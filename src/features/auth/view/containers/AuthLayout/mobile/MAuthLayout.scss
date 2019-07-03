@@ -1,0 +1,45 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.m-auth-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include themed('color', 'main-text-color');
+  @include themed('background-color', 'app-background-color');
+
+  &_disabled {
+    opacity: 0.65;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 39px;
+    margin-bottom: 38px;
+  }
+
+  &__content-wrapper {
+    width: 100%;
+    max-width: 35.714rem;
+  }
+
+  &__ssl-notice {
+    margin-bottom: 0.857rem;
+  }
+
+  &__segments {
+    padding-bottom: 1.429rem;
+  }
+
+  &__title {
+    padding-top: 0.714rem;
+    padding-bottom: 2.357rem;
+    text-align: center;
+    color: #7e849e;
+    font-size: 0.857rem;
+    font-weight: 600;
+  }
+}

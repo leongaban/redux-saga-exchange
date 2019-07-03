@@ -1,0 +1,9 @@
+.ecxhange-rates-settings {
+  display: block;
+
+  &__visible-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

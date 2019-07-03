@@ -1,0 +1,18 @@
+@import "src/shared/view/styles/mixins";
+
+.order-history-layout {
+  &__settings-window {
+    padding: 0 1rem;
+  }
+
+  &__controls {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: 10.7143rem;
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/shared/view/styles/mixins";
+
+.m-order-list {
+  &__table-header {
+    display: flex;
+    padding: 0.5rem 0.71rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__market-cell-content {
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__order-side-cell-content {
+    font-size: 0.79rem;
+    font-weight: 500;
+    text-transform: capitalize;
+
+    @include themed('color', 'main-text-color');
+
+    &_side {
+      &_buy {
+        @include themed('color', 'main-green-color');
+      }
+
+      &_sell {
+        @include themed('color', 'main-red-color');
+      }
+    }
+  }
+
+  &__price-cell-content {
+    font-weight: 500;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__amount-cell-content {
+    font-size: 0.79rem;
+    font-weight: 500;
+
+    @include themed('color', 'secondary-text-color');
+  }
+
+  &__cancel-button {
+    width: 4rem;
+  }
+
+  &__cancel-all-button {
+    width: 6.14rem;
+  }
+}

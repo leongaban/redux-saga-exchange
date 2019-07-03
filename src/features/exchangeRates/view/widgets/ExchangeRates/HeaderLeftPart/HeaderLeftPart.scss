@@ -1,0 +1,54 @@
+@import 'src/shared/view/styles/mixins';
+
+.exchange-rates-widget-header-left-part {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  &__button-toggle-favorites {
+    width: 0.8571rem;
+    height: 0.8571rem;
+    margin-right: 0.357rem;
+    cursor: pointer;
+
+    path {
+      @include themed('stroke', 'exchange-rates-favorite-icon-stroke');
+    }
+
+    &_favorite {
+      path {
+        @include themed('fill', 'exchange-rates-favorite-icon-fill');
+      }
+    }
+  }
+
+  &__fav-icon {
+    vertical-align: top;
+  }
+
+  &__market {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    color: rgba(105, 110, 132, 0.7);
+    font-size: 0.7143rem;
+  }
+
+  &__period {
+    width: 6rem;
+  }
+
+  &__current-period {
+    width: 100%;
+    padding: 2px 0;
+    text-align: center;
+    color: #354052;
+    border: 1px solid #e6eaee;
+    border-radius: 2px;
+    background-color: #fafbfc;
+    font-size: 0.8571rem;
+  }
+}

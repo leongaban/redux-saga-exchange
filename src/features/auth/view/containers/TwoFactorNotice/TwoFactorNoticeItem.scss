@@ -1,0 +1,13 @@
+@import 'src/shared/view/styles/mixins';
+
+.two-factor-notice-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  & + & {
+    border-top: 1px dashed;
+
+    @include themed-alpha('border-color', 'table-header-border', 0.7);
+  }
+}

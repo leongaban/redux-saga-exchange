@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "traceResolution": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "es2017",
+      "es6",
+      "es7",
+      "es5",
+      "dom",
+      "scripthost"
+    ],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "strictFunctionTypes": false,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*",
+    "webpack/**/*"
+  ]
+}

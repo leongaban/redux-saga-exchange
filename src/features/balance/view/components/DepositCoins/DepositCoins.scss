@@ -1,0 +1,89 @@
+@import "src/shared/view/styles/mixins";
+
+.deposit-coins {
+  display: flex;
+  padding: 0.64rem 0.71rem 1rem 1.64rem;
+
+  @include themed('color', 'main-text-color');
+
+  @include mobile {
+    flex-direction: column;
+    padding: 0 0.71rem;
+  }
+
+  &__preloader {
+    &_is-active {
+      @include desktop {
+        width: 50.07rem;
+      }
+    }
+  }
+
+  &__usage-warning-text-and-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__usage-warning-text,
+  &__smart-contract-warning-text {
+    width: 32.6429rem;
+    margin: 0.86rem 0;
+    font-size: 0.79rem;
+
+    @include themed('color', 'main-text-color');
+
+    @include mobile {
+      width: auto;
+      margin: 0.4rem 0;
+    }
+  }
+
+  &__memo-warning-text {
+    font-size: 0.79rem;
+
+    @include themed('color', 'main-red-color');
+  }
+
+  &__smart-contract-warning-text {
+    font-weight: bold;
+  }
+
+  &__address {
+    margin-bottom: 2rem;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bch-address-type {
+    display: flex;
+    margin-bottom: 0.714rem;
+    align-items: center;
+
+    &-select {
+      width: 10.714rem;
+      margin-left: 0.714rem;
+    }
+  }
+
+  &__copy-button {
+    width: 7.14rem;
+    margin-left: 0.71rem;
+
+    @include mobile {
+      margin-top: 0.71rem;
+      align-self: flex-end;
+    }
+  }
+
+  &__simplex-wrapper {
+    text-align: right;
+
+    > * {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+}

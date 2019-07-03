@@ -1,0 +1,82 @@
+@import "~shared/view/styles/variables";
+
+.order-book-header-left-part {
+  $r: &;
+
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    &_horizontal {
+      width: auto;
+    }
+  }
+
+  &__widget-types {
+    display: flex;
+    width: 3.1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__switch-button {
+    width: 1.3rem;
+    height: 1.1rem;
+    cursor: pointer;
+
+    &_property {
+      &_widget-type {
+        #{$r}__widget-type-icon {
+          g {
+            fill: $color-grey;
+          }
+
+          &_selected {
+            g {
+              fill: $color-blue;
+            }
+          }
+        }
+      }
+
+      &_displayed-order-type {
+        #{$r}__displayed-order-type-icon {
+          path {
+            fill: $color-grey;
+          }
+
+          &_selected {
+            path {
+              fill: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__order-type-buttons {
+    display: flex;
+    width: 4.7rem;
+    margin-right: 0.7rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__decimals-select {
+    width: 4.8rem;
+    margin-right: 0.6rem;
+  }
+}

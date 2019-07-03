@@ -1,0 +1,24 @@
+@import "src/shared/view/styles/mixins";
+
+.document-list {
+  padding: 1.4rem 0 0 0.7rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__remove-info {
+    margin: 0;
+    font-size: 0.785rem;
+    text-align: left;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+}

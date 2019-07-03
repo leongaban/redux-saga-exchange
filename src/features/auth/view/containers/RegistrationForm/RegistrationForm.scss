@@ -1,0 +1,27 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.registration-form {
+  width: 100%;
+
+  &__section {
+    display: flex;
+    padding: 0.429rem 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    margin-top: 2.143rem;
+  }
+
+  &__success {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__captcha {
+    display: flex;
+    justify-content: center;
+  }
+}

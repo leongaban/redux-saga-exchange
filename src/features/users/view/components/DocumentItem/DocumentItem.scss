@@ -1,0 +1,57 @@
+@import 'src/shared/view/styles/mixins';
+
+.document-item {
+  display: flex;
+  width: 60%;
+  padding-top: 0.714rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @include themed('color', 'main-text-color');
+
+  &__name {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 0.857rem;
+  }
+
+  &__document-viewer {
+    width: 60rem;
+    height: 52rem;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-extension {
+      display: flex;
+      width: 2.86rem;
+      padding: 0.143rem 0.286rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #bdc2cf;
+      border: 1px solid;
+      border-radius: 3px;
+      font-size: 0.786rem;
+      font-weight: 500;
+      justify-content: center;
+      align-items: center;
+
+      @include themed('background-color', 'widget-background-color');
+      @include themed('color', 'headline-1-color');
+      @include themed('border-color', 'widget-border-color');
+    }
+
+    &-name {
+      overflow: hidden;
+      padding-left: 1rem;
+      text-overflow: ellipsis;
+      font-size: 0.857rem;
+
+      @include themed('color', 'table-header-cell-title-color');
+    }
+  }
+}

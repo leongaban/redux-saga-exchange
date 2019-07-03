@@ -1,0 +1,12 @@
+@import "src/shared/view/styles/mixins";
+
+.simplex-section {
+  &__icon {
+    width: 20px;
+
+    // to override deault path color
+    svg path {
+      @include themed('fill', 'main-text-color');
+    }
+  }
+}

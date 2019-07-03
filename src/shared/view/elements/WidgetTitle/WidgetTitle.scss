@@ -1,0 +1,19 @@
+@import 'src/shared/view/styles/mixins';
+
+.widget-title {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  @include themed('color', 'headline-1-color');
+
+  &_text-transform {
+    &_uppercase {
+      text-transform: uppercase;
+    }
+
+    &_initial {
+      text-transform: initial;
+    }
+  }
+}

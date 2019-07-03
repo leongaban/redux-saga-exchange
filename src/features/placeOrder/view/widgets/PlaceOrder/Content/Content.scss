@@ -1,0 +1,86 @@
+@import 'src/shared/view/styles/mixins';
+
+.place-order-widget-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.5rem;
+  border-top: 1px solid;
+
+  @include themed('border-color', 'widget-border-color');
+
+  &__order-types {
+    width: 100%;
+  }
+
+  &__forms {
+    display: flex;
+    flex: 1;
+    width: 95%;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+
+  &__form {
+    flex: 1;
+
+    &:nth-child(1) {
+      padding-right: 1.5714rem;
+    }
+
+    &:nth-child(2) {
+      padding-left: 1.5714rem;
+      border-left: 1px solid;
+
+      @include themed('border-color', 'widget-border-color');
+    }
+  }
+
+  &__field {
+    flex: 1;
+    margin-left: 1.5714rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__fields-pair {
+    display: flex;
+  }
+
+  &__data {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  &__place-types {
+    display: flex;
+    width: 100%;
+    padding-bottom: 1.071rem;
+  }
+
+  &__place-type {
+    width: 100%;
+  }
+
+  &__error {
+    overflow: hidden;
+    padding: 0 1rem;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 0.92rem;
+    padding: 1.2857rem 1.4286rem;
+    border-top: 1px solid;
+    justify-content: flex-end;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__button {
+    width: 7.1429rem;
+    margin-left: 1.4286rem;
+  }
+}

@@ -1,0 +1,58 @@
+.widget-ne {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  border: 1px solid #e6eaee;
+  background-color: #fff;
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: flex-start; /* Extra space in Cross Axis */
+
+  &__title {
+    margin: 0;
+    color: #7e849e;
+    font-size: 12px;
+  }
+
+  &__header {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__close {
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+
+    &-icon {
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+    }
+  }
+
+  &__settings {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+@import "src/shared/view/styles/mixins";
+
+.assets-info-table {
+  &__asset {
+    margin: 0.8rem 0;
+  }
+
+  &__asset-icon,
+  &__asset-label {
+    display: inline-block;
+  }
+
+  &__asset-icon {
+    width: 1.3rem;
+    margin-right: 0.5rem;
+  }
+
+  &__asset-label {
+    vertical-align: middle;
+  }
+
+  &__boolean-field-icon {
+    width: 1rem;
+
+    &_status {
+      &_true path {
+        @include themed('fill', 'main-green-color');
+      }
+
+      &_false path {
+        @include themed('fill', 'main-red-color');
+      }
+    }
+  }
+}

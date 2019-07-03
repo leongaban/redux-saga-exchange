@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <defs></defs>
+    <g id="Client-Pages-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-660.000000, -1313.000000)">
+        <g id="window-copy-5" transform="translate(595.000000, 951.000000)" fill="#DF2A41" fill-rule="nonzero">
+            <path d="M71.5,362 C67.9160155,362 65,364.916016 65,368.5 C65,372.083984 67.9160155,375 71.5,375 C75.0839845,375 78,372.083984 78,368.5 C78,364.916016 75.0839845,362 71.5,362 Z M71.5,363 C74.542969,363 77,365.457032 77,368.5 C77,371.542969 74.542969,374 71.5,374 C68.4570315,374 66,371.542969 66,368.5 C66,365.457032 68.4570315,363 71.5,363 Z M71,365.5 L71,369.5 L72,369.5 L72,365.5 L71,365.5 Z M71,370.5 L71,371.5 L72,371.5 L72,370.5 L71,370.5 Z" id="error"></path>
+        </g>
+    </g>
+</svg>

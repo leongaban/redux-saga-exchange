@@ -1,0 +1,48 @@
+@import "src/shared/view/styles/mixins";
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+
+  @include themed('background-color', 'widget-background-color');
+  @include themed('border-color', 'widget-border-color');
+
+  @include mobile {
+    border: none;
+  }
+
+  &__header {
+    display: flex;
+    padding: 1rem 2.2857rem;
+    text-transform: uppercase;
+    justify-content: space-between;
+
+    @include mobile {
+      padding: 1rem 0.7rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #9996aa;
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+
+  &__header-right-part {
+    display: flex;
+    align-items: center;
+  }
+
+  &__settings {
+    display: flex;
+    margin-left: 1rem;
+
+    &-icon {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+  }
+}

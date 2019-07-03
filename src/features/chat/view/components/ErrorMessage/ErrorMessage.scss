@@ -1,0 +1,15 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.error-message {
+  @include themed('color', 'main-red-color');
+
+  font-size: 0.9rem;
+  font-style: oblique;
+  padding: 0.1rem;
+  text-align: center;
+
+  & + & {
+    border-top: 0;
+  }
+}

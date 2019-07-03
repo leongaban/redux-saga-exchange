@@ -1,0 +1,17 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-blue;
+  font-size: 0.857rem;
+
+  &:focus {
+    text-decoration: none;
+    color: $color-blue;
+    outline: 0.15rem solid;
+
+    @include themed('outline-color', 'nav-menu-item-active-color');
+  }
+}

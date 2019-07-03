@@ -1,0 +1,19 @@
+@import 'src/shared/view/styles/mixins';
+
+.toolbar-button {
+  &__content {
+    display: flex;
+    width: 2.857rem;
+    height: 2.143rem;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: transparent;
+
+    @include themed('color', 'headline-1-color');
+    @include themed('border-color', 'headline-1-color-disabled');
+  }
+}

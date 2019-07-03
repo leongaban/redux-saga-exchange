@@ -1,0 +1,12 @@
+@import 'src/shared/view/styles/mixins';
+
+.place-order-modal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 35.5714rem;
+  padding: 1.5714rem;
+  border-top: 1px solid;
+
+  @include themed('border-color', 'widget-border-color');
+}

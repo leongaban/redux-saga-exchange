@@ -1,0 +1,40 @@
+@import 'src/shared/view/styles/mixins';
+
+.order-book-widget-content {
+  $r: &;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; // Mozzila Huck overflow + flex
+  border-top: 1px solid;
+
+  @include themed('border-color', 'widget-border-color');
+
+  &__header {
+    display: flex;
+    padding: 0.7143rem 0;
+    border-bottom: 1px solid;
+    font-size: 0.75rem;
+    font-weight: 500;
+    align-items: center;
+
+    @include themed('color', 'order-book-header-color');
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__total {
+    display: flex;
+    flex: 1;
+    font-size: 1rem;
+    justify-content: center;
+
+    &_bid {
+      @include themed('color', 'order-book-bid-color');
+    }
+
+    &_ask {
+      @include themed('color', 'order-book-ask-color');
+    }
+  }
+}

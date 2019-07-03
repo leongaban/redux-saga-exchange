@@ -1,0 +1,26 @@
+@import "src/shared/view/styles/mixins";
+
+.m-deposit-coins-dialog {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__buttons {
+    display: flex;
+    padding: 0.5rem 0.71rem;
+    border-top: 1px solid;
+    justify-content: flex-end;
+
+    @include themed('border-top-color', 'widget-border-color');
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-left: 1.43rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

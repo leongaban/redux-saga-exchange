@@ -1,0 +1,53 @@
+@import '~shared/view/styles/variables';
+
+.announcements-list {
+  margin-top: -1.429rem;
+
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.714rem 1.429rem 0.714rem 2.857rem;
+    border-bottom: 1px solid $color-light-grey;
+    background-color: $color-light-grey-alt;
+    cursor: move;
+    position: relative;
+    word-break: break-all;
+
+    &:nth-child(2n) {
+      background-color: transparent;
+    }
+
+    button {
+      width: 120px;
+      margin: 5px;
+    }
+
+    &-content {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    margin-left: 0.714rem;
+  }
+
+  &__drag-handle {
+    left: 1.429rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+  }
+
+  &__info-message {
+    margin: 2.857rem 0;
+    text-align: center;
+    width: 100%;
+  }
+}

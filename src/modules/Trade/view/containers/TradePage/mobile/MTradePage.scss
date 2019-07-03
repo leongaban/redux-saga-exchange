@@ -1,0 +1,24 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-trade-page {
+  display: flex;
+
+  &__left-panel {
+    width: 50%;
+    padding: 0 0.5rem;
+    padding-top: 0.57rem;
+    border-right: 1px solid;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__order-book {
+    width: 50%;
+    height: 100%;
+    padding-top: 0.57rem;
+  }
+
+  &__place-order {
+    margin-top: 0.357rem;
+  }
+}

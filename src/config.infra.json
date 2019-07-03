@@ -1,0 +1,6 @@
+{
+  "nodeWebsocketServer": "wss://trd.io-node.azurewebsites.net/socket",
+  "signalWebsocketServerPublic": "https://api.infra.kube-dev.studiomobile.ru/marketdata-ws/info",
+  "signalWebsocketServerPrivate": "https://api.infra.kube-dev.studiomobile.ru/frontoffice/ws/account",
+  "restServerAddress": "https://api.infra.kube-dev.studiomobile.ru/frontoffice"
+}

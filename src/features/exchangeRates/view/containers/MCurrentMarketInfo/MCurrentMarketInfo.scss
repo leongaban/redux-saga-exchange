@@ -1,0 +1,33 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-current-market-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__current-price {
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.15rem;
+
+    @include themed('color', 'chart-left-side-holder');
+
+    &_in-usdt {
+      margin-left: 0.55rem;
+
+      @include themed('color', 'headline-1-color-disabled');
+    }
+  }
+
+  &__favorite-icon {
+    width: 1.4rem;
+
+    path {
+      @include themed('stroke', 'exchange-rates-favorite-icon-stroke');
+    }
+
+    &_checked path {
+      @include themed('fill', 'exchange-rates-favorite-icon-fill');
+    }
+  }
+}

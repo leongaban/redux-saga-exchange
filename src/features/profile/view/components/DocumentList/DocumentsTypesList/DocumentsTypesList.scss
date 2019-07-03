@@ -1,0 +1,15 @@
+@import "src/shared/view/styles/mixins";
+
+.document-types-list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    display: block;
+    padding: 1.4rem;
+
+    &:nth-child(2n) {
+      @include themed('background-color', 'menu-list-background');
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.m-assets-table {
+  &__action-buttons {
+    display: flex;
+    justify-content: space-between;
+    // hack for mobile safari - vertical alignment of 3rd button (with menu inside) broken
+    line-height: 0.714rem;
+  }
+
+  &__action-button {
+    width: 5.36rem;
+
+    &-simplex {
+      width: auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__subcontent-value {
+    text-align: end;
+  }
+}

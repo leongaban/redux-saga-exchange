@@ -1,0 +1,31 @@
+@import "src/shared/view/styles/mixins";
+
+.admin-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 8.143rem;
+  padding: 0 2rem 0 3.5rem;
+  border: 1px solid;
+  justify-content: space-between;
+
+  @include themed('color', 'headline-1-color');
+  @include themed('background-color', 'app-background-color');
+  @include themed('border-color', 'widget-border-color');
+
+  &__route-name {
+    font-size: 2.3rem;
+    align-self: center;
+  }
+
+  &__control-panel {
+    display: flex;
+    width: 70px;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    margin-top: 0.15rem;
+  }
+}

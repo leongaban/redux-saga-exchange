@@ -1,0 +1,70 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.info-widget {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    position: relative;
+    padding: 0 1rem 1rem;
+    width: 100%;
+    min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $color-medium-grey;
+
+    @media only screen and (max-width: 833px) { padding: 0 1rem 1rem; }
+
+    &_value {
+      @include themed('background-color', 'widget-background-color');
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    @media only screen and (max-width: 833px) {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    &-header {
+      display: flex;
+      margin: 0.7143rem 0 0;
+      padding: 1rem;
+      min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $color-medium-grey;
+
+      h4 {
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0;
+    width: 50%;
+  }
+
+  &__full-width {
+    width: 100%;
+  }
+}

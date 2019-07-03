@@ -1,0 +1,67 @@
+@import 'src/shared/view/styles/mixins';
+
+.exchange-rates {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0; // Mozzila Hack overflow + flex
+  outline: none;
+
+  &__controls {
+    @include themed('border-color', 'widget-border-color');
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    padding: 0.557rem 0.357rem;
+    border: 1px solid;
+    border-right: none;
+    border-left: none;
+    justify-content: space-between;
+  }
+
+  &__controls-gap {
+    flex: 0;
+    min-width: 0.7143rem;
+  }
+
+  &__search {
+    display: flex;
+    flex: 0.75;
+    min-width: 5.64rem;
+    max-width: 11.0858rem;
+  }
+
+  &__tabs {
+    flex: 1;
+  }
+
+  &__table {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  &__market,
+  &__current {
+    &_selected {
+      color: #fafbfc;
+    }
+  }
+
+  &__toggle-favorites-checkbox {
+    display: flex;
+
+    path {
+      @include themed('stroke', 'exchange-rates-favorite-icon-stroke');
+    }
+
+    &_favorite path {
+      @include themed('fill', 'exchange-rates-favorite-icon-fill');
+    }
+  }
+
+  &_selected {
+    color: #fff;
+  }
+}

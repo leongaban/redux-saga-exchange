@@ -1,0 +1,20 @@
+@import 'src/shared/view/styles/mixins';
+
+.indicators-menu {
+  &__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 1.286rem;
+    height: 1.286rem;
+
+    path {
+      @include themed('fill', 'headline-1-color');
+    }
+  }
+}

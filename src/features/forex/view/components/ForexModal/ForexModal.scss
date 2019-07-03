@@ -1,0 +1,125 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.forex-modal {
+  @include themed('background-color', 'widget-background-color');
+  @include themed('border-color', 'widget-border-color');
+
+  &__title {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  &__container {
+    position: relative;
+    padding: 0 20px 20px;
+    width: 80vw;
+    max-width: 800px;
+    min-width: 320px;
+    height: 100%;
+
+    @media only screen and (max-width: 320px) {
+      padding: 0 1rem;
+      min-width: 300px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-top: 0.571rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__row-item {
+    margin-bottom: 1rem;
+    min-width: 15rem;
+    max-width: 22rem;
+    width: 100%;
+
+    @include themed('color', 'main-text-color');
+
+    @include mobile {
+      max-width: unset;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    &-base-assets {
+      width: 220px;
+    }
+  }
+
+  &__forex-instructions {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  &__legal {
+    margin-bottom: 1rem;
+  }
+
+  &__legal-document {
+    display: flex;
+  }
+
+  &__legal-link {
+    margin-left: 0.5rem;
+  }
+
+  &__tio-markets-logo {
+    float: right;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    @media only screen and (max-width: 800px) {
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+      width: 100%;
+    }
+  }
+
+  .theme_moon &__tio-markets-logo {
+    /* doiuse-disable */
+    mix-blend-mode: hard-light;
+
+    /* doiuse-enable */
+  }
+
+  &__field-title {
+    margin: 1rem 0 0;
+    width: 100%;
+  }
+
+  &__commisions-info {
+    margin: 0.5rem 0;
+  }
+
+  &__tabs {
+    display: flex;
+    padding: 0.557rem 0;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__tab {
+    width: 3rem;
+  }
+
+  &__button-group {
+    padding: 1rem 0 0;
+    width: 100%;
+  }
+
+  &__button {
+    margin-bottom: 1rem;
+  }
+}

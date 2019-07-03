@@ -1,0 +1,32 @@
+@import "src/shared/view/styles/mixins";
+
+.modal-cancel {
+  max-width: 23.5714rem;
+
+  @include mobile {
+    max-width: unset;
+  }
+
+  &__text {
+    padding: 1.5714rem 1.6429rem;
+    font-size: 0.886rem;
+    text-align: center;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__controls {
+    display: flex;
+    padding: 0 1.5714rem 1.3571rem;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 7.1429rem;
+  }
+
+  &__cancel-modal-display-checkbox {
+    width: 18rem;
+    margin: 0 auto 1rem;
+  }
+}

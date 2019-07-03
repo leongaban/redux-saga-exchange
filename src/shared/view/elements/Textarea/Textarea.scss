@@ -1,0 +1,42 @@
+@import 'src/shared/view/styles/mixins';
+
+@mixin text-styles() {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.857rem;
+  line-height: 1.286rem;
+
+  @include themed('color', 'input-color');
+}
+
+.textarea {
+  @include text-styles();
+
+  width: 100%;
+  padding: 0.429rem 0.929rem;
+
+  /* doiuse-disable */
+  resize: none;
+
+  /* doiuse-enable */
+
+  border: 1px solid;
+  border-radius: 4px;
+  outline: none;
+
+  @include themed('border-color', 'input-border-color');
+  @include themed('background-color', 'input-background-color');
+
+  &:active {
+    @include themed('border-color', 'input-active-border-color');
+  }
+
+  &:focus {
+    @include themed('border-color', 'input-active-border-color');
+  }
+
+  &::placeholder {
+    @include text-styles();
+
+    opacity: 0.25;
+  }
+}

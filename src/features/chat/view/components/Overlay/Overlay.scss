@@ -1,0 +1,35 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.chat-widget-overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+
+  @include themed('background-color', 'chat-widget-offline-overlay-bg');
+  @include themed('color', 'main-text-color');
+
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__image {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+  }
+
+  &__error {
+    @include themed('color', 'main-red-color');
+
+    font-size: 0.8em;
+  }
+}

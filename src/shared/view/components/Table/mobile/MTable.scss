@@ -1,0 +1,128 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-table {
+  $r: &;
+
+  &_lite {
+    #{$r}__row {
+      padding: 0.3rem 0;
+
+      &:nth-child(even) {
+        background-color: initial !important;
+      }
+    }
+  }
+
+  &__row {
+    padding: 0.71rem;
+
+    &:nth-child(even) {
+      @include themed('background-color', 'table-even-row-background-color');
+    }
+
+    &_header {
+      display: flex;
+      font-size: 0.71rem;
+      font-weight: 500;
+
+      #{$r}_holding-rows-with-subcontent & {
+        padding-right: 2.14rem;
+      }
+    }
+
+    &-primary-content {
+      display: flex;
+      align-items: center;
+    }
+
+    &-subcontent {
+      transform: scaleY(0);
+      transition: transform 0.2s linear;
+
+      &_displayed {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 0.71rem;
+        padding-right: 2.14rem;
+        transform: scaleY(1);
+      }
+
+      &-rows {
+        flex: 1;
+
+        &_flexible {
+          flex: calc(2 / 3);
+        }
+      }
+
+      &-bottom-part {
+        margin-top: 1rem;
+
+        &_flexible {
+          flex: calc(1 / 3);
+        }
+      }
+
+      &-row {
+        display: flex;
+        margin-top: 0.36rem;
+
+        &-title,
+        &-value {
+          flex: 1;
+          font-size: 0.79rem;
+          font-weight: 500;
+        }
+
+        &-title {
+          @include themed('color', 'secondary-text-color');
+        }
+
+        &-value {
+          @include themed('color', 'main-text-color');
+        }
+      }
+
+      &-checkbox {
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 0 3.5px 4px;
+        border-color: transparent;
+        transition: transform 0.2s linear;
+        transform: rotate(180deg);
+
+        @include themed('border-bottom-color', 'main-text-color');
+
+        &_checked {
+          transform: rotate(0deg);
+        }
+
+        &-wrapper {
+          cursor: pointer;
+          margin-left: 1.07rem;
+          padding: 4px;
+          user-select: none;
+        }
+      }
+    }
+  }
+
+  &__cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include themed('color', 'main-text-color');
+
+    &_right-aligned {
+      text-align: right;
+    }
+
+    &_column-header {
+      @include themed('color', 'table-header-cell-title-color');
+    }
+  }
+}

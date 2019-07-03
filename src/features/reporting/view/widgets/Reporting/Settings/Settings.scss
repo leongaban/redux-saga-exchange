@@ -1,0 +1,16 @@
+.reporting-settings {
+  &__visible-rows-field {
+    width: 14.29rem;
+  }
+
+  &__options-section {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__option {
+    display: flex;
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+}

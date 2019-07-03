@@ -1,0 +1,125 @@
+# ${CI_REGISTRY} is in project's gitlab CI/CD variables
+variables:
+  DAPP_VERSION: "0.32"
+.base_deploy: &base_deploy
+  stage: deploy
+  script:
+    - kubectl get ns ${CI_ENVIRONMENT_CUSTOM_SLUG:-${CI_ENVIRONMENT_SLUG}} || kubectl create namespace ${CI_ENVIRONMENT_CUSTOM_SLUG:-${CI_ENVIRONMENT_SLUG}}
+    - kubectl get secret registrysecret-tradeio -n kube-system -o json |
+                      jq ".metadata.namespace = \"${CI_ENVIRONMENT_CUSTOM_SLUG:-${CI_ENVIRONMENT_SLUG}}\"|
+                      del(.metadata.annotations,.metadata.creationTimestamp,.metadata.resourceVersion,.metadata.selfLink,.metadata.uid)" |
+                      kubectl apply -f -
+    - source dapp_use ${DAPP_VERSION}
+    - dapp --version
+    - dapp kube deploy
+      --timeout 900
+      --tag-ci
+      --namespace ${CI_ENVIRONMENT_SLUG}
+      --set "global.env=${CI_ENVIRONMENT_SLUG}"
+      ${CI_REGISTRY_IMAGE}
+  dependencies:
+    - build
+  tags:
+    - deploy-dev
+
+stages:
+  - build
+  - deploy
+  - cleanup_registry
+  - cleanup_builder
+
+build:
+  stage: build
+  script:
+    - source dapp_use ${DAPP_VERSION}
+    - dapp --version
+    - dapp dimg bp --tag-ci ${CI_REGISTRY_IMAGE}
+  except:
+    - schedules
+  tags:
+    - build
+
+Deploy to Infra:
+  <<: *base_deploy
+  environment:
+    name: infra
+  except:
+    - schedules
+  when: manual
+
+Deploy to Stress:
+  <<: *base_deploy
+  environment:
+    name: stress
+  except:
+    - schedules
+  when: manual
+
+Deploy to QAenv:
+  <<: *base_deploy
+  environment:
+    name: qaenv
+  except:
+    - schedules
+  when: manual
+
+Deploy to Development:
+  <<: *base_deploy
+  environment:
+    name: development
+  except:
+    - schedules
+  when: manual
+
+Deploy to dev1env:
+  <<: *base_deploy
+  environment:
+    name: dev1env
+  except:
+    - schedules
+  when: manual
+
+Deploy to Staging:
+  <<: *base_deploy
+  environment:
+    name: staging
+  except:
+    - schedules
+  when: manual
+
+To production:
+  <<: *base_deploy
+  stage: deploy
+  environment:
+    name: production
+#  only:
+#    - tags
+  when: manual
+  except:
+    - schedules
+  tags:
+    - deploy-prod
+
+Cleanup registry:
+  stage: cleanup_registry
+  script:
+    - source dapp_use ${DAPP_VERSION}
+    - dapp dimg cleanup repo ${CI_REGISTRY_IMAGE}
+  only:
+    - schedules
+  tags:
+    - deploy-dev
+
+Cleanup builder:
+  stage: cleanup_builder
+  script:
+    - source dapp_use ${DAPP_VERSION}
+    - dapp dimg stages cleanup local
+        --improper-cache-version
+        --improper-git-commit
+        --improper-repo-cache
+        ${CI_REGISTRY_IMAGE}
+  only:
+    - schedules
+  tags:
+    - build

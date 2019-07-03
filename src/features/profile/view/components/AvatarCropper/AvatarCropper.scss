@@ -1,0 +1,29 @@
+@import 'src/shared/view/styles/mixins';
+
+.avatar-cropper {
+  max-width: 60.8571rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  @include mobile {
+    max-width: 24rem;
+  }
+
+  &__image {
+    & > img { // library rule
+      max-width: 100%;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  &__button {
+    width: 9rem;
+  }
+}

@@ -1,0 +1,13 @@
+.input-control {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.071rem;
+
+  &__label {
+    margin: 0;
+    padding-bottom: 0.643rem;
+    font-size: 0.929rem;
+    font-weight: 400;
+    line-height: 1.071rem;
+  }
+}

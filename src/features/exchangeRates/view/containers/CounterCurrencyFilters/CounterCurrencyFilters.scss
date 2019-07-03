@@ -1,0 +1,49 @@
+@import 'src/shared/view/styles/mixins';
+
+.counter-currency-filters {
+  $r: &;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__currencies {
+    display: flex;
+  }
+
+  &__favorite-icon {
+    path {
+      @include themed('stroke', 'exchange-rates-favorite-icon-stroke');
+    }
+
+    &_checked path {
+      @include themed('fill', 'exchange-rates-favorite-icon-fill');
+    }
+  }
+
+  &_size {
+    &_small {
+      #{$r}__favorite-icon {
+        width: 0.8571rem;
+      }
+    }
+
+    &_middle {
+      #{$r}__favorite-icon {
+        width: 1.4rem;
+      }
+    }
+  }
+
+  &__currency {
+    flex: 1;
+  }
+
+  &__currencies {
+    width: 78%;
+  }
+
+  &__favorite-radio {
+    width: 20%;
+  }
+}

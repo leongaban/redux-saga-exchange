@@ -1,0 +1,35 @@
+@import "src/shared/view/styles/mixins";
+
+.tabs {
+  display: flex;
+
+  &__element {
+    margin-left: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 0.786rem;
+    font-weight: 600;
+
+    @include themed('color', 'headline-1-color');
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_active {
+      color: #0098d8;
+      border-bottom: 1.5px solid #0098d8;
+    }
+
+    &_disabled {
+      cursor: default;
+
+      @include themed('color', 'headline-1-color-disabled');
+    }
+
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+}

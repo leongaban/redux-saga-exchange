@@ -1,0 +1,9 @@
+.m-order-book {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  &__decimals-selector {
+    padding: 0 0.5rem;
+  }
+}

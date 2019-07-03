@@ -1,0 +1,70 @@
+@import './day/theme';
+@import './night/theme';
+@import './moon/theme';
+
+$themes: (
+  day: $day,
+  night: $night,
+  moon: $moon,
+);
+
+// to style things outside body
+@mixin themed-global($propName, $valueName) {
+  @each $theme, $themeMap in $themes {
+    .theme_#{$theme} & {
+      @if map-has-key($themeMap, $valueName) {
+        #{$propName}: map-get($themeMap, $valueName);
+      }
+
+      @else {
+        @error 'The #{$valueName} color doesn\'t exist in the #{$theme} theme';
+      }
+    }
+  }
+}
+
+@mixin themed($propName, $valueName) {
+  @each $theme, $themeMap in $themes {
+    body.theme_#{$theme} & {
+      @if map-has-key($themeMap, $valueName) {
+        #{$propName}: map-get($themeMap, $valueName);
+      }
+
+      @else {
+        @error 'The #{$valueName} color doesn\'t exist in the #{$theme} theme';
+      }
+    }
+  }
+}
+
+@mixin themed-alpha($propName, $valueName, $alpha) {
+  @each $theme, $themeMap in $themes {
+    body.theme_#{$theme} & {
+      #{$propName}: rgba(map-get($themeMap, $valueName), $alpha);
+    }
+  }
+}
+
+@mixin themed-mobile($propName, $valueName) {
+  @each $theme, $themeMap in $themes {
+    html.device_mobile > body.theme_#{$theme} & {
+      #{$propName}: map-get($themeMap, $valueName);
+    }
+  }
+}
+
+@mixin themed-desktop($propName, $valueName) {
+  @each $theme, $themeMap in $themes {
+    html.device_desktop > body.theme_#{$theme} & {
+      #{$propName}: map-get($themeMap, $valueName);
+    }
+  }
+}
+
+@mixin themed-body($propName, $valueName) {
+  @each $theme, $themeMap in $themes {
+    &.theme_#{$theme} {
+      #{$propName}: map-get($themeMap, $valueName);
+    }
+  }
+}

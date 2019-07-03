@@ -1,0 +1,25 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-trade-history {
+  &__title {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  &__table {
+    font-size: 0.85rem;
+    font-family: Arial;
+  }
+
+  &__price {
+    &_type {
+      &_sell {
+        @include themed('color', 'main-red-color');
+      }
+
+      &_buy {
+        @include themed('color', 'main-green-color');
+      }
+    }
+  }
+}

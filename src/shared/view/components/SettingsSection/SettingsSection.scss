@@ -1,0 +1,17 @@
+@import 'src/shared/view/styles/mixins';
+
+.settings-section {
+  margin-top: 1.43rem;
+
+  &_higher {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+    margin-bottom: 0.71rem;
+    font-size: 1.14rem;
+
+    @include themed('color', 'headline-1-color');
+  }
+}

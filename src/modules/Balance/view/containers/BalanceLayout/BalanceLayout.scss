@@ -1,0 +1,98 @@
+@import "~shared/view/styles/variables";
+@import "src/shared/view/styles/mixins";
+
+.balance-layout {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-top: 0.571rem;
+    justify-content: space-between;
+
+    &:first-child {
+      flex-wrap: wrap;
+    }
+
+    &-header {
+      display: flex;
+      margin: 0;
+      padding: 1.143rem 1.571rem;
+      text-transform: uppercase;
+      color: #7e849e;
+      border-bottom: 1px solid;
+      font-size: 0.857rem;
+      align-items: center;
+
+      @include themed('border-color', 'widget-border-color');
+    }
+
+    &-title {
+      margin-right: 1rem;
+    }
+
+    &_with-border {
+      border: 1px solid;
+      border-radius: 6px;
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+      @include themed('border-color', 'widget-border-color');
+    }
+
+    &_fixed-height {
+      &_large {
+        height: 35rem;
+      }
+
+      &_medium {
+        height: 25rem;
+      }
+    }
+
+    &_assets,
+    &_operation-history {
+      @include themed('background-color', 'widget-background-color');
+    }
+
+    &_operation-history {
+      flex-direction: column;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    max-height: 20rem;
+    padding: 1em 1.643rem;
+    border: 1px solid;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &-header {
+      margin: 0.7143rem 0;
+      text-transform: uppercase;
+      color: #7e849e;
+    }
+
+    &_estimated-value {
+      width: 60%;
+      padding: 0;
+
+      @media only screen and (max-width: 833px) {
+        width: 100%;
+        margin-bottom: 0.571rem;
+      }
+    }
+
+    &_exchange-rates {
+      width: 39%;
+
+      @media only screen and (max-width: 833px) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import 'src/shared/view/styles/mixins';
+
+.manage-presets-form {
+  width: 42.86rem;
+
+  &__section {
+    padding-right: 1.64rem;
+    padding-left: 1.93rem;
+    border-top: 0.07rem solid;
+
+    @include themed('border-color', 'widget-border-color');
+
+    &:nth-child(1) {
+      overflow-y: auto;
+      max-height: 17.857rem;
+      padding-top: 1.43rem;
+      padding-bottom: 2.29rem;
+    }
+
+    &:nth-child(2) {
+      padding-top: 1.29rem;
+      padding-bottom: 1.29rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-right: 1.43rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

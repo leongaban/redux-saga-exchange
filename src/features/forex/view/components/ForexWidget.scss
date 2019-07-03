@@ -1,0 +1,77 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.transaction-widget {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 0 1rem 1rem;
+    min-height: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $color-medium-grey;
+
+    @media only screen and (max-width: 833px) { padding: 0 1rem 1rem; }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-height: 30rem;
+    width: 49.5%;
+    border: 1px solid;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    @media only screen and (max-width: 833px) {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    &-header {
+      display: flex;
+      margin: 0.7143rem 0 0;
+      padding: 1rem;
+      min-height: 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $color-medium-grey;
+
+      h4 {
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__fx-stat-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__fx-stat {
+    position: relative;
+    top: -10px;
+
+    .symbol {
+      margin-bottom: 0.1rem;
+    }
+  }
+
+  &__amount-input {
+    margin-top: 10px;
+    width: 100%;
+
+    input {
+      height: 3rem;
+    }
+  }
+}

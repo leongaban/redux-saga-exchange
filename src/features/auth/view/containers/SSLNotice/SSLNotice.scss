@@ -1,0 +1,35 @@
+.ssl-notice {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+
+  &__image-wrapper {
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    margin: 5px auto 0;
+  }
+
+  &__image {
+    border-radius: 4px;
+    padding: 5px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    top: 0.125em;
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    color: red;
+    margin-right: 3px;
+  }
+}

@@ -1,0 +1,53 @@
+.manage-presets-field-list {
+  display: block;
+  width: 42.86rem;
+
+  &__list {
+    margin-top: 0.57rem;
+  }
+
+  &__item {
+    z-index: 1000;
+    display: flex;
+    margin-top: 0.57rem;
+    align-items: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &_for-new-preset {
+      margin-left: 2.57rem;
+    }
+
+    &-element {
+      flex: 1;
+      margin-left: 0.71rem;
+
+      &_located-before-handle {
+        margin-left: 1.14rem;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 2.29rem;
+    margin-left: 0.71rem;
+  }
+
+  &__drag-handle {
+    width: 1.43rem;
+    height: 0.79rem;
+    cursor: pointer;
+
+    /* doiuse-disable */
+
+    cursor: grab;
+
+    /* doiuse-enable */
+  }
+}

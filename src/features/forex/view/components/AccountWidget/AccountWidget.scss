@@ -1,0 +1,96 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.account-widget {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+    padding: 0 1rem 1rem;
+    width: 100%;
+    min-height: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $color-medium-grey;
+    border: 1px solid $color-medium-grey;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    &-header {
+      display: flex;
+      margin: 0.7143rem 0 0;
+      padding: 1rem;
+      width: 100%;
+      min-height: 0;
+      text-transform: uppercase;
+      color: $color-medium-grey;
+
+      h4 {
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    @media only screen and (max-width: 833px) { padding: 0 1rem 1rem; }
+
+    &_value {
+      @include themed('background-color', 'widget-background-color');
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0;
+    width: 49.5%;
+
+    @media only screen and (max-width: 833px) {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  &__table {
+    margin-top: 10px;
+    width: 100%;
+    align-items: baseline;
+    color: $color-medium-grey;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      min-height: 1rem;
+      padding: 1rem 1rem 0.5rem;
+      border-bottom: 1px solid $grey-blue-light;
+
+      @media only screen and (max-width: 320px) {
+        padding: 5px 0 5px 1rem;
+      }
+    }
+  }
+
+  &__info-name {
+    align-self: flex-start;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__login-id {
+    width: 100px;
+  }
+
+  &__preloader {
+    height: 10rem;
+  }
+}

@@ -1,0 +1,40 @@
+@import "~shared/view/styles/variables";
+
+.date-input {
+  overflow: hidden;
+  cursor: pointer;
+
+  &__calendar {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_center {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__time {
+    width: 85%;
+    margin: auto;
+    margin-top: 1.4286rem;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: 7.1429rem;
+    margin-left: 1.4286rem;
+  }
+}
+

@@ -1,0 +1,46 @@
+@import "src/shared/view/styles/mixins";
+
+.transactions-filter-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include themed('color', 'main-text-color');
+
+  &__label {
+    // TODO this is rest for bootstrap
+    display: initial;
+    max-width: initial;
+    margin-bottom: initial;
+    font-size: 0.929rem;
+    font-weight: 400;
+
+    @include themed('color', 'input-color');
+  }
+
+  &__labeled-field {
+    display: flex;
+    margin: 0.3rem auto;
+    padding-right: 0.71rem;
+    align-items: center;
+  }
+
+  &__field {
+    display: flex;
+    margin-left: 0.36rem;
+  }
+
+  &__asset-field,
+  &__type-field {
+    width: 7.3rem;
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 0.3rem auto;
+  }
+
+  &__button {
+    width: 5.71rem;
+    margin-right: 0.71rem;
+  }
+}

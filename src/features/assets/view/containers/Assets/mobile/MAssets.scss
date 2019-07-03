@@ -1,0 +1,41 @@
+@import "src/shared/view/styles/mixins";
+
+$vertical-margin: 0.714rem;
+$horizontal-padding: $vertical-margin;
+
+.m-balance-assets {
+  &__estimated-value {
+    margin-top: $vertical-margin;
+    padding: 0 $horizontal-padding;
+
+    &-label {
+      font-size: 0.86rem;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @include themed('color', 'secondary-text-color');
+    }
+
+    &-value {
+      font-size: 1.21rem;
+
+      @include themed('color', 'main-text-color');
+    }
+  }
+
+  &__table {
+    margin-top: $vertical-margin;
+  }
+
+  &__filters {
+    padding: 0 $horizontal-padding;
+    margin-top: $vertical-margin;
+    display: flex;
+    align-items: center;
+
+    &-search {
+      width: 9.286rem;
+      margin-right: $horizontal-padding;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  $sidebar-z-index: 100;
+
+  &__header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1.3rem 1rem 0.5rem;
+    width: 100%;
+    z-index: $sidebar-z-index + 1;
+    border-bottom: 0.1rem solid;
+
+    @include themed('color', 'main-text-color');
+    @include themed('background-color', 'app-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &-main-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &-section {
+      display: flex;
+
+      &_align {
+        &_left {
+          justify-content: space-between;
+          width: 9.1rem;
+        }
+
+        &_right {
+          align-items: center;
+        }
+      }
+
+      &-entry {
+        margin-left: 1.071rem;
+      }
+    }
+  }
+
+  &__navigation-tabs {
+    margin-top: 1rem;
+  }
+
+  &__sidebar {
+    position: fixed;
+    width: 80%;
+    height: 130%;  // for mobile browsers with hidden address bar
+    z-index: $sidebar-z-index;
+    transition-property: left;
+    transition-duration: 0.2s;
+
+    @include themed('color', 'main-text-color');
+    @include themed('background-color', 'app-background-color');
+
+    path {
+      @include themed('fill', 'main-text-color');
+    }
+  }
+
+  &__sidebar-entries {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__sidebar-toggle {
+    width: 1.5rem;
+    margin-top: 0.1rem;
+    background: transparent;
+
+    g {
+      stroke-width: 0.1;
+
+      @include themed('fill', 'main-text-color');
+    }
+
+    path {
+      @include themed('stroke', 'main-text-color');
+    }
+  }
+
+  &__sidebar-entry {
+    display: flex;
+    align-items: center;
+    height: 4.3rem;
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+
+    &_selected {
+      @include themed('color', 'nav-menu-item-active-color');
+      @include themed('background-color', 'menu-entry-hover');
+
+      path {
+        @include themed('fill', 'nav-menu-item-active-color');
+      }
+    }
+
+    &_disabled {
+      opacity: 0.25;
+    }
+  }
+
+  &__sidebar-icon {
+    width: 1rem;
+    margin-right: 1.2rem;
+  }
+
+  &__sidebar-title {
+    max-width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: $sidebar-z-index - 1;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__swipeable {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 6.5rem;
+  }
+}

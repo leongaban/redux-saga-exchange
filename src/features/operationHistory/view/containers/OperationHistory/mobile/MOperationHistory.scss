@@ -1,0 +1,28 @@
+@import "src/shared/view/styles/mixins";
+
+.m-operation-history {
+  &__cell {
+    &-operation-content {
+      text-transform: capitalize;
+    }
+
+    &-instrument-content,
+    &-amount-content {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-date-content,
+    &-confirmations-content,
+    &-operation-content, {
+      font-size: 11px;
+      font-weight: 500;
+
+      @include themed('color', 'secondary-text-color');
+    }
+
+    &-confirmations-content {
+      text-align: center;
+    }
+  }
+}

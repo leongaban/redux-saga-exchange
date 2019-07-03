@@ -1,0 +1,87 @@
+@import "src/shared/view/styles/mixins";
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 17.86rem;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 8rem;
+  list-style-type: none;
+
+  @include themed('background-color', 'admin-sidebar-background-color');
+
+  &__nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 4.1rem;
+    padding-left: 1.43rem;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &_active {
+      background-color: #0098d8;
+
+      path {
+        fill: #fff;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    &_disabled {
+      color: #999;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        color: #999;
+      }
+    }
+  }
+
+  &__route-mark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-icon {
+      margin-right: 1.42rem;
+    }
+  }
+
+  &__route-mark-icon {
+    width: 1.286rem;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1.79rem;
+    height: 1.36rem;
+  }
+}

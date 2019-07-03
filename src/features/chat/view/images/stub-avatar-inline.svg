@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+        <circle id="path-2" cx="40" cy="40" r="40"></circle>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Client-Pages-2" transform="translate(-967.000000, -192.000000)">
+            <g id="window-copy-3" transform="translate(945.000000, 99.000000)">
+                <g id="Group" transform="translate(22.000000, 93.000000)">
+                    <g id="Avatar">
+                        <use fill="#F8F9FA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <circle stroke="#E6EAEE" stroke-width="1" cx="40" cy="40" r="39.5"></circle>
+                    </g>
+                    <g id="camera-icons---free-download--png-and-svg-(1)">
+                        <path d="M35.5,30 L35.1875,30.40625 L34,32 L27,32 L27,50 L53,50 L53,32 L46,32 L44.8125,30.40625 L44.5,30 L35.5,30 Z M36.5,32 L43.5,32 L44.6875,33.59375 L45,34 L51,34 L51,48 L29,48 L29,34 L35,34 L35.3125,33.59375 L36.5,32 Z M32,35 C31.449219,35 31,35.449219 31,36 C31,36.550781 31.449219,37 32,37 C32.550781,37 33,36.550781 33,36 C33,35.449219 32.550781,35 32,35 Z M40,35 C36.699219,35 34,37.699219 34,41 C34,44.300781 36.699219,47 40,47 C43.300781,47 46,44.300781 46,41 C46,37.699219 43.300781,35 40,35 Z M40,37 C42.222656,37 44,38.777344 44,41 C44,43.222656 42.222656,45 40,45 C37.777344,45 36,43.222656 36,41 C36,38.777344 37.777344,37 40,37 Z" id="Shape" fill="#8B90A2" fill-rule="nonzero"></path>
+                        <g id="Group-4">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <g id="Avatar">
+                                <use fill="#F8F9FA" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                <circle stroke="#E6EAEE" stroke-width="1" cx="40" cy="40" r="39.5"></circle>
+                            </g>
+                            <g id="man-icons---free-download--png-and-svg-(4)" mask="url(#mask-3)" fill="#BDC2CF" fill-rule="nonzero">
+                                <g transform="translate(8.000000, 16.000000)" id="Shape">
+                                    <path d="M32,0 C23.156252,0 16,7.156252 16,16 C16,24.843752 23.156252,32 32,32 C40.843752,32 48,24.843752 48,16 C48,7.156252 40.843752,0 32,0 Z M32,40 C7.593752,40 0,56 0,56 L0,64 L64,64 L64,56 C64,56 56.406252,40 32,40 Z"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

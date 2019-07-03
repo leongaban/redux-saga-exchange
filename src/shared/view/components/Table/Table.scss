@@ -1,0 +1,145 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.table {
+  // TODO initials reset styles from bootstrap
+  display: flex;
+  flex-direction: column;
+  width: initial;
+  max-width: initial;
+  height: 100%;
+  min-height: 0; // Mozzila Huck overflow + flex
+  margin-bottom: initial;
+  outline: none;
+
+  &__content {
+    display: flex;
+    overflow-x: auto;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__row {
+    display: flex;
+    min-height: 1.4286rem;
+    padding: 0 0.3rem 0 1.3rem;
+
+    &_header {
+      min-height: 2.1429rem;
+      border-bottom: 1px solid;
+
+      @include themed('border-color', 'table-header-border');
+      @include themed('background-color', 'table-header-background-color');
+    }
+
+    &:not(&_selected):nth-child(even) {
+      @include themed('background-color', 'table-even-row-background-color');
+    }
+
+    &_selected {
+      @include themed('background-color', 'table-active-row-background-color');
+    }
+
+    &_selectable {
+      cursor: pointer;
+    }
+
+    &_animate {
+      @include fadeIn;
+    }
+  }
+
+  &__rows {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__no-data-info {
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__row-header {
+    display: flex;
+    width: 0.8571rem;
+    margin-right: 0.7857rem;
+  }
+
+  &__header-cell {
+    display: flex;
+    overflow: hidden;
+    flex: 1 0 3rem;
+    min-width: 3rem;
+    padding: 0.5714rem 0 0.4286rem;
+    cursor: pointer;
+    font-size: 0.71rem;
+    font-weight: 500;
+    align-self: center;
+    align-items: center;
+
+    @include themed('color', 'table-header-cell-title-color');
+
+    &_actions {
+      flex-basis: 13.5714rem;
+    }
+  }
+
+  &__header-cell-sort-arrow {
+    position: relative;
+    width: 0.2857rem;
+    height: 0.3571rem;
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '';
+      border-width: 0.14rem 0.14rem 0;
+      border-style: solid;
+      border-color: rgba(105, 110, 132, 0.7) transparent transparent;
+    }
+
+    &::after {
+      top: 0.24rem;
+    }
+
+    &::before {
+      top: 0.02rem;
+      transform: rotate(180deg);
+    }
+
+    &_sorted {
+      &_ascend {
+        &::after {
+          display: none;
+        }
+      }
+
+      &_descend {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__header-cell-title {
+    padding-left: 0.2857rem;
+  }
+
+  &__cell {
+    flex: 1 0 3rem;
+    min-width: 3rem;
+    padding: 0.143rem 0 0.143rem 0.2rem;
+    font-size: 0.83rem;
+    font-weight: 500;
+    align-self: center;
+
+    @include themed('color', 'main-text-color');
+  }
+}

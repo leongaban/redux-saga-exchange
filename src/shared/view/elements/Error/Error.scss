@@ -1,0 +1,24 @@
+@import "src/shared/view/styles/mixins";
+
+.error {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    display: block;
+    white-space: pre-line;
+    font-size: 0.857rem;
+
+    @include themed('color', 'input-error-border-color');
+  }
+
+  &__icon {
+    width: 0.929rem;
+    height: 0.929rem;
+    margin-right: 0.5rem;
+  }
+
+  path {
+    @include themed('fill', 'main-red-color');
+  }
+}

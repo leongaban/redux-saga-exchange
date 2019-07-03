@@ -1,0 +1,30 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.forex-mt5 {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-top: 0.571rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 640px) {
+      margin-top: -1px;
+      border-radius: 0;
+      box-shadow: 0;
+    }
+
+    @media only screen and (max-width: 320px) {
+      width: 320px;
+    }
+  }
+
+  &__tio-markets-logo {
+    margin: 1rem 0 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}

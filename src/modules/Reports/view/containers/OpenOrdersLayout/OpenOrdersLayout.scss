@@ -1,0 +1,41 @@
+@import "src/shared/view/styles/mixins";
+
+.open-orders-layout {
+  &__table-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__pagination-controls {
+    display: flex;
+  }
+
+  &__right-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__settings-window {
+    padding: 0 1rem;
+  }
+
+  &__controls {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: 10.7143rem;
+    margin-left: 1rem;
+  }
+
+  &__cancel-orders-button {
+    width: 9rem;
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "nodeWebsocketServer": "ws://localhost:1337/socket",
+  "signalWebsocketServerPublic": "http://localhost:8081/info",
+  "signalWebsocketServerPrivate": "http://localhost:82/ws/account",
+  "restServerAddress": "http://localhost:82"
+}

@@ -1,0 +1,160 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.autocomplete {
+  $r: &;
+
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+
+  &__selected-option {
+    position: relative;
+    display: flex;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin: auto 0;
+    border-width: 0.2rem 0.17rem 0;
+    border-style: solid;
+    border-color: $color-medium-grey transparent transparent;
+
+    #{$r}_open & {
+      visibility: hidden;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: none;
+    overflow-y: auto;
+    width: 100%;
+    max-height: 17.86rem;
+    border: 0.07rem solid $color-light-grey;
+
+    @include themed('border-color', 'input-border-color');
+    @include themed('color', 'input-color');
+    @include themed('background-color', 'input-background-color');
+
+    #{$r}_open & {
+      z-index: 1;
+      display: block;
+      border-radius: 0.3rem;
+    }
+  }
+
+  &__option {
+    position: relative;
+    display: flex;
+    height: 2.14rem;
+    margin: 0 0.9rem;
+    padding: 0.5rem 0;
+    user-select: none;
+    justify-content: space-between;
+    align-items: center;
+
+    @include themed('background-color', 'select-background-color');
+
+    &_disabled {
+      cursor: default;
+    }
+
+    &_from-list {
+      flex-direction: column;
+      border-top: 0.07rem solid transparent;
+
+      @include themed('border-color', 'select-border-color');
+
+      &:hover {
+        margin: 0;
+        padding: 0.5rem 0.9rem;
+
+        @include themed('background-color', 'select-option-hover-background-color');
+      }
+
+      &:hover + & {
+        margin: 0;
+        padding: 0.5rem 0.9rem;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    &_from-list-selected > #{$r}__value {
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.6rem;
+        height: 0.5rem;
+        margin: auto;
+        content: '';
+        background: url('./img/triangle_select.svg') no-repeat;
+      }
+    }
+  }
+
+  &__value {
+    position: relative;
+    width: 100%;
+    align-self: start;
+
+    @include themed('color', 'select-option-value-color');
+
+    &_add-option {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__placeholder {
+    opacity: 0.25;
+  }
+
+  &__delete-option-button {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+
+    &:hover {
+      polygon {
+        stroke-width: 0.25rem;
+      }
+    }
+  }
+
+  &__delete-option-icon {
+    width: 0.7rem;
+
+    polygon {
+      @include themed('fill', 'select-option-value-color');
+      @include themed('stroke', 'select-option-value-color');
+    }
+  }
+
+  &__add-option-icon {
+    width: 1rem;
+    margin-right: 0.4rem;
+
+    path {
+      stroke-width: 0.15rem;
+
+      @include themed('fill', 'select-option-value-color');
+      @include themed('stroke', 'select-option-value-color');
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.transactions-table {
+  &__header {
+    display: flex;
+    padding: 0.357rem 1.071rem;
+    flex-direction: column;
+
+    &-row {
+      display: flex;
+
+      &_align {
+        &_left {
+          justify-content: flex-start;
+        }
+
+        &_right {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  &__text-cell {
+    word-break: break-all;
+  }
+}

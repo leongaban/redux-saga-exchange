@@ -1,0 +1,33 @@
+@import "src/shared/view/styles/mixins";
+
+.edit-asset {
+  width: 18rem;
+  margin: 1rem 2rem;
+
+  @include themed('color', 'main-text-color');
+
+  &__options {
+    display: flex;
+    flex-flow: wrap column;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+  }
+
+  &__checkbox-options {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    text-align: end;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 7rem;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "src/shared/view/styles/mixins";
+
+.form-with-order-side-switch {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__order-side-radios {
+    display: flex;
+  }
+
+  &__order-side-radio {
+    flex: 1;
+  }
+
+  &__order-side-label {
+    text-transform: uppercase;
+
+    @include mobile {
+      text-transform: capitalize;
+    }
+  }
+}

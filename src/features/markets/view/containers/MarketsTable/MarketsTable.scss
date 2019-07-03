@@ -1,0 +1,15 @@
+.markets-table {
+  &__actions {
+    display: flex;
+    width: 12rem;
+    height: 4.286rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0.714rem;
+  }
+
+  &__edit-button {
+    width: 5rem;
+    margin-left: 1rem;
+  }
+}

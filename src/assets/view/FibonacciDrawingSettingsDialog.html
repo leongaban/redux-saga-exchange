@@ -1,0 +1,93 @@
+<div id="scxFibonacciDrawingDialog" class="modal scxDialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+                <h4 id="scxFibonacciDrawingDialog_title">Fibonacci Drawing</h4>
+            </div>
+            <div class="modal-body scxFibonacciDrawingDialog-body">
+                <ul class="scxTabs">
+                    <li class="scxTabItem active" data-id="scxFibonacciDrawingDialog_tab_style" data-i18n="drawingSettingDialog.style"></li>
+                    <li class="scxTabItem" data-id="scxFibonacciDrawing_tab_points" data-i18n="drawingSettingDialog.points.title"></li>
+                </ul>
+
+                <div class="scxTabsContent">
+                    <div class="scxTabPanel active" data-id="scxFibonacciDrawingDialog_tab_style">
+                        <div class="scxFibonacciDrawingDialog_panel_figure">
+                            <label class="scxFibonacciDrawingDialog_label_lineLevel" data-i18n="fibonacciDrawing.lineLevel"></label>
+                            <label class="scxFibonacciDrawingDialog_label_lineWidth" data-i18n="fibonacciDrawing.lineWidth"></label>
+                            <table>
+                            </table>
+                            <a href="#" aria-hidden="true" class="scxFibonacciDrawingDialog_panel_addLinePanel">+</a>
+                        </div>
+
+                        <div class="scxFibonacciDrawingDialog_panel_figure_trendLinePanel">
+                            <table>
+                            </table>
+                        </div>
+
+                        <div class="scxFibonacciDrawingDialog_panel_figure_retracementsOptionsPanel">
+                            <table>
+                            </table>
+                        </div>
+
+                        <div class="scxFibonacciDrawingDialog_panel_figure_levelParametersPanel">
+                            <table>
+                            </table>
+                        </div>
+
+                        <div class="scxFibonacciDrawingDialog_panel_figure_labelsParametersPanel">
+                            <table>
+                            </table>
+                        </div>
+
+                        <div class="scxFibonacciDrawingDialog_panel_figure_backgroundPanel">
+                            <table>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="scxTabPanel" data-id="scxFibonacciDrawing_tab_points">
+                        <div class="scxDrawingDialog_panel_points">
+                            <table id="scxDrawingDialog_panel_magnetTo_selector">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <label id="scxFibonacciDrawingDialog_label_magnetModeLabel" data-i18n="drawingSettingDialog.points.magnetMode"></label>
+                                    </td>
+                                    <td>
+                                        <select id="scxFibonacciDrawingDialog_input_magnetMode" class="scxMagnetSelector scxDropdown scxFibonacciDrawingDialog_input_magnetMode">
+                                            <option value="none" data-i18n="drawingSettingDialog.points.never">Never</option>
+                                            <option value="always" data-i18n="drawingSettingDialog.points.always">Always</option>
+                                            <option value="near" data-i18n="drawingSettingDialog.points.near">Near point</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label id="scxFibonacciDrawingDialog_label_magnetToLabel" data-i18n="drawingSettingDialog.points.magnetTo"></label>
+                                    </td>
+                                    <td>
+                                        <select id="scxFibonacciDrawingDialog_input_magnetTo" class="scxMagnetSelector scxDropdown scxFibonacciDrawingDialog_input_magnetTo">
+                                            <option value="open" data-i18n="drawingSettingDialog.points.open">Open</option>
+                                            <option value="high" data-i18n="drawingSettingDialog.points.high">High</option>
+                                            <option value="low" data-i18n="drawingSettingDialog.points.low">Low</option>
+                                            <option value="close" data-i18n="drawingSettingDialog.points.close">Close</option>
+                                            <option value="bar" data-i18n="drawingSettingDialog.points.bar">Bar</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer scxFibonacciDrawingDialog-footer">
+                <button type="button" class="btn btn-warning" id="scxFibonacciDrawingDialog_btn_resetToDefaults" data-i18n="button.defaults">Defaults</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="button.close"></button>
+                <button type="button" class="btn btn-success" id="scxFibonacciDrawingDialog_btn_save" data-i18n="button.save"></button>
+                <button type="button" class="btn btn-primary" id="scxFibonacciDrawingDialog_btn_apply" data-i18n="button.apply"></button>
+            </div>
+        </div>
+    </div>
+</div>

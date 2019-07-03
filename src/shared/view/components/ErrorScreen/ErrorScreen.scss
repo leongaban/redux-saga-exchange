@@ -1,0 +1,42 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  width: 23.5714rem;
+  padding-bottom: 3.4286rem;
+  border: 1px solid;
+  align-items: center;
+
+  @include themed('background-color', 'widget-background-color');
+  @include themed('border-color', 'widget-border-color');
+
+  &__icon {
+    width: 5.4286rem;
+    height: 5.4286rem;
+    margin-top: 3.4286rem;
+  }
+
+  &__title {
+    margin-top: 2.3571rem;
+    text-transform: uppercase;
+    font-size: 0.8571rem;
+    font-weight: 600;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__message {
+    margin-top: 1.1429rem;
+    padding: 0 1rem;
+    font-size: 0.7857rem;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__button {
+    min-width: 10rem;
+    margin-top: 2rem;
+  }
+}

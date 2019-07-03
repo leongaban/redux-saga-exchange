@@ -1,0 +1,172 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.calculator {
+  width: 100%;
+
+  @include themed('border-color', 'widget-border-color');
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 49.5%;
+    max-height: 30rem;
+    color: $color-medium-grey;
+    border: 1px solid;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-width: 833px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 640px) {
+      margin: -1px 0 0;
+      border-radius: 0;
+      box-shadow: 0;
+    }
+
+    @media only screen and (max-width: 320px) {
+      max-height: auto;
+    }
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &-title {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    &-header {
+      margin: 0.7143rem 0 0;
+      padding: 1rem 1rem 0;
+      min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+
+      @media only screen and (max-width: 640px) {
+        margin: 0;
+      }
+    }
+
+    &-tiers,
+    &-percentages {
+      border: none;
+
+      ul {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-tiers {
+      text-align: left;
+    }
+
+    &-percentages {
+      text-align: right;
+    }
+  }
+
+  &__my-return {
+    position: relative;
+    top: -15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: right;
+
+    @media only screen and (max-width: 400px) {
+      top: 0;
+      margin-top: 0.25rem;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__symbol {
+    margin-bottom: 0.1rem;
+  }
+
+  &__descriptions {
+    display: flex;
+    padding: 0 1rem;
+    width: 49.5%;
+    justify-content: space-between;
+  }
+
+  &__calculation-area,
+  &__descriptions-area {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__calculation-area {
+    padding: 1rem;
+    min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+  }
+
+  &__descriptions-area { padding: 0; }
+
+  &__left-side,
+  &__right-side { width: 49.5%; }
+
+  &__left-side {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid;
+
+    @include themed('border-color', 'calculator-border-color');
+    @include themed('background-color', 'calculator-background-color');
+  }
+
+  &__right-side {
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  &__tio-value-label { margin-left: auto; }
+
+  &__liquidity-pool-stats {
+    .input {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__total-pool-assets { margin-bottom: 0.5rem; }
+
+  &__calculate-button { margin-top: 1.2rem; }
+
+  &__rank { width: 2rem; }
+
+  &__count { text-align: left; }
+
+  &__bold-true {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  &__view-desktop {
+    display: block;
+
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__view-mobile {
+    display: none;
+
+    @media only screen and (max-width: 500px) {
+      display: block;
+    }
+  }
+}

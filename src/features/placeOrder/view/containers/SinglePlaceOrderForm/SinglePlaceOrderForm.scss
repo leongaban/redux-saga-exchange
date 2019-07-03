@@ -1,0 +1,41 @@
+@import 'src/shared/view/styles/mixins';
+
+$m-field-top-margin: 0.357rem;
+
+.single-place-order-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__form {
+    flex: 1;
+    margin-top: 0.6rem;
+
+    @include mobile {
+      margin-top: $m-field-top-margin;
+    }
+  }
+
+  &__order-types {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__m-order-type-field {
+    margin-top: $m-field-top-margin;
+    display: none;
+
+    &-label {
+      font-size: 0.93rem;
+    }
+
+    &-select {
+      margin-top: $m-field-top-margin;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+}

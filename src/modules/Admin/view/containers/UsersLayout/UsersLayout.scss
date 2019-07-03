@@ -1,0 +1,52 @@
+@import "src/shared/view/styles/mixins";
+
+$search-form-height: 5.74rem;
+
+.users-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  &__table-section {
+    overflow: hidden;
+    width: 97%;
+    height: 100%;
+    border: 1px solid;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__search {
+    &-form {
+      display: flex;
+      width: 100%;
+      height: $search-form-height;
+      border: 1px solid;
+      align-items: center;
+
+      @include themed('border-color', 'widget-border-color');
+    }
+
+    &-input {
+      position: relative;
+      display: flex;
+      width: 21.429rem;
+      height: 2.286rem;
+      margin: 0 2rem;
+    }
+  }
+
+  &__users-table {
+    width: 100%;
+    height: calc(100% - #{$search-form-height});
+    border: 1px solid;
+    border-top: none;
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+  }
+}

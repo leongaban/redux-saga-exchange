@@ -1,0 +1,28 @@
+@import "src/shared/view/styles/mixins";
+@import "~shared/view/styles/variables";
+
+.terms-of-service {
+  &__title {
+    margin-top: 0;
+    text-align: center;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__documents {
+    margin: 2rem 0;
+  }
+
+  &__document {
+    color: $color-blue;
+  }
+
+  &__confirm-checkbox {
+    display: inline-block;
+  }
+
+  &__agree-button {
+    width: 60%;
+    margin: 2rem auto 0;
+  }
+}

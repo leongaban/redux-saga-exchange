@@ -1,0 +1,28 @@
+@import 'src/shared/view/styles/mixins';
+
+.menu-radio {
+  width: 100%;
+
+  @include themed('color', 'radio-btn-color');
+
+  &__menu-toggle {
+    width: 1.071rem;
+    display: flex;
+    justify-content: center;
+
+    &-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.3rem 0.25rem 0;
+      border-color: transparent;
+      transition: transform 0.2s;
+
+      @include themed('border-top-color', 'radio-btn-color');
+
+      &_reversed {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

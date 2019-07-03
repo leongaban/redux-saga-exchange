@@ -1,0 +1,9 @@
+@import "src/shared/view/styles/mixins";
+
+.assets-layout {
+  width: 97%;
+  margin-top: 1.276rem;
+  border: 1px solid;
+
+  @include themed('border-color', 'widget-border-color');
+}

@@ -1,0 +1,83 @@
+@import 'src/shared/view/styles/mixins';
+
+.document-viewer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  @include themed('color', 'main-text-color');
+
+  &__scale-controls {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    overflow: auto;
+    flex: 1;
+    justify-content: center;
+
+    @include themed('background-color', 'document-viewer-background-color');
+  }
+
+  &__document {
+    margin: auto;
+  }
+
+  &__image-container {
+    display: flex;
+  }
+
+  &__image {
+    margin: auto;
+  }
+
+  &__controls {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__button {
+    width: 5rem;
+
+    &_scale {
+      width: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    &_next {
+      margin-left: 1rem;
+    }
+
+    &_download {
+      position: relative;
+      overflow: hidden;
+      width: 8rem;
+    }
+  }
+
+  &__info {
+    @include themed('color', 'pagination-controls-pagination-control-color');
+  }
+
+  &__download-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

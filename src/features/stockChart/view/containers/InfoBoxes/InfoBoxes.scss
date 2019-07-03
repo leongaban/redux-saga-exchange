@@ -1,0 +1,52 @@
+@import 'src/shared/view/styles/mixins';
+
+.info-boxes {
+  $r: &;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  justify-content: space-between;
+
+  @include themed('color', 'chart-left-side-holder');
+
+  &_vertical {
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 5.5rem;
+
+    #{$r}__info-box {
+      margin: 0;
+    }
+  }
+
+  &__info-box {
+    margin-right: 1rem;
+
+    &_up #{$r}__change {
+      @include themed('color', 'main-red-color');
+    }
+
+    &_down #{$r}__change {
+      @include themed('color', 'main-green-color');
+    }
+  }
+
+  &__caption {
+    white-space: nowrap;
+    opacity: 0.5;
+    font-size: 0.87rem;
+  }
+
+  &__value {
+    white-space: nowrap;
+    font-size: 0.85rem;
+
+    &_bold {
+      font-weight: 600;
+    }
+  }
+}

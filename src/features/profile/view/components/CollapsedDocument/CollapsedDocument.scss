@@ -1,0 +1,66 @@
+@import "src/shared/view/styles/mixins";
+
+.collapsed-document {
+  &__wrapper {
+    overflow: auto;
+  }
+
+  &__document {
+    display: block;
+    width: 48.4rem;
+    margin-left: -1.67rem;
+    height: 0;
+    border: none;
+    transition: height 0.7s ease;
+    overflow: hidden;
+    -webkit-text-stroke: 0 !important; // HACK to fix blur on iframe
+    -webkit-font-smoothing: antialiased !important;
+
+    // HACKS with media queries to avoid blur effect on panda document
+    @media screen and (max-width: 740px) {
+      width: 44rem;
+      margin: auto;
+    }
+
+    @media screen and (min-width: 834px) and (max-width: 1080px) {
+      width: 44rem;
+      margin: auto;
+    }
+
+    &_open {
+      height: 950px;
+    }
+  }
+
+  &__expand-btn {
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.7s ease;
+
+    .glyphicon {
+      @include themed('color', 'main-text-color');
+    }
+
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 0.857rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    @include themed('color', 'main-text-color');
+    @include themed('border-color', 'headline-1-color');
+  }
+
+  &__document-status {
+    margin: 0 15px 0 auto;
+    font-size: 0.786rem;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+}

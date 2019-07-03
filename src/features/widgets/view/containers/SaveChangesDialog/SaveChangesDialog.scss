@@ -1,0 +1,23 @@
+@import "src/shared/view/styles/mixins";
+
+.save-changes-dialog {
+  width: 24.85rem;
+  padding-bottom: 0.9375rem;
+  text-align: center;
+
+  &__message {
+    padding: 0 2.15rem 1rem;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 6.5rem;
+    margin-right: 0.9375rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

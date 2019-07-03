@@ -1,0 +1,82 @@
+@import 'src/shared/view/styles/variables';
+@import "src/shared/view/styles/mixins";
+
+.notification {
+  $r: &;
+
+  position: fixed;
+  z-index: 1002;
+  top: 0;
+  left: 50%;
+  display: flex;
+  max-width: 42.857rem;
+  padding: 0.79rem 0.71rem;
+  transform: translateX(-50%);
+  animation: fadeInOut 10s ease;
+  color: white;
+  border-radius: 0 0 2px 2px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  justify-content: flex-start;
+
+  &__holder {
+    display: flex;
+
+    &__content {
+      z-index: 1001;
+    }
+  }
+
+  &_kind {
+    &_error {
+      @include themed('background-color', 'main-red-color');
+
+      #{$r}__icon {
+        path:first-child {
+          @include themed('fill', 'main-red-color');
+        }
+      }
+    }
+
+    &_info {
+      @include themed('background-color', 'main-green-color');
+
+      #{$r}__icon {
+        path:first-child {
+          @include themed('fill', 'main-green-color');
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 0.93rem;
+    height: 0.93rem;
+  }
+
+  &__text {
+    padding-left: 0.714rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

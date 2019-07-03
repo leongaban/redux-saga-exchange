@@ -1,0 +1,111 @@
+@import "src/shared/view/styles/mixins";
+
+.single-api-key {
+  padding: 0.72rem;
+  list-style: none;
+  font-size: 0.929rem;
+
+  @include themed('color', 'main-text-color');
+
+  &:nth-child(2n) {
+    @include themed('background-color', 'menu-list-background');
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+  }
+
+  &__details-title {
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__checkbox {
+    display: flex;
+    padding: 0 1.5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    @include mobile {
+      flex-basis: 100%;
+      padding: 0.2rem 0;
+    }
+  }
+
+  &__label {
+    @include themed('color', 'headline-1-color');
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+
+  &__api-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include mobile {
+      margin-right: auto;
+      flex-basis: calc(100% - 2.86rem);
+      flex-grow: 0;
+    }
+  }
+
+  &__api-key {
+    padding-right: 0.9rem;
+    margin: 0 auto 0 0.9rem;
+    flex-shrink: 0;
+
+    @include mobile {
+      order: 1;
+      margin: 0;
+    }
+  }
+
+  &__paragraph {
+    display: flex;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__ip-list-title {
+    padding-top: 0.72rem;
+    margin-bottom: 0.36rem;
+    flex-basis: 100%;
+
+    @include themed('color', 'table-header-cell-title-color');
+
+    &_link {
+      cursor: pointer;
+    }
+  }
+
+  &__ip-list-item {
+    flex-basis: 100%;
+    margin-bottom: 0.43rem;
+  }
+
+  &__ip-list {
+    padding-left: 1.79rem;
+  }
+
+  &__button {
+    width: 2.2857rem;
+    flex-shrink: 0;
+  }
+}

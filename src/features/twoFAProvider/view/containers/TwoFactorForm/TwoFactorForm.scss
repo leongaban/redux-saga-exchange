@@ -1,0 +1,63 @@
+@import "src/shared/view/styles/mixins";
+
+.two-factor-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include themed('color', 'main-text-color');
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__form {
+    flex: 1;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 0.857rem;
+    }
+
+    &-label {
+      margin-bottom: 0.714rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__qr-code {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.429rem;
+    align-items: flex-end;
+
+    @include mobile {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__secret-code {
+    text-align: right;
+
+    @include mobile {
+      text-align: center;
+    }
+
+    &-title {
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    width: 14.143rem;
+  }
+}

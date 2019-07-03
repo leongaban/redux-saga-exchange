@@ -1,0 +1,206 @@
+@import 'src/shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+$horizontal-padding: 0.5rem;
+
+@mixin OrderBookfadeIn {
+  animation: rowBlink;
+  animation-duration: 0.4s;
+}
+
+@keyframes rowBlink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+.order-book-row {
+  $r: &;
+
+  position: relative;
+  display: flex;
+  min-height: 1.714rem;
+  margin-bottom: 0.071rem;
+  padding: 0.357rem 0;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &:hover {
+    @include themed-desktop('background-color', 'order-book-row-hover-background-color');
+
+    #{$r}__bg {
+      &_type {
+        &_ask {
+          @include themed-desktop('background-color', 'order-book-ask-hover-background-color');
+        }
+
+        &_bid {
+          @include themed-desktop('background-color', 'order-book-bid-hover-background-color');
+        }
+      }
+    }
+  }
+
+  &_order-type {
+    &_ask {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &_with-left-padding {
+    padding-left: $horizontal-padding;
+  }
+
+  &_with-right-padding {
+    padding-right: $horizontal-padding;
+  }
+
+  &_vertical {
+    flex-direction: row;
+    padding-right: $horizontal-padding;
+
+    #{$r}__price-wrapper {
+      &_type_ask {
+        justify-content: flex-start;
+      }
+    }
+
+    #{$r}__volume {
+      justify-content: flex-end;
+
+      &_type_ask {
+        padding-left: 0.16rem;
+      }
+    }
+
+    #{$r}__bg {
+      right: 0;
+      left: initial;
+    }
+  }
+
+  &__price-wrapper {
+    z-index: 1;
+    display: flex;
+    flex: 1;
+
+    &_type {
+      &_ask {
+        justify-content: flex-end;
+
+        @include themed('color', 'main-red-color');
+      }
+
+      &_bid {
+        padding-left: 0.2rem;
+
+        @include themed('color', 'main-green-color');
+      }
+    }
+  }
+
+  &__volume {
+    z-index: 1;
+    display: flex;
+    flex: 1;
+
+    &_type {
+      &_bid {
+        padding-left: 0.2rem;
+      }
+
+      &_ask {
+        padding-left: 0.2rem;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.6;
+
+    &_animate {
+      @include OrderBookfadeIn;
+    }
+
+    &_type {
+      &_ask {
+        right: 0;
+
+        @include themed('background-color', 'order-book-ask-background-color');
+      }
+
+      &_bid {
+        left: 0;
+
+        @include themed('background-color', 'order-book-bid-background-color');
+      }
+    }
+  }
+
+  &__triangle {
+    display: flex;
+    width: 0;
+    height: 0;
+    border-top: $horizontal-padding solid transparent;
+    border-bottom: $horizontal-padding solid transparent;
+    align-self: center;
+
+    &_type {
+      &_bid {
+        border-left: $horizontal-padding solid #fec734;
+      }
+
+      &_ask {
+        border-right: $horizontal-padding solid #fec734;
+      }
+    }
+  }
+
+  &__value-part {
+    opacity: 0.95;
+
+    &_greyed-out {
+      opacity: 0.45;
+    }
+  }
+
+  &__total {
+    z-index: 1;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    &_type {
+      &_ask {
+        padding-left: 0.2rem;
+      }
+
+      #{$r}_orientation_horizontal &_bid {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__value,
+  &__total {
+    @include mobile {
+      &:active {
+        font-weight: 700;
+      }
+    }
+
+    @include desktop {
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}

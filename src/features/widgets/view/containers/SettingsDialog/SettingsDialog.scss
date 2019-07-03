@@ -1,0 +1,27 @@
+@import 'src/shared/view/styles/mixins';
+
+.settings-dialog {
+  width: 48.71rem;
+
+  &__section {
+    padding: 2.43rem 1.64rem;
+  }
+
+  &__buttons {
+    display: flex;
+    padding: 1.29rem 1.5rem;
+    border-top: 1px solid;
+    justify-content: flex-end;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-left: 1.43rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

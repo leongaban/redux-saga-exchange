@@ -1,0 +1,157 @@
+@import "src/shared/view/styles/mixins";
+
+.withdraw-coins {
+  @include mobile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__fields-and-details {
+    display: flex;
+    flex-direction: column;
+    padding: 1.43rem 1.57rem 2.14rem 1.71rem;
+
+    @include mobile {
+      padding: 1.21rem 0.71rem;
+    }
+  }
+
+  &__labeled-field {
+    margin-top: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__label {
+    font-size: 0.93rem;
+    font-weight: normal; // TODO to override bootstap. Remove it
+
+    @include themed('color', 'withdraw-coins-dialog-label-color');
+  }
+
+  &__field {
+    margin-top: 0.64rem;
+  }
+
+  &__fields-separator {
+    margin: 0.3rem;
+
+    @include themed('color', 'withdraw-coins-dialog-label-color');
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 1.14rem 1.43rem 1.36rem;
+    border: 1px solid;
+    border-radius: 4px;
+    justify-content: space-between;
+
+    @include themed('background-color', 'withdraw-coins-dialog-details-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &-title {
+      text-transform: uppercase;
+      font-size: 0.86rem;
+      font-weight: 600;
+
+      @include themed('color', 'withdraw-coins-dialog-title-color');
+    }
+
+    &-withdraw-value {
+      white-space: pre-wrap;
+      text-transform: uppercase;
+      word-break: break-all;
+      font-size: 2.29rem;
+      font-weight: 300;
+
+      @include themed('color', 'withdraw-coins-dialog-value-color');
+    }
+
+    &-commission-presentation {
+      margin-top: 0.714rem;
+      font-size: 0.99rem;
+      font-weight: 500;
+
+      @include themed('color', 'withdraw-coins-dialog-details-commision-color');
+
+      @include mobile {
+        font-size: 0.86rem;
+      }
+    }
+
+    &-available-balance {
+      margin-top: 1.93rem;
+      font-size: 0.99rem;
+      font-weight: 500;
+
+      @include themed('color', 'withdraw-coins-dialog-details-commision-color');
+
+      @include mobile {
+        font-size: 0.86rem;
+        margin-top: 0.2rem;
+      }
+
+      &-value {
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding: 1.5rem 1.36rem;
+    border-top: 1px solid;
+    justify-content: flex-end;
+
+    @include themed('border-top-color', 'widget-border-color');
+
+    @include mobile {
+      padding: 0.5rem 0.71rem;
+    }
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-left: 1.43rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.714rem;
+
+    &-icon {
+      width: 1.071rem;
+      height: 1.071rem;
+      cursor: pointer;
+    }
+  }
+
+  &__new-address {
+    display: flex;
+    margin-top: 0.5rem;
+
+    &-label-field {
+      flex: 0.3;
+    }
+
+    &-field {
+      flex: 0.7;
+    }
+  }
+}

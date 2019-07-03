@@ -1,0 +1,18 @@
+@import "~shared/view/styles/variables";
+
+.login-form {
+  &__section {
+    display: flex;
+    padding: 0.429rem 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    margin-top: 2.143rem;
+  }
+
+  &__error-section {
+    padding-top: 1.429rem;
+  }
+}

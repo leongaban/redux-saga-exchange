@@ -1,0 +1,16 @@
+@import "src/shared/view/styles/mixins";
+
+.coin-cell {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 1.143rem;
+    height: 1.143rem;
+  }
+
+  &__label {
+    margin-left: 0.714rem;
+    font-size: 0.857rem;
+  }
+}

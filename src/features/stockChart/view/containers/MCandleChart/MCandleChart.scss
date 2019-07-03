@@ -1,0 +1,9 @@
+@import "src/shared/view/styles/mixins";
+
+.m-candle-chart {
+  &__chart {
+    height: 19rem;
+    display: flex;
+    margin-top: 1rem;
+  }
+}

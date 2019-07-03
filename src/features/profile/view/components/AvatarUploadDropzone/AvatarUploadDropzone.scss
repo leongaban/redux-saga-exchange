@@ -1,0 +1,39 @@
+.avatar-upload-dropzone {
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    color: #fff;
+    background-color: rgba(139, 144, 162, 0.9);
+    font-family: "Work Sans";
+    font-size: 0.929rem;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      width: 22.857rem;
+      height: 13.5rem;
+      border: 2px dashed #e6eaee;
+      border-radius: 0.714rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    width: 3.714rem;
+    height: 2.857rem;
+    margin-bottom: 1.786rem;
+  }
+
+  &__dropzone {
+    position: relative;
+  }
+}

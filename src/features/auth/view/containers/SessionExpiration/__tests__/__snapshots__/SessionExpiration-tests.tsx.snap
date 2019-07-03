@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feature Auth container SessionExpiration endSessionTime: 320, must render timer with 05:20 1`] = `
+<Modal
+  hasCloseCross={true}
+  isOpen={false}
+  onClose={[Function]}
+  title="session expiration"
+>
+  <div
+    className="session-expiration__clock"
+  />
+  <div
+    className="session-expiration__title"
+  >
+    AUTH:SESSION-EXPIRATION:SESSION-EXPIRES
+  </div>
+  <div
+    className="session-expiration__timer"
+  >
+    <div
+      className="session-expiration__minutes"
+    >
+      05
+    </div>
+    :
+    <div
+      className="session-expiration__seconds"
+    >
+      20
+    </div>
+  </div>
+  <div
+    className="session-expiration__button"
+  >
+    <Button
+      onClick={[Function]}
+      size="large"
+    >
+      AUTH:SESSION-EXPIRATION:BUTTON-DONT-END-SESSION
+    </Button>
+  </div>
+</Modal>
+`;
+
+exports[`Feature Auth container SessionExpiration must rendered without crash 1`] = `
+<Modal
+  hasCloseCross={true}
+  isOpen={false}
+  onClose={[Function]}
+  title="session expiration"
+>
+  <div
+    className="session-expiration__clock"
+  />
+  <div
+    className="session-expiration__title"
+  >
+    AUTH:SESSION-EXPIRATION:SESSION-EXPIRES
+  </div>
+  <div
+    className="session-expiration__timer"
+  >
+    <div
+      className="session-expiration__minutes"
+    >
+      00
+    </div>
+    :
+    <div
+      className="session-expiration__seconds"
+    >
+      00
+    </div>
+  </div>
+  <div
+    className="session-expiration__button"
+  >
+    <Button
+      onClick={[Function]}
+      size="large"
+    >
+      AUTH:SESSION-EXPIRATION:BUTTON-DONT-END-SESSION
+    </Button>
+  </div>
+</Modal>
+`;

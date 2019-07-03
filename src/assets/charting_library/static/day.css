@@ -1,0 +1,61 @@
+.chart-page .chart-container {
+  border: none;
+}
+
+.chart-page {
+  background: transparent;
+}
+
+/* indicators dialog styles */
+
+.chart-page.on-widget .tv-dialog {
+  background-color: #fff;
+  color: #7e849e;
+}
+
+.chart-page.on-widget .tv-dialog__title {
+  color: #7e849e;
+}
+
+.chart-page.on-widget .tv-dialog__section--title {
+  border-color: #e6eaee;
+}
+
+.chart-page.on-widget .feature-no-touch .tv-insert-study-item:hover {
+  background-color: #fafbfc;
+}
+
+.chart-page.on-widget .tv-insert-indicator-dialog__search-control {
+  border-color: #e6eaee;
+}
+
+.chart-page.on-widget .tv-insert-indicator-dialog__search-control input {
+  background-color: #fff;
+  color: #354052;
+  border-color: #e6eaee;
+}
+
+/* left toolbar styles  */
+
+.layout__area--left .apply-common-tooltip.common-tooltip-vertical {
+  background-color: #fff !important;
+}
+
+/* below bad selectors, but for now we dont have another ways */
+.layout__area--left .group-2JyOhh7Z- {
+  background-color: #fff !important;
+}
+
+html.theme-dark .container-3_8ayT2Q- .background-Q1Fcmxly- {
+  fill: #fff;
+  stroke: #dadde0;
+}
+
+html.feature-no-touch.theme-dark .container-3_8ayT2Q-:hover .background-Q1Fcmxly- {
+  fill: #3bb3e4;
+  stroke: #299dcd;
+}
+
+.toggleButton-13QgefpG- {
+  bottom: 50%;
+}

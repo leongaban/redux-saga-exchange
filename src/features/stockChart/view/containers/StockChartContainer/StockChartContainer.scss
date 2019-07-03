@@ -1,0 +1,52 @@
+@import 'src/shared/view/styles/mixins';
+@import "~shared/view/styles/variables";
+
+.stock-chart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &__upper-part {
+    @include mobile {
+      margin-bottom: 1rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__main-content {
+    display: flex;
+    flex: 1;
+
+    @include mobile {
+      position: relative;
+      border-radius: 0.3rem;
+      border: 1px solid;
+    }
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__error {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.43rem;
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__stock-chart {
+    display: none;
+    flex-direction: column;
+    flex: 1 100%;
+
+    &_visible {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+@import 'src/shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+@mixin disable() {
+  cursor: default;
+  border: 1px solid #e6eaee;
+
+  @include themed('background-color', 'button-text-red-disabled-background-color');
+  @include themed('color', 'button-text-red-disabled-color');
+}
+
+.button {
+  $r: &;
+
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  outline: none;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.857rem;
+  font-weight: 600;
+
+  @include themed('border-color', 'button-main-border-color');
+
+  &:focus &__content {
+    outline: 0.2rem solid;
+
+    @include themed('outline-color', 'nav-menu-item-active-color');
+  }
+
+  &_text-transform {
+    &_uppercase {
+      text-transform: uppercase;
+    }
+
+    &_capitalize {
+      text-transform: capitalize;
+    }
+  }
+
+  &_size {
+    &_large {
+      height: 2.571rem;
+    }
+
+    &_medium {
+      height: 2.2857rem;
+    }
+
+    &_small {
+      height: 1.7143rem;
+    }
+  }
+
+  &_color {
+    &_green {
+      @include themed('background-color', 'button-green-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-green-hover');
+      }
+
+      &:active {
+        @include themed('background-color', 'button-green-active-background-color');
+      }
+
+      &:disabled {
+        @include disable();
+      }
+    }
+
+    &_text-red {
+      font-size: 0.6429rem;
+
+      @include themed('color', 'button-text-red-color');
+      @include themed('border-color', 'button-border-color');
+      @include themed('background-color', 'button-text-red-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-text-red-hover-background-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+
+    &_text-blue {
+      font-size: 0.6429rem;
+
+      @include themed('color', 'button-text-blue-color');
+      @include themed('border-color', 'button-border-color');
+      @include themed('background-color', 'button-text-red-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-text-red-hover-background-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+
+    &_text-green {
+      font-size: 0.6429rem;
+
+      @include themed('color', 'button-text-green-color');
+      @include themed('border-color', 'button-border-color');
+      @include themed('background-color', 'button-text-red-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-text-red-hover-background-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+
+    &_blue {
+      @include themed('background-color', 'button-blue-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-blue-hover');
+      }
+
+      &:active {
+        @include themed('background-color', 'button-blue-active-background-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+
+    &_red {
+      @include themed('background-color', 'button-red-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-red-hover');
+      }
+
+      &:active {
+        @include themed('background-color', 'button-red-active-background-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+
+    &_black-white {
+      @include themed('color', 'button-black-white-color');
+      @include themed('border-color', 'button-border-color');
+      @include themed('background-color', 'button-black-white-background-color');
+
+      &:hover {
+        @include themed('background-color', 'button-black-white-hover');
+      }
+
+      &:active {
+        border-color: none;
+
+        @include themed('background-color', 'button-border-color');
+      }
+
+      &:disabled {
+        cursor: default;
+
+        @include disable();
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    &_kind {
+      &_plus {
+        width: 0.857rem;
+        height: 0.857rem;
+      }
+
+      &_trash {
+        width: 0.857rem;
+        height: 1rem;
+      }
+    }
+  }
+}

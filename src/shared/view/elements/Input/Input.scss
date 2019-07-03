@@ -1,0 +1,129 @@
+@import 'src/shared/view/styles/mixins';
+
+@mixin text-styles() {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.857rem;
+  line-height: 1.286rem;
+}
+
+.input {
+  $r: &;
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  &__field {
+    @include text-styles();
+
+    width: 100%;
+    padding: 0.429rem 0.929rem;
+    border: 1px solid;
+    border-radius: 4px;
+    outline: none;
+
+    @include themed('border-color', 'input-border-color');
+    @include themed('color', 'input-color');
+    @include themed('background-color', 'input-background-color');
+
+    @include mobile {
+      padding: 0.429rem 0.3rem;
+    }
+
+    &::placeholder {
+      @include themed('color', 'input-color');
+    }
+
+    &_search {
+      padding: 0.129rem 0.929rem;
+      border: 1px solid;
+      font-size: 0.8571rem;
+    }
+
+    &:active {
+      @include themed('border-color', 'input-active-border-color');
+    }
+
+    &:focus {
+      @include themed('border-color', 'input-active-border-color');
+    }
+
+    &:read-only {
+      @include themed('border-color', 'input-border-color');
+    }
+
+    &:-webkit-autofill {
+      @include themed('box-shadow', 'webkit-input-auto-fill-color');
+      @include themed('-webkit-text-fill-color', 'input-color');
+    }
+
+    &::placeholder {
+      @include text-styles();
+
+      opacity: 0.25;
+    }
+
+    &_with-unit {
+      @include desktop {
+        padding-right: 2rem;
+      }
+    }
+
+    &_error,
+    &_error:active,
+    &_error:focus {
+      padding-right: 2.143rem;
+
+      @include themed('border-color', 'input-error-border-color');
+    }
+
+    &_icon {
+      padding-left: 1.9rem;
+    }
+
+    &_error + #{$r}__icon {
+      path:first-child {
+        @include themed('fill', 'main-red-color');
+      }
+    }
+
+    &_search + #{$r}__icon {
+      width: 0.7143rem;
+      height: 0.7143rem;
+    }
+
+    &_extent {
+      &_small {
+        height: 1.6rem;
+      }
+
+      &_middle {
+        height: 2.1rem;
+      }
+    }
+
+    &_disabled {
+      @include themed('background-color', 'input-disabled-background-color');
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0.857rem;
+    width: 1.143rem;
+    height: 1.143rem;
+  }
+
+  &__unit {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 0.86rem;
+
+    @include themed('color', 'input-unit-color');
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

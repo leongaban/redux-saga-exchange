@@ -1,0 +1,83 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.message {
+  display: flex;
+  padding: 1rem 0;
+
+  &__avatar {
+    flex: 0 0 2.7rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+  }
+
+  &__content {
+    flex: 1;
+    margin-left: 0.8rem;
+  }
+
+  &__upper-panel {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name-and-date {
+    display: flex;
+    font-size: 0.9rem;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 1rem;
+  }
+
+  &__name {
+    margin-right: 1.5rem;
+    font-weight: bold;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__date {
+    @include themed('color', 'chat-widget-date-color');
+  }
+
+  &__edited {
+    @include themed('color', 'chat-widget-edited-color');
+
+    font-size: 0.9rem;
+    font-style: oblique;
+  }
+
+  &__edit-icon {
+    width: 1em;
+    height: 1em;
+    transform: translate(-0.5rem, 0.5rem);
+    cursor: pointer;
+
+    @include themed('color', 'chat-widget-button-color');
+
+    &:hover {
+      @include themed('color', 'main-text-color');
+    }
+  }
+
+  &__text {
+    white-space: pre-line;
+    word-break: break-all;
+    word-break: break-word;
+    font-size: 1rem;
+
+    p {
+      margin: 0;
+    }
+
+    @include themed('color', 'main-text-color');
+
+    &-element {
+      &_link {
+        color: $color-blue;
+      }
+    }
+  }
+}

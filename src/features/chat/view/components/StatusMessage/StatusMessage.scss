@@ -1,0 +1,21 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.status-message {
+  @include themed('background-color', 'chat-widget-status-message-bg');
+  @include themed('color', 'chat-widget-status-message-color');
+
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+
+  @include themed('border-color', 'widget-border-color');
+
+  font-size: 0.9rem;
+  font-style: oblique;
+  padding: 0.3rem;
+  text-align: center;
+
+  & + & {
+    border-top: 0;
+  }
+}

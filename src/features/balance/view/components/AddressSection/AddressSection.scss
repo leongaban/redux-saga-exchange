@@ -1,0 +1,43 @@
+@import "src/shared/view/styles/mixins";
+
+.address-section {
+  & + & {
+    margin-top: 20px;
+  }
+
+  &__label {
+    font-size: 0.93rem;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__field-and-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.64rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__field {
+    flex: 1;
+    padding: 0.357rem 0.93rem;
+    border: 1px solid #e6eaee;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-basis: 100%;
+
+    @include mobile {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-left: 0.71rem;
+    flex-shrink: 0;
+  }
+}

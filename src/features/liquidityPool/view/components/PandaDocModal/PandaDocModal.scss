@@ -1,0 +1,28 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.panda-doc-modal {
+  position: relative;
+  overflow: auto;
+
+  &__iframe {
+    height: 80vh;
+    min-width: 600px;
+    max-width: 800px;
+  }
+
+  @include mobile {
+    width: 90vw;
+  }
+
+  @include themed('background-color', 'widget-background-color');
+  @include themed('border-color', 'widget-border-color');
+
+  @media only screen and (max-width: 640px) {
+    width: auto;
+  }
+
+  &__button {
+    padding: 10px;
+  }
+}

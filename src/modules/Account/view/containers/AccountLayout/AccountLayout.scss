@@ -1,0 +1,26 @@
+@import "src/shared/view/styles/mixins";
+
+.account-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    border: 1px solid;
+
+    @include themed('border-color', 'widget-border-color');
+    @include themed('background-color', 'widget-background-color');
+  }
+
+  &__content {
+    position: relative;
+    width: 48.571rem;
+    border-top: 1px solid;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__header {
+    padding: 0.714rem;
+  }
+}

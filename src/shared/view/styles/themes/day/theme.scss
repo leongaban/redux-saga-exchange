@@ -1,0 +1,159 @@
+@import './variables';
+
+$day: (
+  // text styles
+  'headline-1-color': $grey-blue-light,
+  'headline-1-color-disabled': $grey-blue-lightest,
+  'headline-2-color': $white,
+  'main-text-color': $grey-blue-darkest,
+  'secondary-text-color': $grayish-blue,
+  'main-green-color': $green,
+  'main-red-color': $red,
+  // main styles
+  'app-background-color': $white,
+  'widget-background-color': $white,
+  'widget-border-color': $grey-light,
+  'widget-shadow': $shadow,
+  'nav-menu-item-active-color': $blue-light,
+  'menu-list-background': $white,
+  'menu-entry-hover': $grey-lightest,
+  // table styles
+  'table-header-border': $grey-light,
+  'table-header-background-color': $white,
+  'table-header-cell-title-color': $grey-blue,
+  'table-even-row-background-color': $grey-lightest,
+  'table-active-row-background-color': $blue-light,
+  // checkbox styles
+  'checkbox-border-color': $grey-light,
+  'checkbox-background-color': $grey-lightest,
+  'checkbox-label-color': $grey-blue-darkest,
+  'checkbox-active-background-color': $blue-light,
+  'checkbox-active-border-color': $blue,
+  'checkbox-disabled-background-color': $grey-blue-light,
+  'checkbox-disabled-border-color': $grey-blue-light,
+  // input and textarea styles
+  'input-border-color': $grey-light,
+  'input-color': $grey-blue-darkest,
+  'input-background-color': $white,
+  'input-disabled-background-color': $grey-f1,
+  'input-active-border-color': $grey-blue,
+  'input-error-border-color': $red,
+  'input-unit-color': $grey-blue-dark,
+  // radio-button styles
+  'radio-btn-color': $grey-blue-darkest,
+  'radio-btn-border-color': $grey-light,
+  'radio-btn-background-color': $grey-lightest,
+  'radio-btn-active-color': $white,
+  'radio-btn-active-border-color': $blue,
+  'radio-btn-active-background-color': $blue-light,
+  'radio-btn-disabled-color': $grey-blue-light,
+  // balance widget
+  'balance-widget-element-background-color': $grey-lightest,
+  'balance-widget-element-value-color': $grey-blue-darkest,
+  'balance-widget-element-code-color': $grey-blue,
+  // select styles
+  'select-border-color': $grey-light,
+  'select-background-color': $white,
+  'select-header-option-color': $grey-blue-light,
+  'select-option-hover-background-color': $grey-lightest,
+  'select-option-value-color': $grey-blue-darkest,
+  // place order form styles
+  'place-order-title-color': $grey-blue-light,
+  'place-order-balance-title-color': $grey-blue,
+  'place-order-balance-value-color': $grey-blue-darkest,
+  // buttons styles
+  'button-border-color': $grey-light,
+  'button-main-border-color': $white,
+  'button-text-blue-color': $blue-light,
+  'button-text-green-color': $green,
+  'button-text-red-color': $red,
+  'button-text-red-background-color': $grey-lightest,
+  'button-text-red-hover-background-color': $white,
+  'button-text-red-disabled-background-color': $grey-light,
+  'button-text-red-disabled-color': $grey-blue-light,
+  // red button
+  'button-red-background-color': $red,
+  'button-red-hover': $red-dark,
+  'button-red-active-background-color': $red-dark,
+  // green button
+  'button-green-background-color': $green,
+  'button-green-hover': $green-light,
+  'button-green-active-background-color': $green-dark,
+  // blue button
+  'button-blue-background-color': $blue-light,
+  'button-blue-hover': $blue,
+  'button-blue-active-background-color': $blue-dark,
+  // black-white
+  'button-black-white-color': $grey-blue-darkest,
+  'button-black-white-background-color': $grey-lightest,
+  'button-black-white-hover': $white,
+  // calendar styles
+  'calendar-background-color': $white,
+  'calendar-day-color': $grey-blue-light,
+  'calendar-day-name-color': $grey-blue-light,
+  'calendar-day-disabled-color': $grey-light,
+  'calendar-header-text-color': $grey-blue-light,
+  // assets table
+  'assets-table-balance-code-label': $black,
+  // tooltip styles
+  'tooltip-color': $grey-blue-darkest,
+  'tooltip-background-color': $white,
+  // withdraw-coins-dialog styles
+  'withdraw-coins-dialog-details-commision-color': $black,
+  'withdraw-coins-dialog-label-color': $black,
+  'withdraw-coins-dialog-details-background-color': $grey-lightest,
+  'withdraw-coins-dialog-title-color': $grey-blue,
+  'withdraw-coins-dialog-value-color': $grey-blue-darkest,
+  // charts styles
+  'chart-left-side-holder': $black,
+  // order book
+  'order-book-bid-background-color': $green-transparent,
+  'order-book-ask-background-color': $red-transparent,
+  'order-book-bid-hover-background-color': $green-transparent,
+  'order-book-ask-hover-background-color': $red-transparent,
+  'order-book-row-hover-background-color': $grey-f1,
+  'order-book-bid-color': $green,
+  'order-book-ask-color': $red,
+  'order-book-header-color': $grey-blue-light,
+  'order-book-color': $grey-blue-darkest,
+  'order-book-inline-price-background-color': $grey-lightest,
+  // scrollbar styles
+  'scrollbar-background': $white,
+  'scrollbar-thumb': $grey-light,
+  'scrollbar-thumb:hover': $grey-blue,
+  // exchange rates styles
+  'exchange-rates-selected-text-color': $white,
+  'exchange-rates-favorite-icon-stroke': $grey-blue-light,
+  'exchange-rates-favorite-icon-fill': $yellow,
+  'webkit-input-auto-fill-color': $webkit-input-auto-fill-color,
+  // pagination-controls
+  'pagination-controls-pagination-control-background-color':  $grey-lightest,
+  'pagination-controls-pagination-control-color': $grey-blue-darkest,
+  'pagination-controls-pagination-control-border-color': $grey-light,
+  'pagination-controls-pagination-control-disabled-background-color': $grey-e3,
+  'pagination-controls-pagination-control-disabled-color': $grey-blue-light,
+  'pagination-controls-pagination-control-active-color': $white,
+  'pagination-controls-pagination-control-active-background-color': $blue-light,
+  // document-viewer
+  'document-viewer-background-color': $grey-e3,
+  // admin page
+  'admin-sidebar-background-color': $grey-blue-darkest,
+  //operation history status
+  'operation-history-status-complete-bg': $green-light-transparent,
+  'operation-history-status-in-progress-bg': $yellow-transparent,
+  'operation-history-status-cancelled-bg': $red-light-transparent,
+  'operation-history-status-in-progress-color': $yellow,
+  // modal
+  'modal-refining-text-color': $blue,
+  // chat widget
+  'chat-widget-date-color': $grey-blue-darkest,
+  'chat-widget-day-separator-color': $blue-light,
+  'chat-widget-status-message-bg': $grey-light,
+  'chat-widget-status-message-color': $grey-blue-darkest,
+  'chat-widget-button-color': $blue-light,
+  'chat-widget-edited-color': $grey-blue-darkest,
+  'chat-widget-offline-overlay-bg': rgba($white, 0.8),
+  // calculator
+  'calculator-background-color': $white,
+  'calculator-border-color': $grey-light,
+);

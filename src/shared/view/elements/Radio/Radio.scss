@@ -1,0 +1,125 @@
+@import 'src/shared/view/styles/mixins';
+
+.radio-button {
+  $r: &;
+
+  width: 100%;
+  margin-bottom: 0; // TODO delete after deleted bootstrap
+
+  &__fake-input {
+    display: none;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    border: 0.0714rem solid;
+    align-items: center;
+    justify-content: center;
+
+    @include themed('color', 'radio-btn-color');
+    @include themed('background-color', 'radio-btn-background-color');
+    @include themed('border-color', 'radio-btn-border-color');
+
+    &_position {
+      &_left {
+        border-top-left-radius: 0.2857rem;
+        border-bottom-left-radius: 0.2857rem;
+      }
+
+      &_right {
+        border-top-right-radius: 0.2857rem;
+        border-bottom-right-radius: 0.2857rem;
+      }
+
+      &_single {
+        border-radius: 0.2857rem;
+      }
+    }
+
+    &_extent {
+      &_large {
+        height: 2.5714rem;
+      }
+
+      &_middle {
+        height: 2.1429rem;
+      }
+
+      &_small {
+        height: 1.7143rem;
+      }
+    }
+
+    &_with-text-and-icon {
+      #{$r}__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #{$r}__label {
+        margin: 0 0.4rem;
+      }
+    }
+  }
+
+  &_checked &__input {
+    @include themed('color', 'radio-btn-active-color');
+
+    &_colors-set {
+      &_primary {
+        @include themed('border-color', 'radio-btn-active-border-color');
+        @include themed('background-color', 'radio-btn-active-background-color');
+      }
+
+      &_buy {
+        @include themed('background-color', 'button-green-background-color');
+      }
+
+      &_sell {
+        @include themed('background-color', 'button-red-background-color');
+      }
+
+      &_buy,
+      &_sell {
+        @include themed-mobile('border-color', 'radio-btn-active-border-color');
+        @include themed-mobile('background-color', 'radio-btn-active-background-color');
+      }
+    }
+  }
+
+  &_disabled &__input {
+    @include themed('color', 'radio-btn-disabled-color');
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    align-items: center;
+    align-content: center;
+
+    &_font-size {
+      &_big {
+        font-size: 0.9286rem;
+      }
+
+      &_small {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &__tooltip {
+    width: 0.926rem;
+    height: 0.926rem;
+    margin-left: 0.5rem;
+  }
+}

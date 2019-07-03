@@ -1,0 +1,8 @@
+.widgets {
+  & > .react-grid-item {
+    & > .react-resizable-handle { // Default very big
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

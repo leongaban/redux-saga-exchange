@@ -1,0 +1,115 @@
+@import "~shared/view/styles/variables";
+@import "src/shared/view/styles/mixins";
+
+.css-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(139, 144, 162, 0.4);
+  }
+
+  &__header {
+    display: flex;
+    padding: 0.79rem 0.79rem 0.79rem 1.5rem;
+
+    /* doiuse-disable */
+
+    cursor: grab;
+
+    /* doiuse-enable */
+
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+
+    @include themed('color', 'headline-1-color');
+
+    &_center {
+      justify-content: center;
+    }
+
+    &_with-bottom-border {
+      border-bottom: 1px solid;
+
+      @include themed('border-color', 'widget-border-color');
+    }
+  }
+
+  &__cross {
+    position: relative;
+    width: 0.6rem;
+    height: 0.6rem;
+    cursor: pointer;
+    vertical-align: middle;
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0.3rem;
+      width: 0.07rem;
+      height: 0.6rem;
+      content: '';
+
+      @include themed('background-color', 'headline-1-color');
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &-wrapper {
+      display: flex;
+      width: 1.71rem;
+      height: 1.71rem;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        @include themed('background-color', 'menu-entry-hover');
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid;
+    box-shadow: 0 0.71rem 0.71rem 0 rgba(53, 64, 82, 0.1);
+
+    @include themed('background-color', 'tooltip-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &_with-scroll {
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+  }
+
+  &__left-part {
+    display: flex;
+  }
+
+  &__refining-text {
+    margin-left: 0.71rem;
+    font-weight: bold;
+
+    @include themed('color', 'modal-refining-text-color');
+  }
+}

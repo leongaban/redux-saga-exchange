@@ -1,0 +1,24 @@
+.announcements-form {
+  width: 100%;
+
+  &__action-buttons {
+    max-width: 300px;
+    display: flex;
+
+    > * {
+      margin-right: 0.714rem;
+    }
+  }
+
+  &__modal-buttons {
+    display: flex;
+  }
+
+  &__editor-field {
+    padding: 0 1.429rem 1.429rem;
+  }
+}
+
+.mce-notification {
+  display: none !important;
+}

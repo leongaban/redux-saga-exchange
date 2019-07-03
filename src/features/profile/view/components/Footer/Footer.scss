@@ -1,0 +1,42 @@
+@import "src/shared/view/styles/mixins";
+
+.profile-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.286rem 1.571rem;
+  border-top: 1px solid;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include themed('border-color', 'table-header-border');
+
+  &__info-text {
+    font-size: 0.8rem;
+  }
+
+  .theme_moon &__info-text {
+    color: white;
+  }
+
+  .theme_night &__info-text {
+    color: white;
+  }
+
+  &__button {
+    position: relative;
+    width: 7.143rem;
+    margin-top: 10px;
+    margin-right: 1.429rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__caution {
+    width: 80%;
+    font-size: 0.857rem;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+}

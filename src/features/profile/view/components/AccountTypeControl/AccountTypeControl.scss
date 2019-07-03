@@ -1,0 +1,21 @@
+@import "src/shared/view/styles/mixins";
+
+.account-type-control {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1.714rem;
+  padding: 1.714rem 0 1.071rem;
+
+  &__title {
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    flex-basis: 100%;
+
+    @include themed('color', 'main-text-color');
+  }
+
+  &__button {
+    flex-basis: 50%;
+  }
+}

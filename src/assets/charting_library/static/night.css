@@ -1,0 +1,61 @@
+.chart-page .chart-container {
+  border: none;
+}
+
+.chart-page {
+  background: transparent;
+}
+
+/* indicators dialog styles */
+
+.chart-page.on-widget .tv-dialog {
+  background-color: #14141f;
+  color: #b3b3b3;
+}
+
+.chart-page.on-widget .tv-dialog__title {
+  color: #b3b3b3;
+}
+
+.chart-page.on-widget .tv-dialog__section--title {
+  border-color: #2d2f3c;
+}
+
+.chart-page.on-widget .feature-no-touch .tv-insert-study-item:hover {
+  background-color: #181824;
+}
+
+.chart-page.on-widget .tv-insert-indicator-dialog__search-control {
+  border-color: #2d2f3c;
+}
+
+.chart-page.on-widget .tv-insert-indicator-dialog__search-control input {
+  background-color: #14141f;
+  color: #fff;
+  border-color: #2d2f3c;
+}
+
+/* left toolbar styles  */
+
+.layout__area--left .apply-common-tooltip.common-tooltip-vertical {
+  background-color: #14141f !important;
+}
+
+/* below bad selectors, but for now we dont have another ways */
+.layout__area--left .group-2JyOhh7Z- {
+  background-color: #14141f !important;
+}
+
+html.theme-dark .container-3_8ayT2Q- .background-Q1Fcmxly- {
+  stroke: #14141f;
+  fill: #14141f;
+}
+
+html.feature-no-touch.theme-dark .container-3_8ayT2Q-:hover .background-Q1Fcmxly- {
+  stroke: #3bb3e4;
+  fill: #299dcd;
+}
+
+.toggleButton-13QgefpG- {
+  bottom: 50%;
+}

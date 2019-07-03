@@ -1,0 +1,39 @@
+@import "src/shared/view/styles/mixins";
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  height: 100%;
+  margin-top: 1.276rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  align-items: center;
+
+  &__controls {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #e6eaee;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__search {
+    width: 12rem;
+    border-bottom: none;
+  }
+
+  &__table {
+    width: 100%;
+    height: 88%;
+    border: 1px solid;
+    border-top: none;
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__add-market-button {
+    width: 12%;
+  }
+}

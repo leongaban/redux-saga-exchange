@@ -1,0 +1,42 @@
+@import "src/shared/view/styles/mixins";
+
+.assets-table {
+  overflow-x: auto;
+
+  &__action {
+    &-column {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      path {
+        @include themed('fill', 'main-red-color');
+      }
+    }
+
+    &-buttons {
+      display: flex;
+    }
+
+    &-button {
+      width: 5rem;
+      margin-left: 0.357rem;
+
+      &-simplex {
+        width: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__warning-icon {
+    width: 0.714rem;
+    height: 0.714rem;
+    margin-right: 0.357rem;
+  }
+}

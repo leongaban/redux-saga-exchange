@@ -1,0 +1,26 @@
+@import "src/shared/view/styles/mixins";
+
+.lined-section {
+  margin: 0 1.714rem;
+  padding: 1.714rem 0 1.071rem;
+
+  @include mobile {
+    margin: 0 0.714rem;
+    padding: 1.071rem 0;
+  }
+
+  &_with-border {
+    border-bottom: 1px solid;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.857rem;
+    font-weight: 500;
+
+    @include themed('color', 'main-text-color');
+    @include themed('border-color', 'headline-1-color');
+  }
+}

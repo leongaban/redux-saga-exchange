@@ -1,0 +1,1572 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Tradeio API"
+  },
+  "paths": {
+    "/frontoffice/api/key": {
+      "get": {
+        "tags": [
+          "ApiKey"
+        ],
+        "operationId": "ApiKeyGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Tradeio.Api.Services.ApiKeyInfo"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ApiKey"
+        ],
+        "operationId": "ApiKeyPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Services.ApiKeyFields"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Services.ApiKeyInfo"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/key/{publicKey}": {
+      "put": {
+        "tags": [
+          "ApiKey"
+        ],
+        "operationId": "ApiKeyByPublicKeyPut",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "fields",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Services.ApiKeyFields"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Services.ApiKeyInfo"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ApiKey"
+        ],
+        "operationId": "ApiKeyByPublicKeyDelete",
+        "consumes": [],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "publicKey",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/info": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "operationId": "ApiInfoGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Response.InfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/ticker/{pair}": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "operationId": "ApiTickerByPairGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "pair",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/Tradeio.Api.Response.PairTicker"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/depth/{pair}": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "operationId": "ApiDepthByPairGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "pair",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/Tradeio.Api.Response.PairDepth"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/trades/{pair}": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "operationId": "ApiTradesByPairGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "pair",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Tradeio.Api.Response.PairTrade"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/sign-in": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "operationId": "ApiSign-inPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.LoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.LoginResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/sign-out": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "operationId": "ApiSign-outPost",
+        "consumes": [],
+        "produces": [],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile": {
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfileGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.GetProfileResponse"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfilePut",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.UpdateBasicVerificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfilePost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.CreateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.CreateAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/referal-info": {
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfileReferal-infoGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Response.ReferalInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/confirm-email": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfileConfirm-emailPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.ConfirmEmailRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/resend-confirmation-email": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfileResend-confirmation-emailPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.ResendConfirmEmailRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/reset-password": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfileReset-passwordPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.ResetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/password": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfilePasswordPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.UpdatePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/profile/2fa": {
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfile2faGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.TwoFactorAuthSecretResponse"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfile2faPut",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.Toggle2FaRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.TwoFactorAuthSecretResponse"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "operationId": "ApiProfile2faPost",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.TwoFactorAuthSecretResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/backoffice/referals": {
+      "get": {
+        "tags": [
+          "Referal"
+        ],
+        "operationId": "BackofficeReferalsGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "PerPage",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/MyExchange.BackOffice.CollectionResponse`2[[System.Collections.Generic.IEnumerable`1[[MyExchange.BackOffice.ReferalResponse, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MyExchange.BackOffice.ReferalFilters, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/backoffice/referal/{userId}/details": {
+      "get": {
+        "tags": [
+          "Referal"
+        ],
+        "operationId": "BackofficeReferalByUserIdDetailsGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/MyExchange.BackOffice.ReferalDetailsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/backoffice/referal/{referalId}/affiliates": {
+      "get": {
+        "tags": [
+          "Referal"
+        ],
+        "operationId": "BackofficeReferalByReferalIdAffiliatesGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "referalId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "PerPage",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/MyExchange.BackOffice.CollectionResponse`2[[System.Collections.Generic.IEnumerable`1[[MyExchange.BackOffice.ReferalResponse, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MyExchange.BackOffice.ReferalFilters, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/backoffice/affiliate/{userId}/details": {
+      "get": {
+        "tags": [
+          "Referal"
+        ],
+        "operationId": "BackofficeAffiliateByUserIdDetailsGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "PerPage",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/MyExchange.BackOffice.CollectionResponse`2[[System.Collections.Generic.IEnumerable`1[[MyExchange.BackOffice.AffiliateDetailResponse, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MyExchange.BackOffice.Paginal, Tradeio.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/order": {
+      "post": {
+        "tags": [
+          "Trade"
+        ],
+        "operationId": "ApiOrderPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.OrderRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.OrderResponse"
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/orders/{orderId}": {
+      "delete": {
+        "tags": [
+          "Trade"
+        ],
+        "operationId": "ApiOrdersByOrderIdDelete",
+        "consumes": [],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/orders/my": {
+      "get": {
+        "tags": [
+          "Trade"
+        ],
+        "operationId": "ApiOrdersMyGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Tradeio.Api.Controllers.OrderInfo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontoffice/api/tapi": {
+      "post": {
+        "tags": [
+          "TradeApi"
+        ],
+        "operationId": "ApiTapiPost",
+        "consumes": [],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "formCollection",
+            "in": "formData",
+            "required": false,
+            "type": "array",
+            "items": {},
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/frontoffice/api/wallet/address": {
+      "get": {
+        "tags": [
+          "Wallet"
+        ],
+        "operationId": "ApiWalletAddressGet",
+        "consumes": [],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "asset",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tradeio.Api.Controllers.AddressResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Tradeio.Api.Services.ApiKeyInfo": {
+      "type": "object",
+      "properties": {
+        "publicKey": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "privateKey": {
+          "type": "string"
+        },
+        "userId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "isInfo": {
+          "type": "boolean"
+        },
+        "isTrade": {
+          "type": "boolean"
+        },
+        "isWithdraw": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Services.ApiKeyFields": {
+      "type": "object",
+      "properties": {
+        "isInfo": {
+          "type": "boolean"
+        },
+        "isTrade": {
+          "type": "boolean"
+        },
+        "isWithdraw": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Response.InfoResponse": {
+      "type": "object",
+      "properties": {
+        "serverTime": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "pairs": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/Tradeio.Api.Response.PairInfo"
+          }
+        }
+      }
+    },
+    "Tradeio.Api.Response.PairInfo": {
+      "type": "object",
+      "properties": {
+        "decimalPlaces": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "minPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "maxPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "minAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "hidden": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fee": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "Tradeio.Api.Response.PairTicker": {
+      "type": "object",
+      "properties": {
+        "high": {
+          "format": "double",
+          "type": "number"
+        },
+        "low": {
+          "format": "double",
+          "type": "number"
+        },
+        "average": {
+          "format": "double",
+          "type": "number"
+        },
+        "volume": {
+          "format": "double",
+          "type": "number"
+        },
+        "volumeCurrency": {
+          "format": "double",
+          "type": "number"
+        },
+        "last": {
+          "format": "double",
+          "type": "number"
+        },
+        "buy": {
+          "format": "double",
+          "type": "number"
+        },
+        "sell": {
+          "format": "double",
+          "type": "number"
+        },
+        "updated": {
+          "$ref": "#/definitions/MyExchange.Data.Sequence"
+        }
+      }
+    },
+    "MyExchange.Data.Sequence": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "format": "int64",
+          "type": "integer",
+          "readOnly": true
+        },
+        "namespace": {
+          "format": "byte",
+          "type": "string",
+          "readOnly": true
+        },
+        "counter": {
+          "format": "int64",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "Tradeio.Api.Response.PairTrade": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "tradeId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "timeStamp": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.LoginRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "verificationCode": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.LoginResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "secondFactorRequired": {
+          "type": "boolean"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.BasicAccountInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.BasicAccountInfo": {
+      "type": "object",
+      "properties": {
+        "nickname": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "affiliateId": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.GetProfileResponse": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.GetProfileResponse+AccountInfo"
+        },
+        "basicVerification": {
+          "$ref": "#/definitions/Tradeio.Api.Dto.BasicVerificationDto"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.GetProfileResponse+AccountInfo": {
+      "type": "object",
+      "properties": {
+        "nickname": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Dto.BasicVerificationDto": {
+      "type": "object",
+      "properties": {
+        "inReview": {
+          "type": "boolean"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "personId": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.CreateAccountRequest": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.CreateAccountRequest+AccountInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.CreateAccountRequest+AccountInfo": {
+      "type": "object",
+      "properties": {
+        "nickname": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "referalId": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.CreateAccountResponse": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.BasicAccountInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.UpdateBasicVerificationRequest": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.UpdateBasicVerificationRequest+AccountInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.UpdateBasicVerificationRequest+AccountInfo": {
+      "type": "object",
+      "properties": {
+        "basicVerification": {
+          "$ref": "#/definitions/Tradeio.Api.Dto.BasicVerificationDto"
+        }
+      }
+    },
+    "Tradeio.Api.Response.ReferalInfoResponse": {
+      "type": "object",
+      "properties": {
+        "user_name": {
+          "type": "string"
+        },
+        "affiliate_id": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.ConfirmEmailRequest": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.ResendConfirmEmailRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.ResetPasswordRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.UpdatePasswordRequest": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.UpdatePasswordRequest+AccountInfo"
+        },
+        "resetPasswordToken": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.UpdatePasswordRequest+AccountInfo": {
+      "type": "object",
+      "properties": {
+        "password": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.TwoFactorAuthSecretResponse": {
+      "type": "object",
+      "properties": {
+        "secret": {
+          "type": "string"
+        },
+        "otpUrl": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.Toggle2FaRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "enable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "MyExchange.BackOffice.ReferalResponse": {
+      "type": "object",
+      "properties": {
+        "user_name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "affiliate_id": {
+          "type": "string"
+        }
+      }
+    },
+    "MyExchange.BackOffice.ReferalFilters": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string"
+        }
+      }
+    },
+    "MyExchange.BackOffice.Paging": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "per_page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "total": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "MyExchange.BackOffice.ReferalDetailsResponse": {
+      "type": "object",
+      "properties": {
+        "user_name": {
+          "type": "string"
+        },
+        "affiliate_id": {
+          "type": "string"
+        }
+      }
+    },
+    "MyExchange.BackOffice.AffiliateDetailResponse": {
+      "type": "object",
+      "properties": {
+        "order_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "order_status": {
+          "format": "int32",
+          "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "type": "integer"
+        },
+        "market": {
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "commission": {
+          "format": "double",
+          "type": "number"
+        },
+        "affiliate_commission": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "MyExchange.BackOffice.Paginal": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "perPage": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.OrderRequest": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.OrderRequest+OrderInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.OrderRequest+OrderInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "isLimit": {
+          "type": "boolean"
+        },
+        "loanRate": {
+          "format": "double",
+          "type": "number"
+        },
+        "rateStop": {
+          "format": "double",
+          "type": "number"
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "side": {
+          "format": "int32",
+          "enum": [
+            0,
+            1
+          ],
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.OrderResponse": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "$ref": "#/definitions/Tradeio.Api.Controllers.OrderInfo"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.OrderInfo": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "isLimit": {
+          "type": "boolean"
+        },
+        "loanRate": {
+          "format": "double",
+          "type": "number"
+        },
+        "rateStop": {
+          "format": "double",
+          "type": "number"
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "unitsFilled": {
+          "format": "double",
+          "type": "number"
+        },
+        "isPending": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Tradeio.Api.Controllers.AddressResponse": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "security": []
+}

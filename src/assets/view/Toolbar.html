@@ -1,0 +1,508 @@
+<div class="scxToolbar">
+    <input type="text" class="symbolSearch form-control" title="Selected instrument">
+
+    <div class="scxToolbarButton scxToolbarButtonWithDropdown scxTimeFramePicker">
+        <div class="scxToolbarButton-buttonWrapper" title="Time frame">
+            <div class="scxToolbarButton-activateBtn">
+                <span class="scxTimeFramePicker-button-value"></span>
+                <span class="scxTimeFramePicker-button-units"></span>
+            </div>
+            <div class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </div>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper scxTimeFramePickerDropDown">
+            <div class="scxTimeFramePicker-dropdownContainer">
+                <div class="scxTimeFramePicker-ValuesWrapper">
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="30" data-scxunits="s" title="30 seconds">
+                        <span class="scxToolbarButton-dropdownElement-value">30</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.seconds"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="" title="1 minute">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.minute"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="5" data-scxunits="" title="5 minutes">
+                        <span class="scxToolbarButton-dropdownElement-value">5</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.minutes"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="10" data-scxunits="" title="10 minutes">
+                        <span class="scxToolbarButton-dropdownElement-value">10</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.minutes"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="15" data-scxunits="" title="15 minutes">
+                        <span class="scxToolbarButton-dropdownElement-value">15</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.minutes"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="h" title="1 hour">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.hour"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="4" data-scxunits="h" title="4 hours">
+                        <span class="scxToolbarButton-dropdownElement-value">4</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.hours"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="d" title="1 day">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.day"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="w" title="1 week">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.week"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="m" title="1 month">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.month"></span>
+                    </div>
+                    <div class="scxToolbarButton-dropdownElement" data-scxvalue="1" data-scxunits="y" title="1 year">
+                        <span class="scxToolbarButton-dropdownElement-value">1</span>
+                        <span class="scxToolbarButton-dropdownElement-units" data-i18n="toolbar.timeFramePicker.year"></span>
+                    </div>
+                </div>
+                <div class="scxTimeFramePicker-CustomValueWrapper">
+                    <button class="scxTimeFramePicker-CustomValueMinus btn btn-default" title="Decrease">-</button>
+                    <input class="scxTimeFramePicker-CustomValueText form-control" value="" type="text" title="Interval">
+                    <button class="scxTimeFramePicker-CustomValuePlus btn btn-default" title="Increase">+</button>
+                    <select class="scxTimeFramePicker-CustomValueUnits" title="Periodicity">
+                        <option value="s" data-i18n="toolbar.timeFramePicker.seconds">second</option>
+                        <option value="" data-i18n="toolbar.timeFramePicker.minute">minute</option>
+                        <option value="h" data-i18n="toolbar.timeFramePicker.hour">hour</option>
+                        <option value="d" data-i18n="toolbar.timeFramePicker.day">day</option>
+                        <option value="w" data-i18n="toolbar.timeFramePicker.week">week</option>
+                        <option value="m" data-i18n="toolbar.timeFramePicker.month">month</option>
+                        <option value="y" data-i18n="toolbar.timeFramePicker.year">year</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scxToolbar-btn scxToolbar-btn-indicators" title="Add Indicators...">
+        <div class="scxToolbarButton-dropdownElement-image scx-icon"></div>
+    </div>
+    <div class="scxToolbar-btn scxToolbar-btn-theme" title="Theme settings...">
+        <div class="scxToolbarButton-dropdownElement-image scx-icon"></div>
+    </div>
+
+    <div class="scxToolbarBarStyle scxToolbarButton scxToolbarButtonWithDropdown" data-type="scxToolbarBarStyle" title="Price Style">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <div class="scxToolbarButton-dropdownElement-image">
+                    <div class="coloredbar-1 scx-icon"></div>
+                    <div class="coloredbar-2 scx-icon"></div>
+                </div>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="bar" title="Bars">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.bars"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="coloredBar" title="Colored Bars">
+                    <span class="scxToolbarButton-dropdownElement-image">
+                        <div class="coloredbar-1 scx-icon"></div>
+                        <div class="coloredbar-2 scx-icon"></div>
+                    </span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.coloredBars"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="candle" title="Candles">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.candles"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="hollowCandle" title="Hollow Candles">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.hollowCandles"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="heikinAshi" title="Heikin Ashi">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.heikinAshi"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="renko" title="Renko">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.renko"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="lineBreak" title="Line Break">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.lineBreak"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="kagi" title="Kagi">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.kagi"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="line" title="Line">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.line"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="mountain" title="Mountain">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.mountain"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="pointAndFigure" title="Point & Figure">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.barStyle.pointsAndFigure"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarCrossHair scxToolbarButton scxToolbarButtonWithDropdown" data-type="scxToolbarCrossHair" title="Cursor Type">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="none" title="Arrow">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.crossHair.arrow"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="markers" title="Arrow with Markers">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.crossHair.arrowWithMarkers"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="crossBars" title="CrossHairs">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.crossHair.crossHair"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarZoomIn scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarZoomIn" title="Zoom In Type">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="dateRange" title="Zoom Date Range">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.zoomIn.zoomDateRange"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="rect" title="Zoom Rect">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.zoomIn.zoomRect"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="scxToolbar-delimiter"></div>-->
+
+    <div class="scxToolbarButton scxToolbarCanToggle scxToolbarButtonManuallySwitchable scxToolbar-btn-hideDrawings" title="Show/Hide Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!--<div class="scxToolbarButton scxToolbarCanToggle scxToolbar-btn-enableDrawingsTooltip scxToolbarButtonManuallySwitchable" title="Enable/Disable Drawings Tooltip">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn"></button>
+        </div>
+    </div>-->
+
+    <div class="scxToolbarButton scxToolbarCanToggle scxToolbarButtonManuallySwitchable scxToolbar-btn-stayInDrawingMode" title="Stay in drawing mode">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="scxToolbarMarkerDrawings scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarMarkerDrawings" title="Chart Marker Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="dot" title="Dot">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.dot"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="square" title="Square">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.square"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="diamond" title="Diamond">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.diamond"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="arrowUp" title="Arrow Up">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.arrowUp"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="arrowDown" title="Arrow Down">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.arrowDown"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="arrowLeft" title="Arrow Left">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.arrowLeft"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="arrowRight" title="Arrow Right">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.arrowRight"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="arrow" title="Arrow">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.arrow"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="note" title="Note">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.markerDrawings.note"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarGeometricDrawings scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarGeometricDrawings" title="Geometric Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="lineSegment" title="Line Segment">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.lineSegment"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="horizontalLine" title="Horizontal Line">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.horizontalLine"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="verticalLine" title="Vertical Line">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.verticalLine"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="rectangle" title="Rectangle">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.rectangle"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="triangle" title="Triangle">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.triangle"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="circle" title="Circle">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.circle"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="ellipse" title="Ellipse">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.ellipse"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="polygon" title="Polygon">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.polygon"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="polyline" title="Polyline">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.polyline"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="freeHand" title="Free hand">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.freeHand"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="cyclicLines" title="Cyclic Lines">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.geometricDrawings.cyclicLines"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarFibonacciDrawings scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarFibonacciDrawings" title="Fibonacci Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciArcs" title="Fibonacci Arcs">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciArcs"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciEllipses" title="Fibonacci Ellipses">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciEllipses"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciRetracements" title="Fibonacci Retracements">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciRetracements"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciFan" title="Fibonacci Fan">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciFan"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciTimeZones" title="Fibonacci Time Zones">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciTimeZones"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="fibonacciExtensions" title="Fibonacci Extensions">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.fibonacciDrawings.fibonacciExtensions"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarTrendDrawings scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarTrendDrawings" title="Trend Channel Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="trendChannel" title="Trend Channel">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.trendChannel"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="andrewsPitchfork" title="Andrews Pitchfork">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.andrewsPitchfork"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="errorChannel" title="Error Channel">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.errorChannel"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="raffRegression" title="Raff Regression">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.raffRegression"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="quadrantLines" title="Quadrant Lines">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.quadrantLines"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="tironeLevels" title="Tirone Levels">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.tironeLevels"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="speedLines" title="Speed Lines">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.speedLines"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="gannFan" title="Gann Fan">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.gannFan"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="trendAngle" title="Trend Angle">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.trendDrawings.trendAngle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarGeneralDrawings scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanToggle" data-type="scxToolbarGeneralDrawings" title="General Drawings">
+        <div class="scxToolbarButton-buttonWrapper">
+            <button class="scxToolbarButton-activateBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="text" title="Text">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.generalDrawings.text"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="image" title="Image">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.generalDrawings.image"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="balloon" title="Balloon">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.generalDrawings.balloon"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxvalue="measure" title="Measure">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.generalDrawings.measure"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scxToolbarDelete scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanFireFromHead" data-type="scxToolbarDelete" title="Delete Selected Drawing">
+        <div class="scxToolbarButton-buttonWrapper">
+            <div class="scxToolbarButton-activateBtn" data-scxValue="deleteDrawing">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </div>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="deleteAllDrawings" title="Delete All Drawings">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.delete.deleteAllDrawings"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="deleteAllIndicators" title="Delete All Indicators">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.delete.deleteAllIndicators"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="scxToolbar-delimiter"></div>-->
+
+    <div class="scxToolbar-btn scxToolbarSaveImage" title="Save as Image...">
+        <span class="scxToolbarButton-dropdownElement-image"></span>
+    </div>
+
+    <div class="scxToolbarViewMode scxToolbarButton scxToolbarButtonWithDropdown scxToolbarCanFireFromHead" data-type="scxToolbarViewMode" title="View Mode">
+        <div class="scxToolbarButton-buttonWrapper">
+            <div class="scxToolbarButton-activateBtn" data-scxValue="toggleFullWindow">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </div>
+            <button class="scxToolbarButton-toggleDropdownBtn">
+                <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+            </button>
+        </div>
+        <div class="scxToolbarButton-dropdownWrapper">
+            <div class="scxToolbarButton-dropdownElementsContainer">
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="toggleFullWindow" title="Full Window Mode">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.viewMode.fullWindowMode"></span>
+                </div>
+                <div class="scxToolbarButton-dropdownElement" data-scxValue="toggleFullScreen" title="Full Screen Mode">
+                    <span class="scxToolbarButton-dropdownElement-image scx-icon"></span>
+                    <span class="scxToolbarButton-dropdownElement-text" data-i18n="toolbar.viewMode.fullScreenMode"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

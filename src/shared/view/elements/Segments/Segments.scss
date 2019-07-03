@@ -1,0 +1,65 @@
+@import "~shared/view/styles/variables";
+
+$border-radius-value: 4px;
+
+.segments {
+  $r: &;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &_font {
+    &_small {
+      font-size: 0.643rem;
+      font-weight: 200;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    height: 2.286rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 0.929rem;
+    justify-content: center;
+    align-items: center;
+
+    &_size {
+      &_large {
+        height: 2.571rem;
+      }
+
+      &_medium {
+        height: 2.286rem;
+      }
+
+      &_small {
+        height: 2rem;
+      }
+    }
+
+    &:first-child {
+      border-top-left-radius: $border-radius-value;
+      border-bottom-left-radius: $border-radius-value;
+    }
+
+    &:last-child {
+      border-top-right-radius: $border-radius-value;
+      border-bottom-right-radius: $border-radius-value;
+    }
+
+    &_background {
+      &_grey {
+        background-color: #fafbfc;
+      }
+    }
+
+    &_selected {
+      color: $color-white;
+      border-color: #1f80c0;
+      background-color: $color-blue;
+    }
+  }
+}

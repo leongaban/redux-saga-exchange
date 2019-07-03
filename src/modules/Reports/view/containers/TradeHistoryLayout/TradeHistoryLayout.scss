@@ -1,0 +1,26 @@
+@import "src/shared/view/styles/mixins";
+
+.trade-history-layout {
+  &__content {
+    display: flex;
+    padding-top: 1.429rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__table-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__filter-form {
+    display: flex;
+  }
+
+  &__pagination-controls {
+    display: flex;
+  }
+}

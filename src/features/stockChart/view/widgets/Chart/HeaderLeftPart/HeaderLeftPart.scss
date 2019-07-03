@@ -1,0 +1,100 @@
+@import 'src/shared/view/styles/mixins';
+
+.chart-widget-header-left-part {
+  display: flex;
+  justify-content: space-between;
+
+  &__header-sections {
+    flex: 1;
+  }
+
+  &__top-header-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__menu-wrapper {
+    margin: 0 0.3rem;
+  }
+
+  &__bottom-header-section {
+    max-width: 60rem;
+  }
+
+  &__header-title {
+    display: flex;
+    margin-top: 0.4286rem;
+    margin-right: 0.03rem;
+    font-size: 1.143rem;
+  }
+
+  &__big-buttons-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
+  }
+
+  &__big-button {
+    min-width: 9.375rem;
+    max-height: 4.29rem;
+    margin: 0 0.2857rem;
+    text-align: center;
+    color: white;
+    border: 1px solid #7a7a7a;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.071rem;
+
+    &_red {
+      border: 1px solid;
+
+      @include themed('background-color', 'button-red-background-color');
+      @include themed('border-color', 'button-main-border-color');
+    }
+
+    &_green {
+      border: 1px solid;
+
+      @include themed('background-color', 'button-green-background-color');
+      @include themed('border-color', 'button-main-border-color');
+    }
+
+    & div {
+      padding-top: 0.375rem;
+      opacity: 0.8;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  &__upper-number {
+    font-size: 1.4375rem;
+  }
+
+  &__header-btn {
+    display: flex;
+    margin: 0 0.3rem;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 3px;
+
+    @include themed('color', 'headline-1-color');
+
+    & span {
+      vertical-align: middle;
+      font-size: 1.143rem;
+      font-weight: 500;
+      line-height: 2.143rem;
+    }
+  }
+
+  &__chart-kind-tabs {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+}

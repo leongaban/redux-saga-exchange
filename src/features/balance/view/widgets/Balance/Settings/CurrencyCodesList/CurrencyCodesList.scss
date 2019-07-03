@@ -1,0 +1,20 @@
+.currency-codes-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__element {
+    min-width: 50%;
+    margin-top: 0.7rem;
+
+    &-field {
+      width: 14.29rem;
+    }
+  }
+
+  &__icon {
+    width: 1.143rem;
+    height: 1.143rem;
+    margin-right: 0.3rem;
+    vertical-align: top;
+  }
+}

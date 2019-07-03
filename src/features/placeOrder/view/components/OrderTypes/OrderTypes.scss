@@ -1,0 +1,8 @@
+.order-types {
+  display: flex;
+  flex-shrink: 0;
+
+  &__radio {
+    flex: 1;
+  }
+}

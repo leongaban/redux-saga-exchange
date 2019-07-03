@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="66px" viewBox="0 0 76 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Client-Dialogs" transform="translate(-1467.000000, -2203.000000)">
+            <g id="window-copy-6" transform="translate(1341.000000, 2119.000000)">
+                <g id="error" transform="translate(112.000000, 65.000000)">
+                    <path d="M49,34 L49,58 L55,58 L55,34 L49,34 Z M49,64 L49,70 L55,70 L55,64 L49,64 Z" id="Shape" fill="#E6EAEE" fill-rule="nonzero"></path>
+                    <path d="M52,17.4641016 L22.0910347,34.7320508 L22.0910347,69.2679492 L52,86.5358984 L81.9089653,69.2679492 L81.9089653,34.7320508 L52,17.4641016 Z" id="Polygon" stroke="#E6EAEE" stroke-width="6" transform="translate(52.000000, 52.000000) rotate(-30.000000) translate(-52.000000, -52.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

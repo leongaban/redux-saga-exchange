@@ -1,0 +1,107 @@
+@import 'src/shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+$pagination-control-border-style: 1px solid;
+
+.table-pagination-controls {
+  display: flex;
+  align-items: center;
+
+  &__records-per-page-select {
+    width: 7.14rem;
+
+    @include mobile {
+      order: 2;
+      margin-left: 0.71rem;
+    }
+  }
+
+  &__navigation-controls {
+    display: flex;
+    margin-left: 0.71rem;
+
+    @include mobile {
+      order: 1;
+      margin-left: 0;
+    }
+  }
+
+  &__prev-pagination-control,
+  &__next-pagination-control,
+  &__numeric-pagination-control,
+  &__pagination-dots {
+    display: flex;
+    width: 2.29rem;
+    height: 2.29rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__prev-pagination-control,
+  &__next-pagination-control,
+  &__numeric-pagination-control {
+    border: none;
+    border-top: $pagination-control-border-style;
+    border-bottom: $pagination-control-border-style;
+
+    @include themed('background-color', 'pagination-controls-pagination-control-background-color');
+    @include themed('border-color', 'pagination-controls-pagination-control-border-color');
+    @include themed('color', 'pagination-controls-pagination-control-color');
+
+    &:disabled {
+      @include themed('background-color', 'pagination-controls-pagination-control-disabled-background-color');
+      @include themed('color', 'pagination-controls-pagination-control-disabled-color');
+    }
+  }
+
+  &__prev-pagination-control {
+    border-left: $pagination-control-border-style;
+
+    &::before {
+      display: block;
+      width: 0;
+      height: 0;
+      content: '';
+      border-width: 4px 0.36rem 4px 0;
+      border-style: solid;
+      border-color: transparent #7f8fa4 transparent transparent;
+    }
+  }
+
+  &__next-pagination-control {
+    border-right: $pagination-control-border-style;
+    border-left: $pagination-control-border-style;
+
+    &::before {
+      display: block;
+      width: 0;
+      height: 0;
+      content: '';
+      border-width: 4px 0 4px 0.36rem;
+      border-style: solid;
+      border-color: transparent transparent transparent #7f8fa4;
+    }
+  }
+
+  &__numeric-pagination-control {
+    color: #354052;
+    font-size: 0.86rem;
+
+    &_active {
+      @include themed('color', 'pagination-controls-pagination-control-active-color');
+      @include themed('background-color', 'pagination-controls-pagination-control-active-background-color');
+    }
+  }
+
+  &__numeric-pagination-control,
+  &__pagination-dots {
+    display: flex;
+    width: 2.29rem;
+    height: 2.29rem;
+    border-left: $pagination-control-border-style;
+    justify-content: center;
+    align-items: center;
+
+    @include themed('border-color', 'pagination-controls-pagination-control-border-color');
+  }
+}

@@ -1,0 +1,21 @@
+@import "src/shared/view/styles/mixins";
+
+.user-order-history {
+  width: 80vw;
+
+  &__table-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__filter-form {
+    display: flex;
+  }
+
+  &__pagination-controls {
+    display: flex;
+  }
+}

@@ -1,0 +1,39 @@
+@import 'src/shared/view/styles/mixins';
+
+.verification-modal {
+  width: 23.571rem;
+  margin: 0 auto;
+  padding: 2.857rem 1.643rem 1.429rem;
+
+  @include mobile {
+    width: 100%;
+    padding: 1.286rem;
+  }
+
+  &__key {
+    display: flex;
+    padding-bottom: 3.214rem;
+    justify-content: center;
+    align-items: center;
+
+    &-icon {
+      width: 5.571rem;
+      height: 5.571rem;
+    }
+  }
+
+  &__input {
+    padding-bottom: 1.429rem;
+  }
+
+  &__retries-amount {
+    padding-bottom: 1.429rem;
+    font-size: 0.857rem;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__footer {
+    display: flex;
+  }
+}

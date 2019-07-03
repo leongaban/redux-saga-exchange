@@ -1,0 +1,10 @@
+@import "src/shared/view/styles/mixins";
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.3571rem;
+  max-height: 85vh;
+
+  @include themed('background-color', 'widget-background-color');
+}

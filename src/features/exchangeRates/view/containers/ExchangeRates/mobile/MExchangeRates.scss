@@ -1,0 +1,58 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-exchange-rates {
+  min-height: 100%;
+
+  @include themed('background', 'widget-background-color');
+
+  &__header {
+    border-bottom: 0.1rem solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 0.75rem 0.65rem 0;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__close-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14%;
+  }
+
+  &__close-button {
+    display: flex;
+  }
+
+  &__close-icon {
+    width: 1.2rem;
+
+    g {
+      @include themed('fill', 'main-text-color');
+    }
+  }
+
+  &__currencies {
+    flex: 1;
+  }
+
+  &__sub-header {
+    padding: 0.95rem 0.75rem 0.55rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__current {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__search {
+    margin-left: 0.714rem;
+    width: 11.143rem;
+  }
+}

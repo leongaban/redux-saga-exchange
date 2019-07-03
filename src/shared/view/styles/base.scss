@@ -1,0 +1,92 @@
+@import './fonts';
+@import 'src/shared/view/styles/mixins';
+
+html {
+  font-size: 87.5%;  // TODO: use rems everywhere in the project
+}
+
+html.device_desktop {
+  @media only screen and (max-width: 1680px) {
+    font-size: 81.25%;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    font-size: 75%;
+  }
+
+  @media only screen and (max-width: 833px) {
+    font-size: 81.25%;
+  }
+
+  @media only screen and (max-width: 740px) {
+    font-size: 75%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+
+  @include themed-body('color', 'main-text-color');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+
+  @include themed('background-color', 'app-background-color');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  /* doiuse-disable */
+
+  -moz-appearance: textfield;
+
+  /* doiuse-enable */
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* doiuse-disable */
+
+    -webkit-appearance: none;
+
+    /* doiuse-enable */
+    margin: 0;
+  }
+}
+
+// it not affect global html/body scrollbar
+.application {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+::-webkit-scrollbar {
+  @include themed-global('background', 'scrollbar-background');
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+
+  @include themed-global('background', 'scrollbar-thumb');
+}
+
+::-webkit-scrollbar-corner {
+  @include themed-global('color', 'scrollbar-thumb');
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @include themed-global('background', 'scrollbar-thumb:hover');
+}

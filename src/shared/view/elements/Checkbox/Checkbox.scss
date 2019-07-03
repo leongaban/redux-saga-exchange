@@ -1,0 +1,84 @@
+@import 'src/shared/view/styles/mixins';
+
+.trade-checkbox {
+  $r: &;
+
+  position: relative;
+  margin: 0;
+
+  &__control {
+    display: flex;
+    align-items: center;
+
+    &_label-position {
+      &_left {
+        #{$r}__label {
+          padding-right: 0.6rem;
+        }
+      }
+
+      &_right {
+        flex-direction: row-reverse;
+
+        #{$r}__label {
+          padding-left: 0.857rem;
+        }
+      }
+    }
+  }
+
+  &__fake-input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+
+    &:focus ~ #{$r}__control {
+      outline: 0.15rem solid;
+
+      @include themed('outline-color', 'nav-menu-item-active-color');
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 1.143rem;
+    height: 1.143rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    justify-content: center;
+    align-items: center;
+
+    @include themed('border-color', 'checkbox-border-color');
+    @include themed('background-color', 'checkbox-background-color');
+
+    #{$r}_checked & {
+      @include themed('border-color', 'checkbox-active-border-color');
+      @include themed('background-color', 'checkbox-active-background-color');
+    }
+
+    #{$r}_disabled & {
+      cursor: default;
+
+      @include themed('border-color', 'checkbox-disabled-border-color');
+      @include themed('background-color', 'checkbox-disabled-background-color');
+    }
+  }
+
+  &__check {
+    position: absolute;
+    width: 0.571rem;
+    height: 0.446rem;
+  }
+
+  &__label {
+    font-size: 0.857rem;
+    font-weight: normal;
+    line-height: 1.357rem;
+
+    @include themed('color', 'checkbox-label-color');
+  }
+}

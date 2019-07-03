@@ -1,0 +1,124 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.number-input {
+  $r: &;
+
+  position: relative;
+  font-size: 0.85rem;
+
+  &:hover {
+    #{$r}__value-controls {
+      display: block;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  @include mobile {
+    display: flex;
+  }
+
+  &__value-controls {
+    position: absolute;
+    top: 50%;
+    right: 0.35rem;
+    display: none;
+    transform: translateY(-50%);
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 2.14rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 0.07rem solid $color-light-grey;
+    border-radius: 0.3rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      @include themed('background-color', 'select-option-hover-background-color');
+    }
+
+    @include themed('border-color', 'input-border-color');
+    @include themed('color', 'input-color');
+    @include themed('background-color', 'input-background-color');
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__input-field {
+    flex: 1;
+  }
+
+  & .input__field {
+    @include mobile {
+      border-radius: 0;
+    }
+  }
+
+  &__m {
+    &-incrementer,
+    &-decrementer, {
+      display: none;
+      width: 2.29rem;
+      height: 2.29rem;
+      border: 1px solid;
+      justify-content: center;
+      align-items: center;
+
+      @include themed('background-color', 'button-black-white-background-color');
+      @include themed('border-color', 'input-border-color');
+
+      @include mobile {
+        display: flex;
+      }
+
+      &:hover {
+        @include themed('background-color', 'button-black-white-hover');
+      }
+    }
+
+    &-incrementer {
+      border-left-width: 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    &-decrementer {
+      border-right-width: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    &-plus-horizontal-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-plus-vertical-line {
+      height: 0.86rem;
+      width: 2px;
+    }
+
+    &-plus-horizontal-line,
+    &-minus {
+      width: 0.86rem;
+      height: 2px;
+    }
+
+    &-plus-horizontal-line,
+    &-plus-vertical-line,
+    &-minus {
+      @include themed('background-color', 'main-text-color');
+    }
+  }
+}

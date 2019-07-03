@@ -1,0 +1,21 @@
+@import "src/shared/view/styles/mixins";
+
+.m-dialog-header {
+  display: flex;
+  margin: 0.93rem 0.71rem 0;
+  font-size: 0.8rem;
+  align-items: center;
+
+  &__title {
+    margin: initial;
+    font-size: inherit;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    margin-left: 0.71rem;
+    font-weight: bold;
+
+    @include themed('color', 'modal-refining-text-color');
+  }
+}

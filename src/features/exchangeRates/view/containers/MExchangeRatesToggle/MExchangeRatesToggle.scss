@@ -1,0 +1,42 @@
+@import 'src/shared/view/styles/mixins';
+
+.m-exchange-rates-toggle {
+  &__current-market {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.15rem;
+
+    @include themed('color', 'chart-left-side-holder');
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.3rem 0.25rem 0;
+      border-color: transparent;
+      margin-left: 0.35rem;
+      transform: translateY(30%);
+
+      @include themed('border-top-color', 'main-text-color');
+    }
+  }
+
+  &__exchange-rates {
+    position: fixed;
+    z-index: 102;
+    overflow-y: auto;
+    // not 100% because of hiding mobile address bar
+    top: 130%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: top 0.3s;
+
+    &_open {
+      top: 0;
+    }
+  }
+}

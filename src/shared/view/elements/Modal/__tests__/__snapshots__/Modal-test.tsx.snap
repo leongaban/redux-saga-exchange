@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Shared) component Modal hasCloseCross: true, must contain close cross  1`] = `
+"<Modal isOpen={true} onRequestClose={[Function: mockConstructor]} className=\\"css-modal\\" overlayClassName=\\"css-modal__overlay\\" ariaHideApp={false} portalClassName=\\"ReactModalPortal\\" bodyOpenClassName=\\"ReactModal__Body--open\\" closeTimeoutMS={0} shouldFocusAfterRender={true} shouldCloseOnEsc={true} shouldCloseOnOverlayClick={true} shouldReturnFocusAfterClose={true} parentSelector={[Function: parentSelector]}>
+  <Draggable handle=\\".css-modal__header\\" bounds=\\".css-modal\\" allowAnyClick={false} cancel={{...}} disabled={false} enableUserSelectHack={true} offsetParent={{...}} grid={{...}} transform={{...}} onStart={[Function: onStart]} onDrag={[Function: onDrag]} onStop={[Function: onStop]} onMouseDown={[Function: onMouseDown]} axis=\\"both\\" defaultClassName=\\"react-draggable\\" defaultClassNameDragging=\\"react-draggable-dragging\\" defaultClassNameDragged=\\"react-draggable-dragged\\" defaultPosition={{...}} position={{...}}>
+    <div className=\\"css-modal__content\\">
+      <div className=\\"css-modal__header\\">
+        <div className=\\"css-modal__left-part\\">
+          <div className=\\"css-modal__title\\">
+            header
+          </div>
+        </div>
+        <div className=\\"css-modal__cross-wrapper\\">
+          <div onClick={[Function: mockConstructor]} className=\\"css-modal__cross\\" />
+        </div>
+      </div>
+    </div>
+  </Draggable>
+</Modal>"
+`;
+
+exports[`(Shared) component Modal should render 1`] = `
+"<Modal isOpen={true} onRequestClose={[Function: mockConstructor]} className=\\"css-modal\\" overlayClassName=\\"css-modal__overlay\\" ariaHideApp={false} portalClassName=\\"ReactModalPortal\\" bodyOpenClassName=\\"ReactModal__Body--open\\" closeTimeoutMS={0} shouldFocusAfterRender={true} shouldCloseOnEsc={true} shouldCloseOnOverlayClick={true} shouldReturnFocusAfterClose={true} parentSelector={[Function: parentSelector]}>
+  <Draggable handle=\\".css-modal__header\\" bounds=\\".css-modal\\" allowAnyClick={false} cancel={{...}} disabled={false} enableUserSelectHack={true} offsetParent={{...}} grid={{...}} transform={{...}} onStart={[Function: onStart]} onDrag={[Function: onDrag]} onStop={[Function: onStop]} onMouseDown={[Function: onMouseDown]} axis=\\"both\\" defaultClassName=\\"react-draggable\\" defaultClassNameDragging=\\"react-draggable-dragging\\" defaultClassNameDragged=\\"react-draggable-dragged\\" defaultPosition={{...}} position={{...}}>
+    <div className=\\"css-modal__content\\">
+      <div className=\\"css-modal__header css-modal__header_center\\">
+        <div className=\\"css-modal__left-part\\">
+          <div className=\\"css-modal__title\\">
+            header
+          </div>
+        </div>
+      </div>
+    </div>
+  </Draggable>
+</Modal>"
+`;

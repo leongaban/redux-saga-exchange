@@ -1,0 +1,131 @@
+@import "src/shared/view/styles/mixins";
+
+.main-tooltip {
+  $r: &;
+
+  &_inline {
+    display: inline-block;
+  }
+
+  &__content {
+    position: fixed;
+    z-index: 1001;
+    max-width: 21.429rem;
+    padding: 0.6rem 1.286rem;
+    color: #354052;
+    border: 1px solid #e6eaee;
+    border-radius: 4px;
+    font-size: 0.857rem;
+
+    &_position {
+      &_top {
+        transform: translate(-50%, -100%);
+      }
+
+      &_bottom {
+        transform: translate(-50%);
+      }
+
+      &_left {
+        transform: translate(-100%, -50%);
+      }
+
+      &_right {
+        transform: translateY(-50%);
+      }
+
+      &_top-left {
+        transform: translate(10%, -100%);
+      }
+    }
+
+    @include themed('color', 'tooltip-color');
+    @include themed('background-color', 'tooltip-background-color');
+  }
+
+  &__pointer {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #e6eaee;
+    border-radius: 2px;
+
+    @include themed('background-color', 'tooltip-background-color');
+
+    &_position {
+      &_right {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%)  rotate(45deg);
+      }
+
+      &_left {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%) rotate(45deg);
+      }
+
+      &_top-left,
+      &_top {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+      }
+
+      &_bottom {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__pointer-fixer {
+    position: absolute;
+    z-index: 10000;
+    display: block;
+
+    @include themed('background-color', 'tooltip-background-color');
+
+    &_position {
+      &_right,
+      &_left {
+        width: 7px;
+        height: 14px;
+      }
+
+      &_top-left,
+      &_top,
+      &_bottom {
+        width: 14px;
+        height: 8px;
+      }
+
+      &_right {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &_left {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &_top-left,
+      &_top {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &_bottom {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

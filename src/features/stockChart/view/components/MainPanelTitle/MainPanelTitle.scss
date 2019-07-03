@@ -1,0 +1,43 @@
+@import 'src/shared/view/styles/mixins';
+
+.chart-main-panel-title {
+  padding-left: 5px;
+
+  @include mobile {
+    padding: initial;
+  }
+
+  @include themed('color', 'main-text-color');
+
+  &__content {
+    @include mobile {
+      font-size: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      height: 2.5rem;
+      flex-flow: column wrap;
+    }
+  }
+
+  &__date {
+    font-weight: 500;
+    padding-right: 10px;
+  }
+
+  &__value {
+    padding-right: 10px;
+
+    @include mobile {
+      padding: initial;
+    }
+  }
+
+  &__values-group {
+    display: inline-block;
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

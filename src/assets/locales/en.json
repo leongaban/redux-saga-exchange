@@ -1,0 +1,2107 @@
+{
+  "notification": {
+      "title": {
+          "success": "Success",
+          "error": "Error",
+          "warning": "Warning",
+          "info": "Info"
+      },
+      "theme": {
+          "msg": {
+              "success": "Theme was successfully saved."
+          }
+      },
+      "indicators": {
+          "msg": {
+              "noMoreSpace": "There are no space to add more indicators"
+          }
+      },
+      "drawingSettingDialog": {
+          "msg": {
+              "urlIsNotSpecified": "Image URL is not specified",
+              "textIsNotSpecified": "Text is not specified"
+          }
+      }
+  },
+  "fonts": {
+    "arial": "Arial",
+    "calibri": "Calibri",
+    "comicSans": "Comic Sans",
+    "courierNew": "Courier New",
+    "georgia": "Georgia",
+    "impact": "Impact",
+    "openSans": "Open Sans",
+    "sourceSansPro": "Source Sans Pro",
+    "tangerine": "Tangerine"
+  },
+  "button": {
+    "defaults": "Defaults",
+    "close": "Close",
+    "save": "Save",
+    "apply": "Apply"
+  },
+  "toolbar": {
+    "timeFramePicker": {
+      "seconds": "seconds",
+      "minute": "minute",
+      "minutes": "minutes",
+      "hour": "hour",
+      "hours": "hours",
+      "day": "day",
+      "week": "week",
+      "month": "month",
+      "year": "year"
+    },
+    "barStyle": {
+      "bars": "Bars",
+      "coloredBars": "Colored Bars",
+      "candles": "Candles",
+      "hollowCandles": "Hollow Candles",
+      "heikinAshi": "Heikin Ashi",
+      "renko": "Renko",
+      "lineBreak": "Line Break",
+      "kagi": "Kagi",
+      "line": "Line",
+      "mountain": "Mountain",
+      "pointsAndFigure": "Point & Figure"
+    },
+    "crossHair": {
+      "arrow": "Arrow",
+      "arrowWithMarkers": "Arrow with Markers",
+      "crossHair": "CrossHairs"
+    },
+    "zoomIn": {
+      "zoomDateRange": "Zoom Date Range",
+      "zoomRect": "Zoom Rect"
+    },
+    "markerDrawings": {
+      "dot": "Dot",
+      "square": "Square",
+      "diamond": "Diamond",
+      "arrowUp": "Arrow Up",
+      "arrowDown": "Arrow Down",
+      "arrowLeft": "Arrow Left",
+      "arrowRight": "Arrow Right",
+      "arrow": "Arrow",
+      "note": "Note"
+    },
+    "geometricDrawings": {
+      "lineSegment": "Line Segment",
+      "horizontalLine": "Horizontal Line",
+      "verticalLine": "Vertical Line",
+      "rectangle": "Rectangle",
+      "triangle": "Triangle",
+      "circle": "Circle",
+      "ellipse": "Ellipse",
+      "polygon": "Polygon",
+      "polyline": "Polyline",
+      "freeHand": "Free hand",
+      "cyclicLines": "Cyclic Lines"
+    },
+    "fibonacciDrawings": {
+      "fibonacciArcs": "Fibonacci Arcs",
+      "fibonacciEllipses": "Fibonacci Ellipses",
+      "fibonacciRetracements": "Fibonacci Retracements",
+      "fibonacciFan": "Fibonacci Fan",
+      "fibonacciTimeZones": "Fibonacci Time Zones",
+      "fibonacciExtensions": "Fibonacci Extensions"
+    },
+    "trendDrawings": {
+      "trendChannel": "Trend Channel",
+      "andrewsPitchfork": "Andrews Pitchfork",
+      "errorChannel": "Error Channel",
+      "raffRegression": "Raff Regression",
+      "quadrantLines": "Quadrant Lines",
+      "tironeLevels": "Tirone Levels",
+      "speedLines": "Speed Lines",
+      "gannFan": "Gann Fan",
+      "trendAngle": "Trend Angle"
+    },
+    "generalDrawings": {
+      "text": "Text",
+      "image": "Image",
+      "balloon": "Balloon",
+      "measure": "Measure"
+    },
+    "delete": {
+      "deleteAllDrawings": "Delete All Drawings",
+      "deleteAllIndicators": "Delete All Indicators"
+    },
+    "viewMode": {
+      "fullWindowMode": "Full Window Mode",
+      "fullScreenMode": "Full Screen Mode"
+    }
+  },
+  "chartPanelOptionControls": {
+    "moveUp": "Panel Move Up",
+    "moveDown": "Panel Move Down",
+    "close": "Close Panel"
+  },
+  "contextMenu": {
+    "settings": "Settings",
+    "showParameters": "Show Parameters",
+    "showMarkers": "Show Markers",
+    "showValues": "Show Values",
+    "visible": "Visible",
+    "delete": "Delete",
+    "about": "About",
+    "clone": "Clone",
+    "format": "Format..."
+  },
+  "drawingSettingDialog": {
+    "style": "Style",
+    "tooltip": "Tooltip",
+    "line": "Line",
+    "fill": "Fill",
+    "innerFill": "Inner Fill",
+    "label": "Label",
+    "border": "Border",
+    "kind": "Kind",
+    "arc": "Arc",
+    "horizontalLine" : "Horizontal Line",
+    "points": {
+      "title": "Points",
+      "magnetMode": "Magnet Mode",
+      "magnetTo": "Magnet To",
+      "high": "High",
+      "low": "Low",
+      "open": "Open",
+      "close": "Close",
+      "bar": "Bar",
+      "never": "Never",
+      "always": "Always",
+      "near": "Near point"
+    }
+  },
+  "indicatorDialog": {
+    "noMatchesForIndicator": "No indicators matched your criteria"
+  },
+  "indicatorSettingsDialog": {
+    "source": "Source",
+    "openPrice": "Open Price",
+    "highPrice": "High Price",
+    "lowPrice": "Low Price",
+    "closePrice": "Close Price",
+    "volume": "Volume",
+    "periods": "Periods",
+    "signalPeriods": "Signal Periods",
+    "r2Scale": "R2 Scale",
+    "standardDeviations": "Standard Deviations",
+    "barHistory": "Bar History",
+    "shiftPercentage": "Shift Percentage",
+    "shortCycle": "Short Cycle",
+    "longCycle": "Long Cycle",
+    "cycle1": "Cycle 1",
+    "cycle2": "Cycle 2",
+    "cycle3": "Cycle 3",
+    "STP": "Short Term Periods",
+    "LTP": "Long Term Periods",
+    "rateOfChange": "Rate of Change",
+    "minimumAF": "Minimum AF",
+    "maximumAF": "Maximum AF",
+    "levels": "Levels",
+    "MTV": "Minimum Tick Value",
+    "LMV": "Limit Move Value",
+    "kPeriods": "%K Periods",
+    "kSmoothing": "%K Smoothing",
+    "kDoubleSmoothing": "%K Double Smoothing",
+    "dPeriods": "%D Periods",
+    "pointsOrPercent": "Points or Percent",
+    "percent": "Percent",
+    "points": "Points",
+    "source2": "Source #2",
+    "MAT": "Moving Average Type",
+    "simple": "Simple",
+    "exponential": "Exponential",
+    "timeSeries": "Time Series",
+    "triangular": "Triangular",
+    "variable": "Variable",
+    "VIDYA": "VIDYA",
+    "weighted": "Weighted",
+    "WWS": "Welles Wilder Smoothing",
+    "dMAT": "%D Moving Average Type",
+    "upColor": "Up Color",
+    "downColor": "Down Color",
+    "color1": "Color 1",
+    "color2": "Color 2",
+    "color3": "Color 3"
+  },
+  "fibonacciDrawing": {
+    "lineLevel": "Line Level",
+    "lineWidth": "Line Width"
+  },
+  "ichimokuIndicatorDialog": {
+    "tenkanSen": "Tenkan Sen",
+    "kijunSen": "Kijun Sen",
+    "chikouSpan": "Chikou Span",
+    "senkouSpanA": "Senkou Span A",
+    "senkouSpanB": "Senkou Span B",
+    "kumo": "Kumo",
+    "CLP": "Conversion Line Periods",
+    "BLP": "Base Line Periods",
+    "LS2P": "Lagging Span 2 Periods"
+  },
+  "priceStyleDialog": {
+    "source": "Source",
+    "close": "Close",
+    "highLow": "High/Low",
+    "calculationMethod": "Calculation Method",
+    "ATR": "ATR",
+    "fixed": "Fixed",
+    "ATRLength": "ATR Length",
+    "boxSize": "Box Size",
+    "reversalAmount": "Reversal Amount",
+    "numberOfLine": "Number Of Line",
+    "style": "Style",
+    "OHLC": "OHLC",
+    "HL": "HL",
+    "HLC": "HLC"
+  },
+  "themeDialog": {
+    "lineBarColor": "Line/Bar Color",
+    "upCandleColor": "Up Candle Color",
+    "upCandleBorderColor": "Up Candle Border Color",
+    "downCandleColor": "Down Candle Color",
+    "downCandleBorderColor": "Down Candle Border Color",
+    "wickColor": "Wick Color",
+    "textFont": "Text Font",
+    "textSize": "Text Size",
+    "textColor": "Text Color",
+    "gradientColor1": "Gradient Color 1",
+    "gradientColor2": "Gradient Color 2",
+    "gridColor": "Grid Color",
+    "dark": "Dark",
+    "light": "Light",
+    "new": "New",
+    "cancel": "Cancel"
+  },
+  "indicatorsHelp": {
+    "SMA": {
+      "title": "Simple Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content": "The Simple Moving Average is simply an average of values over a specified period of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A Moving Average is most often used to average values for a smoother representation of the underlying price or indicator."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "EMA": {
+      "title": "Exponential Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content": "The Exponential Moving Average is a type of Moving Average that applies more weight to recent values by adding a small percentage of the current value to the previous value."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A Moving Average is most often used to average values for a smoother representation of the underlying price or indicator."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "TSMA": {
+      "title": "Time Series Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content1": "Time Series Moving Averages are very different from other types of Moving Averages.",
+        "content2": "The calculation is derived from linear regression forecasts instead of actual data values.",
+        "content3": "For that reason, the Time Series Moving Average can be much greater than or less than the underlying data if the linear regression trend has been increasing or decreasing."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Time Series Moving Average can be used like any other Moving Average, to obtain a smoother representation of the underlying data."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content1": "Wikipedia - Moving Averages",
+        "and": "and",
+        "content2": "Wikipedia - Linear Regression"
+      }
+    },
+    "VMA": {
+      "title": "Variable Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content": "The Variable Moving Average is similar to an Exponential Moving Average with the added benefit of being able to adjust to market volatility. For this reason, the Variable Moving Average may be useful in sideways moving markets."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Variable Moving Average can be used like any other Moving Average, to obtain a smoother representation of the underlying data."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "TMA": {
+      "title": "Triangular Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content1": "The Triangular Moving Average is similar to the Simple Moving Average in that it averages the underlying data over a specified number of previous values.",
+        "content2": "However, the Triangular Moving Average differs in that it is calculated and averaged n-times. The actual formula is TMA = (SMA1 + SMA2 + SMA3 + SMA4 + ... SMAn) / n."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Triangular Moving Average can be used like any other Moving Average, to obtain a smoother representation of the underlying data. It is important to note that the Triangular Moving Average is typically much smoother than other moving averages."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "WMA": {
+      "title": "Weighted Moving Average",
+      "overview": {
+        "title": "Overview",
+        "content": "The Weighted Moving Average is a type of Moving Average that assigns more weight to the most recent data points. The formula is P0 + &#945;P1 + &#945;2P2 + &#945;3P3 + &#8901;&#8901;&#8901; + &#945;nPn + &#8901;&#8901;&#8901;"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Weighted Moving Average can be used like any other Moving Average, to obtain a smoother representation of the underlying data. It is thought that the Weighted Moving Average provides a better representation of market volatility than the Simple and Exponential Moving Averages."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "VIDYA": {
+      "title": "VIDYA",
+      "overview": {
+        "title": "Overview",
+        "content": "The Volatility Index Dynamic Average (VIDYA) indicator is a type of Moving Average derived from the coefficient of determination."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "VIDYA can be used like any other Moving Average, to obtain a smoother representation of the underlying data. Because VIDYA is a derivative of linear regression, it quickly adapts to volatility."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "r2Scale": "R2 Scale - R2 scale to use in the linear regression calculation."
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "WWS": {
+      "title": "Welles Wilder Smoothing",
+      "overview": {
+        "title": "Overview",
+        "content": "Developed by J. Welles Wilder, Jr. this indicator is similar to the Exponential Moving Average. It is rather slow to reflect changes in the underlying data when compared with other Moving Averages. This indicator is also used as the basis of Wilder's Relative Strength Index."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Welles Wilder Smoothing can be used like a Moving Average, to obtain a smoother representation of the underlying data."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content1": "Wikipedia - Moving Averages",
+        "and": "and",
+        "content2": "Wikipedia - Average Directional Index"
+      }
+    },
+    "highMinusLow": {
+      "title": "High Minus Low",
+      "overview": {
+        "title": "Overview",
+        "content": "The High Minus Low indicator is quite simply a running index of the high price minus the low price."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "This indicator can be used to obtain a view of price volatility."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      }
+    },
+    "medianPrice": {
+      "title": "Median Price",
+      "overview": {
+        "title": "Overview",
+        "content": "The Median Price is simply the running median of the high and low price data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Median Price is often used as an alternative for viewing price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Median"
+      }
+    },
+    "typicalPrice": {
+      "title": "Typical Price",
+      "overview": {
+        "title": "Overview",
+        "content": "Typical Price (also known as Pivot Points) is a running average of the high, low and close values."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Typical Price is often used as an alternative for viewing price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Typical Price"
+      }
+    },
+    "weightedClose": {
+      "title": "Weighted Close",
+      "overview": {
+        "title": "Overview",
+        "content1": "Weighted Close (also known as Weighted Pivot Points) is a running average of the high, low and close values.",
+        "content2": "This indicator is similar to standard Pivot Points, except more weight is given to the most recent values in the underlying data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Weighted Close is often used as an alternative for viewing price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "none"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Pivot Points"
+      }
+    },
+    "volumeRateOfChange": {
+      "title": "Volume Rate of Change",
+      "overview": {
+        "title": "Overview",
+        "content1": "Volume Rate of Change is calculated by dividing the security's volume over the last n-periods by the total volume within the last n-periods window.",
+        "content2": "If the volume from the current day is lower than n-periods ago, volume ROC trends lower. The actual formula is ((Volume - Volume n-periods ago ) / Volume n-periods ago) * 100"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Volume Rate of Change shows whether or not volume is trending up or down. This indicator is often used to confirm price breakouts."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Momentum Analysis"
+      }
+    },
+    "priceRateOfChange": {
+      "title": "Price Rate of Change",
+      "overview": {
+        "title": "Overview",
+        "content1": "Price Rate of Change is calculated by dividing the security's price over the last n-periods by the total price within the last n-periods window.",
+        "content2": "If the price from the current day is lower than n-periods ago, Price ROC trends lower. The actual formula is ((Close - Close n-periods ago ) / Close n-periods ago) * 100"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Price Rate of Change shows whether or not the security is trending up or down."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Momentum Analysis"
+      }
+    },
+    "standardDeviation": {
+      "title": "Standard Deviation",
+      "overview": {
+        "title": "Overview",
+        "content1": "Standard deviation is a measure of variability used in statistics and probability theory. Standard Deviation is used in finance to show how much volatility exists in the underlying data.",
+        "content2": "Low values indicate that the security's price is very close to the mean, whereas high values indicate that the price is more volatile than normal."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Major highs and lows often accompany extreme volatility. High values of standard deviations indicate that the price or indicator is more volatile than normal."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "standardDeviation": "Standard Deviations",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Standard Deviation"
+      }
+    },
+    "highestHighValue": {
+      "title": "Highest High Value",
+      "overview": {
+        "title": "Overview",
+        "content": "The Highest High Value is simply a running calculation of the highest high over the previous n-periods."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Highest High is most commonly used together with Lowest Low to identify support and resistance levels."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "lowestLowValue": {
+      "title": "Lowest Low Value",
+      "overview": {
+        "title": "Overview",
+        "content": "The Lowest Low Value is simply a running calculation of the lowest low over the previous n-periods."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Lowest Low is most commonly used together with Highest High to identify support and resistance levels."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "linearRegressionR2": {
+      "title": "Linear Regression R2",
+      "overview": {
+        "title": "Overview",
+        "content": "The coefficient of determination R2 measures the proportion of variability in the price data. R2 is simply the square of the sample correlation coefficient between the price and the predicted price."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "R2 is most often used to guage market volatility. High values indicate that the market is more volatile than normal while lower values indicate that the market is in a steady trend."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content1": "Wikipedia - Linear Regression",
+        "and": "and",
+        "content2": "Wikipedia - R2"
+      }
+    },
+    "linearRegressionForecast": {
+      "title": "Linear Regression Forecast",
+      "overview": {
+        "title": "Overview",
+        "content": "In statistics, linear regression is an approach to modeling the relationship between a scalar variable y and one or more explanatory variables denoted X. Linear regression forecast shows how far prices deviate from their predicted targets."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Linear regression forecast can be used as a type of adaptive moving average."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Linear Regression"
+      }
+    },
+    "linearRegressionSlope": {
+      "title": "Linear Regression Slope",
+      "overview": {
+        "title": "Overview",
+        "content": "In statistics, linear regression is an approach to modeling the relationship between a scalar variable y and one or more explanatory variables denoted X. The slope is b, and a is the intercept (the value of y when x = 0)"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Linear regression slope is often used as trend following indicator."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Linear Regression"
+      }
+    },
+    "linearRegressionIntercept": {
+      "title": "Linear Regression Intercept",
+      "overview": {
+        "title": "Overview",
+        "content": "In statistics, linear regression is an approach to modeling the relationship between a scalar variable y and one or more explanatory variables denoted X. The y intercept is the y value of the linear regression line when X equals zero."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Linear regression intercept can be used as a type of adaptive moving average."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Linear Regression"
+      }
+    },
+    "timeSeriesForecast": {
+      "title": "Time Series Forecast",
+      "overview": {
+        "title": "Overview",
+        "content": "In statistics, linear regression is an approach to modeling the relationship between a scalar variable y and one or more explanatory variables denoted X. Linear regression forecast shows how far prices deviate from their predicted targets."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Time Series Forecast can be used as a type of adaptive moving average."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Linear Regression"
+      }
+    },
+    "bollingerBands": {
+      "title": "Bollinger Bands",
+      "overview": {
+        "title": "Overview",
+        "content": "Bollinger Bands were invented by John Bollinger in the 1980s. Bollinger Bands measure a high and low trading range using a calculation based on standard deviation."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The interpretation of Bollinger Bands varies greatly among traders. The most common method is to buy when the price touches the lower band and to sell when the price touches the higher band."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "standardDeviation": "Standard Deviations",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Bollinger Bands"
+      }
+    },
+    "MAE": {
+      "title": "Moving Average Envelope",
+      "overview": {
+        "title": "Overview",
+        "content": "Moving Average Envelopes are based on moving averages calculated from the underling price, shifted up and down by a fixed percentage."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When prices rise above the upper band or fall below the lower band, a change in direction may occur when the price penetrates the band from the opposite direction."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "shiftPercentage": "Shift Percentage",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "highLowBands": {
+      "title": "High Low Bands",
+      "overview": {
+        "title": "Overview",
+        "content": "High Low Bands consist of moving averages calculated from the underling price, shifted up and down by a fixed percentage of the median price."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When prices rise above the upper band or fall below the lower band, a change in direction may occur when the price penetrates the band from the opposite direction."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "fractalChaosBands": {
+      "title": "Fractal Chaos Bands",
+      "overview": {
+        "title": "Overview",
+        "content1": "The chaotic nature of stock market movements explains why it is sometimes difficult to distinguish hourly charts from monthly charts if the time scale is not given.",
+        "content2": "The patterns are similar regardless of the time resolution. Like the chambers of the nautilus, each level is like the one before it, but the size is different.",
+        "content3": "Fractal Chaos Bands can be used to examine these patterns."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When prices rise above the upper band or fall below the lower band, a change in direction may occur when the price penetrates the band from the opposite direction."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Fractals"
+      }
+    },
+    "primeNumberBands": {
+      "title": "Prime Number Bands",
+      "overview": {
+        "title": "Overview",
+        "content": "Prime Number Bands calculates the nearest prime number for the high and low prices."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When prices rise above the upper band or fall below the lower band, a change in direction may occur when the price penetrates the band from the opposite direction."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Prime Number"
+      }
+    },
+    "MFI": {
+      "title": "Money Flow Index",
+      "overview": {
+        "title": "Overview",
+        "content1": "Money Flow Index is an oscillator indicator that ranges from 0 to 100. The calculation is based on a percentage of up and down days over an n-period sliding window.",
+        "content2": "An 'up' market day is where the close price of a security closes higher than the previous close and a 'down' day is where the close price closes lower than the previous close."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When values are over 80, the market is considered overbought. Conversely, when values are under 20, the market is considered oversold."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Money Flow Index"
+      }
+    },
+    "TVI": {
+      "title": "Trade Volume Index",
+      "overview": {
+        "title": "Overview",
+        "content": "Trade Volume Index shows whether a security is being accumulated or distributed over period of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "When the indicator is rising, the security is said to be accumulating. Conversely, when the indicator is falling, the security is said to being distributing. Prices may reverse when the indicator converges with price."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "minimumTickValue": "Minimum Tick Value"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Money Flow Index"
+      }
+    },
+    "swingIndex": {
+      "title": "Swing Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Swing Index calculates the strength of a security by comparing the open, high, low and close prices with previous values."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Swing Index is a component of the Accumulation Swing Index, which provides an alternative view of price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "limitMoveValue": "Limit Move Value"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Swing Trading"
+      }
+    },
+    "ASI": {
+      "title": "Accumulative Swing Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Accumulative Swing Index is a cumulative total of the Swing Index, which calculates the strength of a security by comparing the open, high, low and close prices with previous values."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Accumulative Swing Index may be analyzed using technical indicators, line studies, and chart patterns as an alternative view of price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "limitMoveValue": "Limit Move Value"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Swing Trading"
+      }
+    },
+    "RSI": {
+      "title": "Relative Strength Index",
+      "overview": {
+        "title": "Overview",
+        "content1": "The Relative Strength Index (RSI) is a technical indicator developed by J. Welles Wilder, which measures the velocity and magnitude of price movements within a security.",
+        "content2": "RSI is computed as the ratio of higher closes to lower closes within an n-period sliding window."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The indicator is most often used with a 14-period setting. Values greater than 70 may indicate that the market is overbought, while values less than 30 may indicate that the market is oversold."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Relative Strength Index"
+      }
+    },
+    "CRS": {
+      "title": "Comparative Relative Strength",
+      "overview": {
+        "title": "Overview",
+        "content": "The Comparative Relative Strength index is a computation between two input series. The values of one time series are divided by the other."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The first time series is said to be 'out-performing' the second time series if the Comparative Relative Strength is trending upwards."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source1": "Source 1",
+          "source2": "Source 2"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Relative Strength Index"
+      }
+    },
+    "PVT": {
+      "title": "Price Volume Trend",
+      "overview": {
+        "title": "Overview",
+        "content": "Price Volume Trend (sometimes referred to as Volume Price Trend) is a technical indicator that compares price to volume. Price Volume Trend is closely related to the On Balance Volume index."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Price Volume Trend generally precedes price movement. The theory is that well-informed investors are buying when the index rises and uninformed investors are buying when the index falls."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Price Volume Trend"
+      }
+    },
+    "positiveVolumeIndex": {
+      "title": "Positive Volume Index",
+      "overview": {
+        "title": "Overview",
+        "content": "he Positive Volume Index measures the price trend for periods where volume increases from the previous volume"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Positive Volume Index is based on the theory that uninformed investors buy when volume increases while informed investors buy when volume decreases."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      }
+    },
+    "negativeVolumeIndex": {
+      "title": "Negative Volume Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Negative Volume Index measures the price trend for periods where volume decreases from the previous volume."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Negative Volume Index is based on the theory that uninformed investors buy when volume increases while informed investors buy when volume decreases."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      }
+    },
+    "onBalanceVolume": {
+      "title": "On Balance Volume",
+      "overview": {
+        "title": "Overview",
+        "content": "The On Balance Volume indicator is calculated based on a cumulative total of volume to show a relationship between price and volume."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "On Balance Volume is generally higher when prices are moving with the dominant trend and for this reason, the technical indicator is most often used to confirm a trend."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - On Balance Volume"
+      }
+    },
+    "performanceIndex": {
+      "title": "Performance Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Performance Index calculates price performance as a normalized value or percentage over time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "If the index shows 50, then the price of the security has increased 50 percent since the start of the calculation. Conversely, if the indictor shows -50, then the price of the security has decreased 50 percent since the start of the calculation."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      }
+    },
+    "massIndex": {
+      "title": "Mass Index",
+      "overview": {
+        "title": "Overview",
+        "content": "he Mass Index identifies price changes by indexing the narrowing and widening change between high and low prices."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "According to the inventor of the Mass Index, reversals may occur when a 25-period Mass Index rises above 27 or falls below 26.5."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "chaikinMoneyFlow": {
+      "title": "Chaikin Money Flow",
+      "overview": {
+        "title": "Overview",
+        "content": "The Chaikin Money Flow oscillator is a momentum indicator that identifies areas of buying and selling in the market by observing price in relation to volume.This indicator is based upon Chaikin Accumulation/Distribution, which is based upon the premise that if a stock closes above its midpoint [(high+low)/2] for the day then there was accumulation.Conversely, if it closes below its midpoint, then there was distribution."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A value of 80 is generally considered overbought while a value of 20 oversold."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Money Flow Index"
+      }
+    },
+    "CCI": {
+      "title": "Commodity Channel Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The CCI was developed by Donald Lambert. The purpose of this indicator is to identify cyclical turns in commodities. The indicator is also frequently used with equities and currencies."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "This indicator oscillates between an overbought and oversold zone of +100 and -100 respectively."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Commodity Channel Index"
+      }
+    },
+    "SMI": {
+      "title": "Stochastic Momentum Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Stochastic Momentum Index, developed by William Blau, first appeared in the January 1993 issue of Stocks & Commodities magazine. This indicator plots the closeness relative to the midpoint of the recent high/low range."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content1": "The Stochastic Momentum Index has two components: %K and %D. %K is most often displayed as a solid line and %D is often shown as a dotted line.",
+        "content2": "The most widely used method for interpreting the Stochastic Momentum Index is to buy when either component rises above 40 or sell when either component falls below 40.",
+        "content3": "Another method is to buy when %K rises above %D and sell when %K falls below %D."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "kPeriods": "%K Periods",
+          "kSmoothing": "%K Smoothing",
+          "kDoubleSmoothing": "%K Double Smoothing",
+          "dPeriods": "%D Periods",
+          "MAT": "Moving Average Type",
+          "dMAT": "%D Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Stochastic Indicator"
+      }
+    },
+    "historicalVolatility": {
+      "title": "Historical Volatility",
+      "overview": {
+        "title": "Overview",
+        "content1": "Historical volatility is the log-normal standard deviation. Historical Volatility is based on the book by Don Fishback, 'Odds: The Key to 90% Winners'.",
+        "content2": "Historical volatility outputs an n-period index ranging between 1 and 0. The formula is Stdev(Log(Close / Close Yesterday), 30) * Sqrt(365)"
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Higher values indicate market volatility while lower values indicate calmness."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "standardDeviation": "Standard Deviations",
+          "barHistory": "Bar History"
+        }
+      }
+    },
+    "chandeMomentumOscillator": {
+      "title": "Chande Momentum Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Chande Momentum Oscillator (CMO) is an advanced momentum oscillator derived from linear regression."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Increasingly high values of CMO may indicate that prices are trending strongly upwards. Conversely, lower values may indicate that prices are trending strongly downwards. CMO is related to MACD and Price Rate of Change (ROC)."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      }
+    },
+    "momentumOscillator": {
+      "title": "Momentum Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Momentum Oscillator calculates the change in price as a ratio over a specified length of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Increasingly high values may indicate that prices are trending strongly upwards. Conversely, lower values may indicate that prices are trending strongly downwards."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      }
+    },
+    "TRIX": {
+      "title": "TRIX",
+      "overview": {
+        "title": "Overview",
+        "content": "TRIX is a momentum oscillator that shows the rate of change of an exponentially averaged closing price."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The most common interpretation of the TRIX oscillator is to buy when the oscillator rises and sell when the oscillator falls."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - TRIX"
+      }
+    },
+    "verticalHorizontalFilter": {
+      "title": "Vertical Horizontal Filter",
+      "overview": {
+        "title": "Overview",
+        "content": "The Vertical Horizontal Filter (VHF) identifies whether a market is in a trending or choppy movement phase."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "VHF is most commonly used as an indicator of market volatility. It is also used as a component in other technical indicators."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      }
+    },
+    "ultimateOscillator": {
+      "title": "Ultimate Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "Ultimate Oscillator was developed by Larry Williams. The indicator is based buying and selling 'pressure' represented by when a bar's closing price falls within the bar's true range."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The most popular interpretation of the Ultimate Oscillator is based on price and indicator divergence."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "cycle1": "Cycle 1",
+          "cycle2": "Cycle 2",
+          "cycle3": "Cycle 3"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Ultimate Oscillator"
+      }
+    },
+    "williamsR": {
+      "title": "Williams %R",
+      "overview": {
+        "title": "Overview",
+        "content": "Williams %R shows overbought and oversold levels by calculating the current closing price in relation to the high and low prices over the past n-periods."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The most widely used method for interpreting Williams %R is to buy when the indicator rises above 80 or sell when the indicator falls below 20."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Williams %R"
+      }
+    },
+    "WAD": {
+      "title": "Williams Accumulation Distribution",
+      "overview": {
+        "title": "Overview",
+        "content": "Williams Accumulation Distribution shows a relationship of price and volume over time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The security is said to be accumulating when the indicator is rising. Conversely, the security is said to be distributing when the indicator falls. Prices may reverse when the indicator converges with price."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Accumulation Distribution"
+      }
+    },
+    "volumeOscillator": {
+      "title": "Volume Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Volume Oscillator shows a spread of two different moving averages of volume over a specified period of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Volume Oscillator offers a clear view of whether or not volume is increasing or decreasing."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shortTermPeriods": "Short Term Periods",
+          "longTermPeriods": "Long Term Periods",
+          "pointsOrPercent": "Points or Percent"
+        }
+      }
+    },
+    "chaikinVolatility": {
+      "title": "Chaikin Volatility",
+      "overview": {
+        "title": "Overview",
+        "content": "The Chaikin Volatility Oscillator is a moving average derivative of the Accumulation/Distribution index."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Chaikin Volatility Oscillator adjusts with respect to volatility, independent of long-term price action."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods",
+          "rateOfChange": "Rate of Change",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "stochasticOscillator": {
+      "title": "Stochastic Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Stochastic Oscillator is a popular indicator that shows where a security's price has closed in proportion to its closing price range over a specified period of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content1": "The Stochastic Oscillator has two components: %K and %D. %K is most often displayed as a solid line and %D is often shown as a dotted line.",
+        "content2": "The most widely used method for interpreting the Stochastic Oscillator is to buy when either component rises above 80 or sell when either component falls below 20.",
+        "content3": "Another way to interpret the Stochastic Oscillator is to buy when %K rises above %D, and conversely, sell when %K falls below %D."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "kPeriods": "%K Periods",
+          "kSmoothingPeriods": "%K Smoothing Periods",
+          "dPeriods": "%D Periods",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Stochastic Oscillator"
+      }
+    },
+    "priceOscillator": {
+      "title": "Price Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Price Oscillator displays a spread between two moving averages."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Buying usually occurs when the oscillator rises and selling usually occurs when the oscillator falls."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "cycle1": "Cycle 1",
+          "cycle2": "Cycle 2"
+        }
+      }
+    },
+    "MACD": {
+      "title": "MACD",
+      "overview": {
+        "title": "Overview",
+        "content": "The MACD is a moving average oscillator that shows potential overbought/oversold phases of market fluctuation. The calculation is based on two different moving averages of the price data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Buy and sell signals are generated whenever MACD crosses a signal line, the zero mark line or when the MACD line diverges from price."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "signalPeriods": "Signal Periods",
+          "shortCycle": "Short Cycle",
+          "longCycle": "Long Cycle",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - MACD"
+      }
+    },
+    "MACDHistogram": {
+      "title": "MACD Histogram",
+      "overview": {
+        "title": "Overview",
+        "content": "The MACD is a moving average oscillator that shows potential overbought/oversold phases of market fluctuation. The calculation is based on two different moving averages of the price data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Buy and sell signals are generated whenever MACD crosses a signal line, the zero mark line or when the MACD line diverges from price."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "signalPeriods": "Signal Periods",
+          "shortCycle": "Short Cycle",
+          "longCycle": "Long Cycle",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "easeOfMovement": {
+      "title": "Ease Of Movement",
+      "overview": {
+        "title": "Overview",
+        "content": "The Ease of Movement oscillator shows a unique relationship between price change and volume."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Ease of Movement oscillator rises when prices are trending upwards under low volume and falls when prices are trending downwards under low volume."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "MAT": "Moving Average Type",
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Ease Of Movement"
+      }
+    },
+    "detrendedPriceOscillator": {
+      "title": "Detrended Price Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Detrened Price Oscillator is used when it is desirable to remove long-term trends or outliers from price data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "This indicator is often used to supplement a standard price chart."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Detrended Price Oscillator"
+      }
+    },
+    "parabolicSAR": {
+      "title": "Parabolic SAR",
+      "overview": {
+        "title": "Overview",
+        "content": "The Parabolic SAR was  developed by Welles Wilder. This indicator is always in the market (whenever a position is closed, an opposing position is taken)."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Parabolic SAR indicator is most often used to set trailing price stops. A stop and reversal (SAR) occurs when the price penetrates a Parabolic SAR level."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "minAF": "Min AF",
+          "maxAF": "Max AF"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - ParabolicSAR"
+      }
+    },
+    "DMS": {
+      "title": "Directional Movement System",
+      "overview": {
+        "title": "Overview",
+        "content1": "The Welles Wilder Directional Movement System is composed of ADX, DI+ and DI-. The indicators guage how much the market is trending, either up or down.",
+        "content2": "The higher the ADX line, the more the market is trending and the more suitable it becomes for a trend-following system.",
+        "content3": "DI+ represents a measure of uptrend strength and DI- represents a measure of downtrend strength.",
+        "content4": "Detailed information about this indicator can be found in Welles Wilder's book, 'New Concepts in Technical Trading Systems'."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A buy signal is given when DI+ crosses over DI-, a sell signal is given when DI- crosses over DI+."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Directional Movement System"
+      }
+    },
+    "trueRange": {
+      "title": "True Range",
+      "overview": {
+        "title": "Overview",
+        "content": "True Range is an indicator developed by Welles Wilder, which measures market volatility."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "High True Range values may signal market bottoms while low True Range values may signal neutral markets."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Average True Range"
+      }
+    },
+    "ATR": {
+      "title": "Average True Range",
+      "overview": {
+        "title": "Overview",
+        "content": "Average True Range is an indicator developed by Welles Wilder, which measures market volatility."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "High Average True Range values may signal market bottoms while low Average True Range values may signal neutral markets."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Average True Range"
+      }
+    },
+    "aroon": {
+      "title": "Aroon",
+      "overview": {
+        "title": "Overview",
+        "content": "The Aroon indicator is used to help identify if a stock is trending or not."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Trends are determined by extreme values (above 80) of both lines (Aroon up and Aroon down), whereas unstable prices are determined when both lines are low (less than 20)."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "aroonOscillator": {
+      "title": "Aroon Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Aroon indicator is used to help identify if a stock is trending or not."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Trends are determined by extreme values (above 80) of both lines (Aroon up and Aroon down), whereas unstable prices are determined when both lines are low (less than 20)."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "rainbowOscillator": {
+      "title": "Rainbow Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Rainbow Oscillator is based upon moving average of multiple time frames."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The trend may reverse when values rise above 80 or fall below 20."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "levels": "Levels",
+          "MAT": "Moving Average Type"
+        }
+      }
+    },
+    "fractalChaosOscillator": {
+      "title": "Fractal Chaos Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content1": "The chaotic nature of stock market movements explains why it is sometimes difficult to distinguish hourly charts from monthly charts if the time scale is not given.",
+        "content2": "The patterns are similar regardless of the time resolution. Like the chambers of the nautilus, each level is like the one before it, but the size is different.",
+        "content3": "The Fractal Chaos Oscillator can be used to examine these patterns."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Continuous zero values often indicate that the trend is about to reverse quickly and sharply."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "PNO": {
+      "title": "Prime Number Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "This indicator finds the nearest prime number from either the top or bottom of the series, and plots the difference between that prime number and the price data."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "This indicator can be used to spot market turning points. When the oscillator remains at the same high point for two consecutive periods in the positive range, consider selling. Conversely, when the oscillator remains at a low point for two consecutive periods in the negative range, consider buying."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Prime Number"
+      }
+    },
+    "elderRay": {
+      "title": "Elder Ray",
+      "overview": {
+        "title": "Overview",
+        "content": "The Elder Ray indicator, developed in 1989 by Dr. Elder, measures bullish and bearish 'power' by comparing the daily high and low to a moving average."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A buy signal occurs when Bear Power is negative but moving upward and Bull Power has recently increased. Conversely, a sell signal occurs when Bull Power is positive but moving downward and Bear Power has recently decreased."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "MAT": "Moving Average Type",
+          "periods": "Periods"
+        }
+      }
+    },
+    "EFI": {
+      "title": "Elder Force Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Elder Force Index is calculated by the change in price from the previous to the current day, multiplied by volume."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Buy signals are generated when the two-day EMA of the Elder Force Index is negative and sell signals are generated when it is positive."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      }
+    },
+    "elderThermometer": {
+      "title": "Elder Thermometer",
+      "overview": {
+        "title": "Overview",
+        "content1": "The Elder Thermometer indicator is described in Dr. Alexander Elder's book 'Come into my trading room' on page 162.",
+        "content2": "This indicator measures the 'temperature' of the market, indicated by greater or lesser intraday ranges."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "'Cold' and 'Hot' Elder Thermometer zones tend to precede major moves."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "EFT": {
+      "title": "Ehler's Fisher Transform",
+      "overview": {
+        "title": "Overview",
+        "content1": "Ehler's Fisher Transform is an oscillator that is based on the principle that security prices do not have a Gaussian probability distribution function.",
+        "content2": "The Fisher Transform makes the probability distribution function nearly Gaussian, creating turning points that are sharply peaked for easier identification of trend changes."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "A trigger line is typically plotted with Ehler's Fisher Transform. Buy and sell signals occur when the trigger line crosses over or under the indicator."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "keltnerChannel": {
+      "title": "Keltner Channel",
+      "overview": {
+        "title": "Overview",
+        "content": "Keltner Channel is a volatility based moving average envelope that shifts a moving average of the True Range indicator by a certain percentage upwards and downwards."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Prices may reverse sharply after exiting and re-entering either the top or bottom band."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shiftPercentage": "Shift Percentage",
+          "periods": "Periods",
+          "MAT": "Moving Average Type"
+        }
+      }
+    },
+    "marketFacilitationIndex": {
+      "title": "Market Facilitation Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Market Facilitation Index, developed by Dr. Bill Williams, shows prices changes as they relate to volume. The formula is (High - Low) / Volume."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content1": "When both the Market Facilitation Index and Volume increase at the same time, it can be said that market participants are becoming more interested.",
+        "content2": "Likewise, when both the Market Facilitation Index and Volume decrease, it can be said that market participants are losing interest."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Market Facilitation Index"
+      }
+    },
+    "schaffTrendCycle": {
+      "title": "Schaff Trend Cycle",
+      "overview": {
+        "title": "Overview",
+        "content": "The Schaff Trend Cycle, by Doug Schaff, combines both Slow Stochastics and the Moving Average Convergence/Divergence (MACD)."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Schaff Trend Cycle is interpreted similar to MACD. Buy and sell signals are generated whenever the indicator crosses a signal line, the zero mark line or when the indicator diverges from price."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shortCycle": "Short Cycle",
+          "periods": "Periods",
+          "longCycle": "Long Cycle",
+          "MAT": "Moving Average Type"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - MACD"
+      }
+    },
+    "QStick": {
+      "title": "QStick",
+      "overview": {
+        "title": "Overview",
+        "content": "QStick was developed by Tushar Chande as a quantifier for candlestick charts. QStick shows the relationship of the open and close prices."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Positive values indicate that the majority of candlesticks have been white during the previous n-periods, while negative values indicate that the majority of candlesticks have been black."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "MAT": "Moving Average Type",
+          "periods": "Periods"
+        }
+      }
+    },
+    "SARC": {
+      "title": "Stoller Average Range Channels",
+      "overview": {
+        "title": "Overview",
+        "content": "Stoller Average Range Channels (STARC) is a volatility based channel system that shifts a moving average of the True Range indicator by a certain percentage upwards and downwards."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Prices may reverse sharply after exiting and re-entering either the top or bottom band."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shiftPercentage": "Shift Percentage",
+          "periods": "Periods",
+          "MAT": "Moving Average Type"
+        }
+      }
+    },
+    "centerOfGravity": {
+      "title": "Center Of Gravity",
+      "overview": {
+        "title": "Overview",
+        "content1": "The Center Of Gravity oscillator, by John Ehlers, shows a comparison of recent prices versus older prices within a sliding window.",
+        "content2": "The prices can be thought of as being placed on two ends of a beam that is supported in the center. The oscillator represents the balance point or center of gravity on the beam."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Center of Gravity oscillator decreases when prices rise and increases when prices fall."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Moving Averages"
+      }
+    },
+    "coppockCurve": {
+      "title": "Coppock Curve",
+      "overview": {
+        "title": "Overview",
+        "content": "The Coppock Curve, developed by Edwin Coppock and published in Barron's Magazine in 1962, is based on a 14-month and 11-month rate of change, smoothed by a 10-period weighted moving average."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The Coppock Curve generates buy signals when the value falls below zero and turns upwards from a low point."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Coppock Curve"
+      }
+    },
+    "CFO": {
+      "title": "Chande Forecast Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Chande Forecast Oscillator calculates the deviation between the current bar's price and an n-bar linear regression forecast value."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The market is said to be trending when the Chande Forecast Oscillator remains either above or below the zero line for an extended time."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      }
+    },
+    "GRI": {
+      "title": "Gopalakrishnan Range Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Gopalakrishnan Range Index (GAPO) by Jayanthi Gopalakrishnan quantifies the variability of price data based on the log of the price range over an n-bar period."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "GAPO helps to identify erratic and smooth markets."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      },
+      "link": {
+        "text": "Also see",
+        "content": "Wikipedia - Gopalakrishnan Range Index"
+      }
+    },
+    "intradayMomentumIndex": {
+      "title": "Intraday Momentum Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The Intraday Momentum Index (IMI) is a technical indicator that combines aspects of candlestick analysis with the relative strength index (RSI)."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The intraday momentum index, or IMI, provides investors with potential buying and selling days based off of signals created on individual days."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "source": "Source",
+          "periods": "Periods"
+        }
+      }
+    },
+    "klingerOscillator": {
+      "title": "Klinger Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "A technical indicator developed by Stephen Klinger that is used to determine long-term trends of money flow while remaining sensitive enough to short-term fluctuations to enable a trader to predict short-term reversals."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "This indicator compares the volume flowing in and out of a security to price movement, and it is then turned into an oscillator."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shortCycle": "Short Cycle",
+          "periods": "Periods",
+          "MAT": "Moving Average Type",
+          "longCycle": "Long Cycle"
+        }
+      }
+    },
+    "PGO": {
+      "title": "Pretty Good Oscillator",
+      "overview": {
+        "title": "Overview",
+        "content": "The Pretty Good Oscillator measures the distance of the current close from its N-day simple moving average, expressed in terms of an average true range over a similar period."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "RAVI": {
+      "title": "Range Action Verification Index",
+      "overview": {
+        "title": "Overview",
+        "content": "Range Action Verification Index (RAVI) indicator, developed by Tushar Chande in the late 1990s, attempts to identify trend strength."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "Tushar Chande in his original implementation uses two simple moving averages for the calculation and takes the absolute value of the result ensuring all values are positive. Doing this, the larger the value of RAVI, the stronger the trend is said to be, however, the trend direction is lost."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "shortCycle": "Short Cycle",
+          "source": "Source",
+          "longCycle": "Long Cycle"
+        }
+      }
+    },
+    "RWI": {
+      "title": "Random Walk Index",
+      "overview": {
+        "title": "Overview",
+        "content": "The random walk index (RWI) is a technical indicator that attempts to determine if a stock's price movement is random or nature or a result of a statistically significant trend."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "The random walk index attempts to determine when the market is in a strong uptrend or downtrend by measuring price ranges over N and how it differs from what would be expected by a random walk (randomly going up or down). The greater the range suggests a stronger trend. The RWI states that the shortest distance between two points is a straight line and the further prices stray from a straight line, implies the market is choppy and random in nature."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "TMF": {
+      "title": "Twiggs Money Flow",
+      "overview": {
+        "title": "Overview",
+        "content": "Based on the popular Chaikin Money Flow indicator, which is in turn derived from the Accumulation Distribution line."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content1": "Twiggs Money Flow warns of breakouts and provides useful trend confirmation. It is based on the observation that buying support is normally signaled by increased volume and frequent closes in the top half of the daily range.",
+        "content2": "Likewise, selling pressure is evidenced by increased volume and frequent closes in the lower half of the daily range."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "periods": "Periods"
+        }
+      }
+    },
+    "ichimokuCloud": {
+      "title": "Ichimoku Cloud",
+      "overview": {
+        "title": "Overview",
+        "content": "The Ichimoku cloud is a chart used in technical analysis that shows support and resistance, and momentum and trend directions for a security or investment."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "It is designed to provide relevant information at a glance using moving averages (tenkan-sen and kijun-sen) to show bullish and bearish crossover points. The 'clouds; (kumo, in Japanese) are formed between spans of the average of the tenkan-sen and kijun-sen plotted six months ahead (senkou span B), and of the midpoint of the 52-week high and low (senkou span B) plotted six months ahead."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "CLP": "Conversion Line Periods",
+          "BLP": "Base Line Periods",
+          "LS2P": "Lagging Span 2 Periods"
+        }
+      }
+    },
+    "volume": {
+      "title": "Volume",
+      "overview": {
+        "title": "Overview",
+        "content": "Volume is the number of shares or contracts traded in a security or an entire market during a given period of time."
+      },
+      "interpretation": {
+        "title": "Interpretation",
+        "content": "It is simply the amount of shares that trade hands from sellers to buyers as a measure of activity. If a buyer of a stock purchases 100 shares from a seller, then the volume for that period increases by 100 shares based on that transaction."
+      },
+      "parameters": {
+        "title": "Parameters",
+        "content": {
+          "none": "None"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "src/shared/view/styles/mixins";
+
+.status-cell {
+  width: 6.5714rem;
+  padding: 0.1429rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.2857rem;
+  font-size: 0.7143rem;
+  font-weight: 600;
+
+  &_complete {
+    @include themed('color', 'main-green-color');
+    @include themed('background-color', 'operation-history-status-complete-bg');
+  }
+
+  &_in-progress {
+    @include themed('color', 'operation-history-status-in-progress-color');
+    @include themed('background-color', 'operation-history-status-in-progress-bg');
+  }
+
+  &_canceled {
+    @include themed('color', 'main-red-color');
+    @include themed('background-color', 'operation-history-status-cancelled-bg');
+  }
+
+  &__link:hover,
+  &__link:focus {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,29 @@
+.users-table-cell {
+  &__cell-container {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+
+  &__verified {
+    color: #56b74d;
+  }
+
+  &__not-verified {
+    color: #ed4b74;
+  }
+
+  &__sub-text {
+    color: #7e849e;
+  }
+
+  &__actions {
+    display: flex;
+    width: 10.5rem;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 5rem;
+  }
+}

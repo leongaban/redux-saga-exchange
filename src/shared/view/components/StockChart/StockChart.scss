@@ -1,0 +1,40 @@
+@import 'src/shared/view/styles/mixins';
+
+.stock-chart {
+  flex: 1 100%;
+  position: relative;
+
+  &__m-chart-value {
+    position: absolute;
+    z-index: 10;
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    &_position {
+      &_left {
+        left: 0.2rem;
+      }
+
+      &_right {
+        right: 0.2rem;
+      }
+    }
+
+    @include themed('color', 'main-text-color');
+  }
+
+  & .scxWaitingBarContainer {
+    background-color: transparent;
+
+    @include themed('color', 'main-text-color');
+  }
+}
+
+div.scxPanelTitle {
+  z-index: 101;
+}
+
+div.scxNavigation {
+  z-index: 90;
+  display: none;
+}

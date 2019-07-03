@@ -1,0 +1,50 @@
+@import "src/shared/view/styles/mixins";
+
+.api-key-generator {
+  &__title {
+    margin: 0 0 0.72rem;
+    font-size: 1rem;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__details {
+    font-size: 0.786rem;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__loader {
+    position: relative;
+    height: 7.15rem;
+    margin-top: 1.43rem;
+  }
+
+  &__empty-list {
+    text-align: center;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__keys-list {
+    padding: 2rem 0 0;
+  }
+
+  &__button {
+    padding: 0.714rem;
+
+    @include themed('background', 'app-background-color');
+
+    @include mobile {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+      background: transparent;
+    }
+  }
+}

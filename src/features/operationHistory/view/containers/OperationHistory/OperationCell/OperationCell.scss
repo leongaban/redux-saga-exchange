@@ -1,0 +1,15 @@
+@import "src/shared/view/styles/mixins";
+
+.operation-cell {
+  text-transform: capitalize;
+
+  &_operation {
+    &_deposit {
+      @include themed('color', 'main-green-color');
+    }
+
+    &_withdrawal {
+      @include themed('color', 'main-red-color');
+    }
+  }
+}

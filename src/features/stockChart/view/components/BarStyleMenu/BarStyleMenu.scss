@@ -1,0 +1,12 @@
+@import 'src/shared/view/styles/mixins';
+
+.bar-style-menu {
+  &__icon {
+    width: 2.714rem;
+    height: 2rem;
+
+    path {
+      @include themed('fill', 'headline-1-color');
+    }
+  }
+}

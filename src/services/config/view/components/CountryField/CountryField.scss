@@ -1,0 +1,36 @@
+@import 'src/shared/view/styles/mixins';
+
+.country {
+  position: relative;
+
+  &__option {
+    display: flex;
+    height: 2.14rem;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    user-select: none;
+    border-top: 1px solid #f0f3f6;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__suggestions-list {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    width: 100%;
+    max-height: 13rem;
+    padding-left: 0;
+    list-style-type: none;
+    border: 1px solid #e6eaee;
+    border-radius: 4px;
+
+    @include themed('background-color', 'select-background-color');
+  }
+
+  &__suggestions-highlighted {
+    cursor: pointer;
+
+    @include themed('background-color', 'select-option-hover-background-color');
+  }
+}

@@ -1,0 +1,10 @@
+@import "src/shared/view/styles/mixins";
+
+.open-orders-report {
+  min-height: 11rem;
+  width: 80vw;
+
+  &__header {
+    padding: 1rem;
+  }
+}

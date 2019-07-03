@@ -1,0 +1,13 @@
+.new-preset-dialog {
+  display: flex;
+  flex-direction: column;
+  width: 23.57rem;
+  padding: 0 1.64rem;
+  padding-bottom: 2.36rem;
+
+  &__add-button {
+    width: 8.57rem;
+    margin-top: 1.43rem;
+    align-self: flex-end;
+  }
+}

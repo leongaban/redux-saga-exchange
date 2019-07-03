@@ -1,0 +1,6 @@
+{
+  "nodeWebsocketServer": "wss://trd.io-node.azurewebsites.net/socket",
+  "signalWebsocketServerPublic": "http://localhost/marketdata-ws/info",
+  "signalWebsocketServerPrivate": "http://localhost/frontoffice/ws/account",
+  "restServerAddress": "http://localhost/"
+}

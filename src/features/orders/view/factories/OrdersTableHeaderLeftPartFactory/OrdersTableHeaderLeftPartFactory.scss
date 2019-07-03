@@ -1,0 +1,9 @@
+.orders-table-header-left-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__hide-checkbox {
+    margin-right: 1.07rem;
+  }
+}

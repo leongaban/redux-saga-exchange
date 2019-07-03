@@ -1,0 +1,66 @@
+@import "src/shared/view/styles/mixins";
+
+.rc-slider {
+  &-handle {
+    width: 0.86rem;
+    height: 0.86rem;
+    margin-top: -4px;
+    border: 2px solid #0098d8;
+    box-shadow: initial;
+
+    &[aria-valuenow="0"] {
+      border-color: #e6eaee;
+
+      &:hover {
+        border-color: #e6eaee;
+      }
+    }
+
+    &:active {
+      border-color: #0098d8;
+      box-shadow: initial;
+    }
+
+    &:hover {
+      border-color: #0098d8;
+    }
+  }
+
+  &-rail {
+    top: 50%;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: #e6eaee;
+  }
+
+  &-track {
+    top: 50%;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: #0098d8;
+  }
+
+  &-dot {
+    bottom: -1px;
+    width: 2px;
+    height: 0.43rem;
+    margin: 0;
+    border: none;
+    border-radius: initial;
+    background-color: #e6eaee;
+
+    &-active {
+      background-color: #0098d8;
+    }
+  }
+
+  &-mark-text {
+    font-size: 0.71rem;
+
+    @include themed('color', 'main-text-color');
+
+    &:last-child {
+      width: initial !important;
+    }
+  }
+}

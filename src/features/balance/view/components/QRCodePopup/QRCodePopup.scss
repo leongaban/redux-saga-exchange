@@ -1,0 +1,11 @@
+@import "src/shared/view/styles/mixins";
+
+.qr-code-popup {
+  text-align: center;
+
+  @include themed('color', 'main-text-color');
+
+  &__info {
+    margin-top: 5px;
+  }
+}

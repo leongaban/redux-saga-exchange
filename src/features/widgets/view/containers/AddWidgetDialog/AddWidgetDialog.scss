@@ -1,0 +1,53 @@
+@import "src/shared/view/styles/mixins";
+
+.add-widget-dialog {
+  width: 48.71rem;
+
+  &__widget-name-select {
+    position: relative;
+    z-index: 4;
+    max-width: 22.29rem;
+    margin-top: 1.43rem;
+
+    &-label {
+      font-size: 1.14rem;
+
+      @include themed('color', 'headline-1-color');
+    }
+  }
+
+  &__section {
+    padding: 1.43rem 1.64rem;
+
+    &_with-bottom-border {
+      padding-bottom: 0;
+
+      &::after {
+        display: block;
+        height: 1px;
+        margin-top: 1.43rem;
+        content: '';
+
+        @include themed('background', 'widget-border-color');
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding: 1.29rem 1.5rem;
+    border-top: 1px solid;
+    justify-content: flex-end;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__button {
+    width: 7.14rem;
+    margin-left: 1.43rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

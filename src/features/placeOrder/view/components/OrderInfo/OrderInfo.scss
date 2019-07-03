@@ -1,0 +1,66 @@
+@import 'src/shared/view/styles/mixins';
+
+.order-info {
+  $r: &;
+
+  font-size: 0.786rem;
+
+  &__upper-part {
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__fee-list {
+    &-title {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    &-toggle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.25rem 0.25rem 0;
+      border-color: transparent;
+      margin-left: 0.2rem;
+      display: inline-block;
+      vertical-align: middle;
+
+      @include themed('border-top-color', 'place-order-balance-title-color');
+
+      &_open {
+        border-bottom-color: transparent;
+        border-width: 0 0.25rem 0.25rem;
+
+        @include themed('border-bottom-color', 'place-order-balance-title-color');
+      }
+    }
+  }
+
+  &__fee-list-values {
+    padding-left: 0.5rem;
+
+    &_hidden {
+      visibility: hidden;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__fee-value {
+    @include themed('color', 'place-order-balance-title-color');
+  }
+
+  &__order-fee-calculation {
+    @include mobile {
+      display: none;
+    }
+  }
+}

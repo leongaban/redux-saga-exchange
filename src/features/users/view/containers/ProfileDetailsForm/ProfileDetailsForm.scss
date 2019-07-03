@@ -1,0 +1,87 @@
+@import "src/shared/view/styles/mixins";
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  width: 48.714rem;
+  padding: 1.071rem 1.071rem 0;
+
+  @include themed('color', 'main-text-color');
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    padding: 0.714rem 0;
+    border-bottom: 1px solid;
+    justify-content: space-between;
+
+    @include themed('border-color', 'widget-border-color');
+  }
+
+  &__section-left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.49;
+  }
+
+  &__section-right {
+    flex: 0.49;
+  }
+
+  &__checkbox-wrapper {
+    padding: 0.357rem 0;
+    width: 10.3rem;
+  }
+
+  &__label {
+    margin: 0;
+    padding-bottom: 1.2rem;
+    font-size: 0.929rem;
+    font-weight: 400;
+    line-height: 1.071rem;
+  }
+
+  &__button {
+    width: 5.714rem;
+  }
+
+  &__account-type {
+    @include themed('color', 'headline-2-color');
+  }
+
+  &__claim {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    padding: 0.357rem 0;
+
+    @include themed('border-color', 'widget-border-color');
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      max-height: 21.429rem;
+      overflow: auto;
+    }
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex: 0.7;
+    padding: 1.3571rem 2rem 0 0;
+    justify-content: flex-end;
+
+    &-button {
+      width: 7.1429rem;
+      margin-left: 1.5rem;
+    }
+  }
+}

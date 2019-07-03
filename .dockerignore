@@ -1,0 +1,9 @@
+.dappfiles
+.git
+.helm
+docs
+generators
+
+.gitignore
+.gitlab-ci.yml
+dappfile.yml

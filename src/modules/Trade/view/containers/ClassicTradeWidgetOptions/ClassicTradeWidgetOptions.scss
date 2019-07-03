@@ -1,0 +1,47 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.classic-trade-widget-options {
+  display: flex;
+  align-items: center;
+
+  &__option {
+    display: flex;
+    margin-right: 1.44rem;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-caption {
+      margin-left: 0.3rem;
+    }
+  }
+
+  &__preset-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      margin-right: 4px;
+      font-size: 0.79rem;
+      font-weight: 600;
+    }
+
+    &-arrow {
+      width: 0;
+      height: 0;
+      border-width: 0.2rem 0.17rem 0;
+      border-style: solid;
+      border-color: $color-medium-grey transparent transparent;
+    }
+  }
+
+  &__icon {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+  }
+}

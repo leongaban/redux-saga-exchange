@@ -1,0 +1,24 @@
+@import "src/shared/view/styles/mixins";
+
+.toggle-2fa-form {
+  width: 17.857rem;
+
+  @include mobile {
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__button {
+    width: 7.143rem;
+  }
+
+  &__error {
+    padding-bottom: 1.071rem;
+  }
+}

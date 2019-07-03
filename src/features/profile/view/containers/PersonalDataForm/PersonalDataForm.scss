@@ -1,0 +1,139 @@
+@import "src/shared/view/styles/mixins";
+
+.personal-data-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__row-item {
+    min-width: 15rem;
+    max-width: 22rem;
+    width: 100%;
+
+    @include themed('color', 'main-text-color');
+
+    @include mobile {
+      max-width: unset;
+    }
+  }
+
+  &__progress {
+    width: 4.714rem;
+  }
+
+  &__hint {
+    display: flex;
+    height: 100%;
+    color: #8b90a2;
+    font-size: 0.786rem;
+    align-items: center;
+  }
+
+  &__avatar {
+    &-field {
+      position: relative;
+      display: flex;
+      width: 5.714rem;
+      height: 5.714rem;
+      cursor: pointer;
+      border: 1px solid;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+
+      @include themed('border-color', 'widget-border-color');
+      @include themed('background-color', 'widget-background-color');
+    }
+
+    &-row {
+      display: flex;
+      padding-bottom: 2rem;
+      align-items: center;
+      flex: 1;
+    }
+
+    &-icon {
+      width: 1.857rem;
+      height: 1.429rem;
+    }
+
+    &-preview {
+      max-width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    &-text {
+      padding-left: 1.571rem;
+      width: 70%;
+    }
+
+    &-title {
+      padding-bottom: 0.357rem;
+      font-size: 0.929rem;
+
+      @include themed('color', 'main-text-color');
+    }
+
+    &-hint {
+      font-size: 0.786rem;
+
+      @include themed('color', 'table-header-cell-title-color');
+    }
+
+    &-cropper {
+      height: 95%; // content in modal
+    }
+  }
+
+  &__form-link {
+    display: inline-block;
+    margin: 0.8rem 1rem 0 0;
+  }
+
+  &__documents {
+    width: 60%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__verified-icon {
+    width: 5rem;
+    height: 5rem;
+
+    path,
+    polygon {
+      @include themed('fill', 'headline-1-color');
+    }
+  }
+
+  &__user-verified {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &__instruction {
+    padding: 1.286rem 1.571rem;
+    font-size: 12px;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__progress-docs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 2.857rem;
+    justify-content: center;
+  }
+}

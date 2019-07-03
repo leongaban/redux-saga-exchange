@@ -1,0 +1,57 @@
+@import 'src/shared/view/styles/mixins';
+
+.chat-widget-header-left-part {
+  display: flex;
+  height: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &__search-button {
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  &__search-input-icons {
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+
+    &-wrapper {
+      padding: 0.1rem;
+      margin-right: 0.5rem;
+      cursor: pointer;
+      font-size: 0;
+
+      &:hover {
+        @include themed('background-color', 'menu-entry-hover');
+      }
+    }
+  }
+
+  &__cancel-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+
+    &-wrapper {
+      margin-left: 0.3rem;
+      padding: 0.4rem;
+      cursor: pointer;
+      font-size: 0;
+
+      &:hover {
+        @include themed('background-color', 'menu-entry-hover');
+      }
+    }
+  }
+
+  &__search-input-field {
+    padding-right: 4rem;
+  }
+}

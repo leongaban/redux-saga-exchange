@@ -1,0 +1,28 @@
+$color-white: #fff;
+$color-black: #000;
+$color-blue: #0098d8;
+$color-green: #00b142;
+$color-red: #df2a41;
+$color-grey: #bdc2cf;
+$color-light-grey: #e6eaee;
+$color-medium-grey: #7f8a94;
+$color-dark-grey: #354052;
+$color-deep-grey: #9699a8;
+$color-light-azureish-grey: #f0f3f6;
+$dark-grayish-blue: #8b90a2;
+$color-light-grey-alt: #fafbfc;
+
+@mixin fadeIn {
+  animation: materialize;
+  animation-duration: 0.4s;
+}
+
+@keyframes materialize {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

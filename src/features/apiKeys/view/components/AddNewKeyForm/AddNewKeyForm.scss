@@ -1,0 +1,67 @@
+@import "src/shared/view/styles/mixins";
+
+.add-new-key-form {
+  width: 60vw;
+  padding: 1.7rem 3rem;
+  max-width: 40rem;
+  max-height: 80vh;
+  overflow: auto;
+  list-style: none;
+  font-size: 0.929rem;
+
+  @include mobile {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  @include themed('color', 'main-text-color');
+
+  &__details {
+    display: flex;
+    padding: 0.72rem;
+    flex-wrap: wrap;
+  }
+
+  &__details-title {
+    margin: 1.43rem 0 0;
+    flex-basis: 100%;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__checkbox {
+    display: flex;
+    padding: 0.72rem 0;
+    flex-basis: 40%;
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+
+  &__ip-submit-btn {
+    padding-bottom: 0.72rem;
+  }
+
+  &__info {
+    padding: 0 0 0.72rem;
+    font-size: 0.85rem;
+
+    @include themed('color', 'table-header-cell-title-color');
+  }
+
+  &__label {
+    font-weight: 400;
+
+    @include themed('color', 'headline-1-color');
+  }
+
+  &__input-field {
+    font-weight: 400;
+  }
+
+  &__btn {
+    width: 2.15rem;
+    margin-left: 0.57rem;
+  }
+}

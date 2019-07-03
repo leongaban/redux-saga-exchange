@@ -1,0 +1,47 @@
+.operation-history-header {
+  display: flex;
+
+  &__controls {
+    display: flex;
+    margin: 0.5rem 0;
+    padding: 0 0.714rem;
+    align-items: center;
+  }
+
+  &__search {
+    width: 12rem;
+
+    @media only screen and (max-width: 560px) {
+      width: 9rem;
+    }
+  }
+
+  &__range {
+    &-start-date,
+    &-end-date {
+      width: 10.7143rem;
+
+      @media only screen and (max-width: 639px) {
+        width: 7.5rem;
+      }
+    }
+
+    &-start-date {
+      margin-right: 1rem;
+      margin-left: 6rem;
+
+      @media only screen and (max-width: 560px) {
+        margin-left: 3rem;
+      }
+    }
+
+    &-end-date {
+      margin-left: 1rem;
+    }
+  }
+
+  &__reset-button {
+    width: 5.71rem;
+    margin-left: 1rem;
+  }
+}

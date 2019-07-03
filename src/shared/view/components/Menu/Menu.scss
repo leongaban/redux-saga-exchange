@@ -1,0 +1,119 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+$entry-horizontal-padding: 1.57rem;
+
+.menu {
+  $r: &;
+
+  &__icon {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+
+    &_highlighted {
+      @include themed('background-color', 'menu-entry-hover');
+    }
+  }
+
+  &__circles {
+    display: flex;
+    width: 1.29rem;
+    height: 1.29rem;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+
+    &_vertically-arranged {
+      transform: rotate(90deg);
+    }
+
+    &-item {
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: #7e849e;
+    }
+  }
+
+  &__list {
+    position: fixed;
+    z-index: 102;
+    visibility: hidden;
+    min-width: 13.71rem;
+    border: 1px solid;
+    border-top: none;
+    box-shadow: 0 0.71rem 0.71rem 0 rgba(53, 64, 82, 0.1);
+    font-size: 0.86rem;
+    font-weight: 500;
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    &_open {
+      visibility: visible;
+      border-radius: 0 0 0.3rem 0.3rem;
+    }
+  }
+
+  &__entries-section {
+    &::after {
+      display: block;
+      height: 1px;
+      content: '';
+      border-right: $entry-horizontal-padding solid;
+      border-left: $entry-horizontal-padding solid;
+
+      @include themed('background-color', 'widget-border-color');
+      @include themed('border-color', 'widget-border-color');
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__entry {
+    display: flex;
+    padding: 0 $entry-horizontal-padding;
+    cursor: pointer;
+    align-items: center;
+
+    &:hover {
+      @include themed('background-color', 'menu-entry-hover');
+    }
+
+    &_height {
+      &_big {
+        height: 3.77rem;
+        line-height: 1.45rem;
+      }
+
+      &_normal {
+        height: 2.86rem;
+      }
+
+      &_small {
+        height: 2.29rem;
+      }
+    }
+  }
+
+  &__disabled-entry {
+    display: flex;
+    padding: 0 $entry-horizontal-padding;
+    cursor: default;
+    align-items: center;
+
+    &_height {
+      &_normal {
+        height: 2.86rem;
+      }
+
+      &_small {
+        height: 2.29rem;
+      }
+    }
+  }
+}

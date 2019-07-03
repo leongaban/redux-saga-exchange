@@ -1,0 +1,167 @@
+@import '~shared/view/styles/variables';
+@import 'src/shared/view/styles/mixins';
+
+.tio-lockup {
+  padding-bottom: 3.571rem;
+
+  &__row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 0 1rem 1rem;
+    min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $color-medium-grey;
+
+    @media only screen and (max-width: 833px) {
+      padding: 0 1rem 1rem;
+    }
+
+    &-lock-button {
+      margin-top: 1rem;
+      height: 3rem;
+      font-size: 1rem;
+    }
+
+    &_value {
+      @include themed('background-color', 'widget-background-color');
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-height: 30rem;
+    width: 49.5%;
+    border: 1px solid;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @include themed('background-color', 'widget-background-color');
+    @include themed('border-color', 'widget-border-color');
+
+    @media only screen and (max-width: 833px) {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 640px) {
+      margin-bottom: 0;
+      border-radius: 0;
+      box-shadow: 0;
+    }
+
+    &-header {
+      display: flex;
+      margin: 0.7143rem 0 0;
+      padding: 1rem;
+      min-height: 0; // HACK: issue of FF (children overflow out of parent size)
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $color-medium-grey;
+
+      h4 {
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+
+    &_total-payout {
+      width: 100%;
+
+      h3 {
+        margin: 0 10px 0 0;
+
+        &:nth-child(2) {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__lp-stat-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__lp-stat {
+    position: relative;
+    top: -10px;
+
+    .symbol {
+      margin-bottom: 0.1rem;
+    }
+  }
+
+  &__adjust-msg {
+    padding: 1rem 0 0;
+    width: 100%;
+    text-align: center;
+
+    @media only screen and (max-width: 833px) {
+      padding: 1.5rem 0 0;
+    }
+  }
+
+  &__locked-input {
+    margin-top: 10px;
+    width: 48%;
+
+    input {
+      height: 3rem;
+    }
+  }
+
+  &__min-lock-copy {
+    position: absolute;
+    top: -1rem;
+  }
+
+  &__help-icon {
+    margin-right: 0.2rem;
+    width: 0.926rem;
+    height: 0.926rem;
+    cursor: pointer;
+  }
+
+  &__confirm-unlock {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__confirm-button {
+    width: 49.5%;
+  }
+
+  &__input_description {
+    @media only screen and (max-width: 1200px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__users-balance {
+    opacity: 0.5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 48%;
+    height: 3rem;
+    line-height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+
+  &__view-desktop {
+    display: block;
+
+    @media only screen and (max-width: 400px) {
+      display: none;
+    }
+  }
+}

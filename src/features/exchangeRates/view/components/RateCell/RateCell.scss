@@ -1,0 +1,41 @@
+@import 'src/shared/view/styles/mixins';
+
+.rate-cell {
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.5rem;
+    height: 0.9rem;
+    margin-right: 0.5rem;
+  }
+
+  &__value {
+    vertical-align: middle;
+  }
+
+  &_state {
+    &_decreased {
+      @include themed('color', 'main-red-color');
+
+      polygon {
+        @include themed('fill', 'main-red-color');
+      }
+    }
+
+    &_increased {
+      @include themed('color', 'main-green-color');
+
+      polygon {
+        @include themed('fill', 'main-green-color');
+      }
+    }
+
+    &_unchanged {
+      @include themed('color', 'main-text-color');
+    }
+  }
+
+  &_selected {
+    @include themed('color', 'exchange-rates-selected-text-color');
+  }
+}

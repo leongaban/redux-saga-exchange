@@ -1,0 +1,23 @@
+@import "src/shared/view/styles/mixins";
+
+.open-orders-table {
+  height: 100%;
+
+  &__market {
+    font-weight: 500;
+  }
+
+  &__order-side {
+    text-transform: uppercase;
+
+    &_side {
+      &_buy {
+        @include themed('color', 'main-green-color');
+      }
+
+      &_sell {
+        @include themed('color', 'main-red-color');
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "~shared/view/styles/variables";
+@import 'src/shared/view/styles/mixins';
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; // TODO: [improvement] Put z-indices in a shared scss dictionary
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include themed-alpha('background-color', 'widget-background-color', 0.9);
+  }
+
+  &__content {
+    z-index: 10;
+  }
+}

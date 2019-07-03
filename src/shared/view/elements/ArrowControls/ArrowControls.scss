@@ -1,0 +1,45 @@
+@import 'src/shared/view/styles/mixins';
+
+.arrow-controls {
+  display: inline-block;
+
+  @include themed('background-color', 'input-border-color');
+
+  &__arrow-button {
+    display: flex;
+    width: 0.9rem;
+    height: 0.7rem;
+    cursor: pointer;
+    justify-content: space-around;
+    align-items: center;
+
+    &:active {
+      @include themed('background-color', 'input-active-border-color');
+    }
+  }
+
+  &__arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+
+    &_direction {
+      &_up {
+        border-width: 0 0.3rem 0.35rem;
+
+        @include themed('border-bottom-color', 'input-unit-color');
+      }
+
+      &_down {
+        border-width: 0.35rem 0.3rem 0;
+
+        @include themed('border-top-color', 'input-unit-color');
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

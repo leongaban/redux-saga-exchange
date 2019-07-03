@@ -1,0 +1,54 @@
+@import 'src/shared/view/styles/mixins';
+
+.toggle {
+  display: flex;
+  margin-bottom: 0; // TODO delete after deleted bootstrap
+  align-items: center;
+
+  &_checked &__switch {
+    justify-content: flex-end;
+  }
+
+  &__label {
+    color: #7e849e;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &_active {
+      color: #0098d8;
+    }
+  }
+
+  &__switch {
+    display: flex;
+    width: 1.93rem;
+    height: 1.07rem;
+    margin: 0 0.54rem;
+    padding: 0 2px;
+    cursor: pointer;
+    border-radius: 3.57rem;
+    background-color: #0098d8;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-thumb {
+      left: 2px;
+      width: 0.79rem;
+      height: 0.79rem;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+
+  &__fake-input {
+    display: none;
+  }
+
+  &__title {
+    margin-right: 1rem;
+    padding-left: 0.857rem;
+    font-weight: 500;
+
+    @include themed('color', 'checkbox-label-color');
+  }
+}

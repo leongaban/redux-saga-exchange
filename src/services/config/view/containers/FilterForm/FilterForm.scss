@@ -1,0 +1,66 @@
+@import "src/shared/view/styles/mixins";
+
+.reports-filter-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include themed('color', 'main-text-color');
+
+  &__label {
+    // TODO this is rest for bootstrap
+    display: initial;
+    max-width: initial;
+    margin-bottom: initial;
+    font-size: 0.929rem;
+    font-weight: 400;
+
+    @include themed('color', 'input-color');
+  }
+
+  &__labeled-field-set {
+    display: flex;
+    margin: 0.3rem auto;
+    padding-right: 0.71rem;
+    align-items: center;
+  }
+
+  &__field-set {
+    display: flex;
+    margin-left: 0.36rem;
+  }
+
+  &__date-input-field,
+  &__base-currency-field,
+  &__counter-currency-field,
+  &__side-field, {
+    width: 7.3rem;
+  }
+
+  &__date-field-set {
+    display: flex;
+    align-items: center;
+
+    &-separator {
+      margin: 0 0.36rem;
+    }
+  }
+
+  &__pair-field-set {
+    display: flex;
+    align-items: center;
+
+    &-separator {
+      margin: 0 0.36rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 0.3rem auto;
+  }
+
+  &__button {
+    width: 5.71rem;
+    margin-right: 0.71rem;
+  }
+}

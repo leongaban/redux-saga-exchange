@@ -1,0 +1,159 @@
+@import './variables';
+
+$moon: (
+  // text styles
+  'headline-1-color': $cyan-lightest,
+  'headline-1-color-disabled': $grey-blue-dark,
+  'headline-2-color': $white,
+  'main-text-color': $white,
+  'secondary-text-color': $cyan-lightest,
+  'main-green-color': $cyan,
+  'main-red-color': $pink-light,
+  // main styles
+  'app-background-color': $black-blue,
+  'widget-background-color': $midnight-blue-darkest,
+  'widget-border-color': $midnight-blue-lightest,
+  'widget-shadow': $shadow,
+  'nav-menu-item-active-color': $sky-blue,
+  'menu-list-background': $midnight-blue,
+  'menu-entry-hover': $midnight-blue-lightest,
+  // table styles
+  'table-header-border': $midnight-blue,
+  'table-header-background-color': $midnight-blue,
+  'table-header-cell-title-color': $sky-blue-dim,
+  'table-even-row-background-color': $midnight-blue,
+  'table-active-row-background-color': $cyan-dark,
+  // checkbox styles
+  'checkbox-border-color': $midnight-blue-lightest,
+  'checkbox-background-color': $midnight-blue,
+  'checkbox-label-color': $white,
+  'checkbox-active-background-color': $sky-blue-darkest,
+  'checkbox-active-border-color': $cyan-dark,
+  'checkbox-disabled-background-color': $grey-blue,
+  'checkbox-disabled-border-color': $grey-blue,
+  // input and textarea styles
+  'input-border-color': $midnight-blue-lightest,
+  'input-color': $white,
+  'input-background-color': $midnight-blue,
+  'input-disabled-background-color': $grey-blue-darkest,
+  'input-active-border-color': $cyan-dark,
+  'input-error-border-color': $pink-lightest,
+  'input-unit-color': $cyan-dark,
+  // radio-button styles
+  'radio-btn-color': $grey-blue-light,
+  'radio-btn-border-color': $grey-blue-darkest,
+  'radio-btn-background-color': $midnight-blue,
+  'radio-btn-active-color': $white,
+  'radio-btn-active-border-color': $midnight-blue,
+  'radio-btn-active-background-color': $sky-blue,
+  'radio-btn-disabled-color': $grey-blue-dark,
+  // balance widget
+  'balance-widget-element-background-color': $midnight-blue-light,
+  'balance-widget-element-value-color': $grey-blue-light,
+  'balance-widget-element-code-color': $white,
+  // select styles
+  'select-border-color': $midnight-blue-lightest,
+  'select-background-color': $midnight-blue,
+  'select-header-option-color': $grey-blue-dark,
+  'select-option-hover-background-color': $midnight-blue-darkest,
+  'select-option-value-color': $grey-light,
+  // place order form styles
+  'place-order-title-color': $cyan-lightest,
+  'place-order-balance-title-color': $grey-blue-light,
+  'place-order-balance-value-color': $white,
+  // buttons styles
+  'button-border-color': $black,
+  'button-main-border-color': $black,
+  'button-text-blue-color': $sky-blue,
+  'button-text-green-color': $cyan-light,
+  'button-text-red-color': $pink-light,
+  'button-text-red-background-color': $sky-blue-darkest,
+  'button-text-red-hover-background-color': $midnight-blue,
+  'button-text-red-disabled-background-color': $grey-blue,
+  'button-text-red-disabled-color': $grey-blue-light,
+  // red button
+  'button-red-background-color': $pink,
+  'button-red-hover': $pink-light,
+  'button-red-active-background-color': $pink-dark,
+  // green button
+  'button-green-background-color': $cyan-dark,
+  'button-green-hover': $cyan,
+  'button-green-active-background-color': $cyan-darkest,
+  // blue button
+  'button-blue-background-color': $sky-blue,
+  'button-blue-hover': $sky-blue-light,
+  'button-blue-active-background-color': $sky-blue-dark,
+  // black-white
+  'button-black-white-color': $white,
+  'button-black-white-background-color': $midnight-blue,
+  'button-black-white-hover': $midnight-blue-light,
+  // calendar styles
+  'calendar-background-color': $midnight-blue-darkest,
+  'calendar-day-color': $white,
+  'calendar-day-name-color': $white,
+  'calendar-day-disabled-color': $grey-blue-dark,
+  'calendar-header-text-color': $cyan-lightest,
+  // assets table
+  'assets-table-balance-code-label': $white,
+  // tooltip styles
+  'tooltip-color': $cyan,
+  'tooltip-background-color': $midnight-blue-lightest,
+  // withdraw-coins-dialog styles
+  'withdraw-coins-dialog-details-commision-color': $white,
+  'withdraw-coins-dialog-label-color': $white,
+  'withdraw-coins-dialog-details-background-color': $midnight-blue-light,
+  'withdraw-coins-dialog-value-color': $white,
+  'withdraw-coins-dialog-title-color': $cyan-lightest,
+  // charts styles
+  'chart-left-side-holder': $cyan-lightest,
+  // order book
+  'order-book-bid-background-color': $cyan-transparent,
+  'order-book-ask-background-color': $pink-transparent,
+  'order-book-bid-hover-background-color': $cyan-black,
+  'order-book-ask-hover-background-color': $pink-darkest,
+  'order-book-row-hover-background-color': $midnight-blue-lightest,
+  'order-book-bid-color': $cyan-light,
+  'order-book-ask-color': $pink,
+  'order-book-header-color': $grey-dark,
+  'order-book-color': $grey-light,
+  'order-book-inline-price-background-color': $black-blue-light,
+  // scrollbar styles
+  'scrollbar-background': $black-blue-light,
+  'scrollbar-thumb': $midnight-blue-dark,
+  'scrollbar-thumb:hover': $midnight-blue-lightest,
+  // exchange rates styles
+  'exchange-rates-selected-text-color': $white,
+  'exchange-rates-favorite-icon-stroke': $grey-blue-dark,
+  'exchange-rates-favorite-icon-fill': $cyan,
+  'webkit-input-auto-fill-color': $webkit-input-auto-fill-color,
+  // pagination-controls
+  'pagination-controls-pagination-control-background-color':  $midnight-blue-light,
+  'pagination-controls-pagination-control-color': $cyan-lightest,
+  'pagination-controls-pagination-control-border-color': $grey-blue,
+  'pagination-controls-pagination-control-disabled-background-color': $grey,
+  'pagination-controls-pagination-control-disabled-color': $grey-blue,
+  'pagination-controls-pagination-control-active-color': $white,
+  'pagination-controls-pagination-control-active-background-color': $sky-blue-dark,
+  // document-viewer
+  'document-viewer-background-color': $black-blue-light,
+  // admin page
+  'admin-sidebar-background-color': $midnight-blue-lightest,
+  // operation history status
+  'operation-history-status-complete-bg': $cyan-transparent,
+  'operation-history-status-in-progress-bg': $sky-blue-transparent,
+  'operation-history-status-cancelled-bg': $pink-dark-transparent,
+  'operation-history-status-in-progress-color': $cyan-dark,
+  // modal
+  'modal-refining-text-color': $cyan-dark,
+  // chat widget
+  'chat-widget-date-color': $sky-blue-dim,
+  'chat-widget-day-separator-color': $sky-blue-dim,
+  'chat-widget-status-message-bg': $grey-blue,
+  'chat-widget-status-message-color': $blue,
+  'chat-widget-button-color': $grey-blue-light,
+  'chat-widget-edited-color': $sky-blue-dim,
+  'chat-widget-offline-overlay-bg': rgba($midnight-blue-darkest, 0.8),
+  // calculator
+  'calculator-background-color': $midnight-blue,
+  'calculator-border-color': $midnight-blue,
+);
